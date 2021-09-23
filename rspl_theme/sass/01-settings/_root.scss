@@ -1,0 +1,10 @@
+:root {
+    --container-width: min(calc(100vw - 30px), 90%);
+    --container-max: 1180px;
+}
+
+@media (min-width: 1440px) { // Large Desktops
+    :root {
+        --container-max: 1400px;
+    }
+}

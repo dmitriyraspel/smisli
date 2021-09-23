@@ -1,0 +1,54 @@
+.margin-right{
+	margin-right: 8pt;
+}
+.mt-0 {
+	margin-top: 0;
+}
+.not-mobile {
+	@media (max-width: #{$desktop-width}) {
+		display: none!important;
+    }
+}
+
+.only-mobile {
+	@media (min-width: #{$desktop-width}) {
+		display: none!important;
+    }
+}
+.desktop-container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	@media (min-width: $desktop-width) {
+		max-width: $containerMax;
+	}
+}
+.background-dark {
+	background-color: $background-dark;
+}
+.display-block {
+	display: block;
+}
+
+.invalid {
+	color: $error;
+}
+.helper-text {
+	display: none;
+}
+.helper-text.invalid {
+	display: block;
+}
+a.label {
+	display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 0.9em;
+	// border-bottom: 1px dotted $primary;
+}
+.bottom-dotted {
+	// border-bottom: 1px dotted $primary;
+}
+.font-normal {
+	font-weight: $normal;
+}

@@ -1,0 +1,33 @@
+ul,
+ol {
+	margin: 0 0 $spacing-vertical $spacing-horizontal;
+
+	a {
+		color: $color__link;
+		&:visited {
+			color: $color__link;
+		}
+	}
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: calc( #{$spacing-horizontal} / 2);
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 $spacing-horizontal $spacing-vertical;
+}

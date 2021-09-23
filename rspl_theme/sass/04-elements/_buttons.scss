@@ -1,0 +1,95 @@
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	display: inline-block;
+	font-size: $button-font-size;
+	line-height: $button-line-height;
+	font-weight: $normal;
+	color: $button-color;
+	background-color: $button-background-color;
+	border: 1px solid $button-border-color;
+	padding: $button-padding;
+	margin-bottom: $block-spacing-vertical;
+	border-radius: $button-border-radius;
+	// white-space: nowrap;
+	text-decoration: none;
+	transition: $base-transition;
+	overflow: hidden;
+
+	&:hover{
+		color: $button-color-hover;
+		background-color: $button-background-color-hover;
+		border-color: $button-border-color-hover;
+	}
+}
+
+.button__accent {
+	background-color: $accent;
+	border-color: $accent;
+	color: #fff;
+
+	&:hover{
+		background-color: darken($accent,4%);
+		border-color: darken($accent,4%);
+		color: #fff;
+	}
+}
+
+.button__delete {
+	background-color: $error;
+	border-color: $error;
+	color: #fff;
+
+	&:hover{
+		background-color: darken($error,4%);
+		border-color: darken($error,4%);
+		color: #fff;
+	}
+}
+
+.button:disabled{
+	opacity: 0.25;
+	cursor: default;
+	pointer-events:none;
+}
+
+// Utility classes
+.button-l {
+	width: 160px;
+}
+.button-xl {
+	width: 280px;
+}
+.button-text {
+	width: $text-container;
+}
+.button-max {
+	width: 100%;
+}
+
+.button-icon,
+.btn-icon {
+	width: 24px;
+	height: 24px;
+	position: relative;
+	display: inline-block;
+	border: none;
+	background: transparent;
+	font-size: 0px;
+	overflow: hidden;
+	padding: 0;
+	text-decoration: none;
+
+	&::after {
+		position: absolute;
+		content: "";
+		top: 2px;
+		left: 2px;
+		width: 20px;
+		height: 20px;
+		background: $primary;
+	}
+}

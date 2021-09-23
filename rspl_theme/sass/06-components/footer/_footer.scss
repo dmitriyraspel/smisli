@@ -4,7 +4,7 @@
     font-size: 14px;
     
     a {
-       color: $color__text-main;
+       color: $text;
        text-decoration: none;
     }
     // a:hover {
@@ -19,7 +19,7 @@
        padding-bottom: 1pt;
     }
     .sep {
-    //    color: $color__currentColor;
+       color: $primary;
     }
     .theme-author {}
 

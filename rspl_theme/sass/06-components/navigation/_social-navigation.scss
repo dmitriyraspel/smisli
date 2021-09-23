@@ -1,0 +1,48 @@
+.social-navigation {
+	
+	& > ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		
+		& > li {
+			position: relative;
+			margin: 0 4px;
+		}
+
+		a {
+			text-decoration: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 36px;
+			height: 36px;
+			padding: 0;
+			color: $color__social-link;
+			border-radius: 50%;
+			overflow: hidden;
+			transition: $base-transition;
+			opacity: 0.85;
+			outline: transparent;
+
+			svg {
+				fill: $color__social-link;
+				transition: $base-transition;
+			}
+
+		&:hover,
+		&:focus {
+			color: $color__social-link-hover;
+			// border-color: $color__social-link-hover;
+			// transform: scale(1.1);
+			// transform: rotate(360deg);
+			opacity: 1;
+
+		svg {
+			// fill: $color__social-link-hover;
+		}
+		}	
+	}
+}
+}

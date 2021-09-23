@@ -1,74 +1,39 @@
-/*!
-Theme Name: rspl-theme
-Theme URI: http://underscores.me/
-Author: Dmitriy Raspel
-Author URI: https://raspel.ru/
-Description: какое-то описание для темы RSPL
-Version: 1.0.0
-Tested up to: 5.4
-Requires PHP: 5.6
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: rspl_theme
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+// Unicode characters
+@charset "UTF-8";
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
+@import "01-settings/file-header";
+@import "01-settings/root";
+@import "01-settings/variables";
 
-rspl-theme is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+@import "02-tools/structure";
+@import "02-tools/columns";
+@import "02-tools/mixins";
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
+@import "03-generic/normalize";
+@import "03-generic/box-sizing";
+@import "03-generic/base";
+@import "03-generic/containers";
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Generic
-	- Normalize
-	- Box sizing
-# Base
-	- Typography
-	- Elements
-	- Links
-	- Forms
-## Layouts
-# Components
-	- Navigation
-	- Posts and pages
-	- Comments
-	- Widgets
-	- Media
-	- Captions
-	- Galleries
-# plugins
-	- Jetpack infinite scroll
-# Utilities
-	- Accessibility
-	- Alignments
+@import "04-elements/typography";
+@import "04-elements/body";
+@import "04-elements/hr";
+@import "04-elements/blockquote";
 
---------------------------------------------------------------*/
+@import "04-elements/lists";
+@import "04-elements/media";
+@import "04-elements/tables";
 
-// Import variables and mixins.
-@import "abstracts/abstracts";
+@import "04-elements/links";
 
-/*--------------------------------------------------------------
-# Generic
---------------------------------------------------------------*/
+@import "04-elements/buttons";
+@import "04-elements/forms";
 
-/* Normalize
---------------------------------------------- */
-@import "generic/normalize";
+/* Blocks */
+// @import "05-utilities/blocks";
+  
+/* Alignments */
+  @import "05-blocks/alignments";
 
-/* Box sizing
---------------------------------------------- */
-@import "generic/box-sizing";
-
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-@import "base/base";
 
 /*--------------------------------------------------------------
 # Layouts
@@ -79,26 +44,28 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-@import "components/components";
+@import "06-components/navigation/navigation";
+@import "06-components/navigation/social-navigation";
+
+@import "06-components/content/posts-and-pages";
+
+@import "06-components/comments/comments";
+
+@import "06-components/widgets/widgets";
+
+@import "06-components/media/media";
+@import "06-components/media/captions";
+@import "06-components/media/galleries";
+
 /* Footer */
 @import "06-components/footer/footer";
 
-/*--------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
-
-/* Jetpack infinite scroll
---------------------------------------------- */
-@import "plugins/jetpack/infinite-scroll";
 
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
+/* Accessibility */
+@import "07-utilities/accessibility";
 
-/* Accessibility
---------------------------------------------- */
-@import "utilities/accessibility";
-
-/* Alignments
---------------------------------------------- */
-@import "utilities/alignments";
+/* Helpers classes */
+@import "07-utilities/helpers";

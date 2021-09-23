@@ -1,0 +1,9 @@
+hr,
+.wp-block-separator {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: $block-spacing-vertical;
+	width: $containerMax;
+	max-width: 100%;
+}

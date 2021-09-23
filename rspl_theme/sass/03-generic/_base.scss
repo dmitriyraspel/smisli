@@ -1,0 +1,44 @@
+.invisible {
+	opacity: 0;
+	transition: 0.7s;
+}
+
+.fakefield {
+	display: none;
+}
+
+.stress {
+	color: $text-dark;
+}
+
+.left-align {
+	text-align: left;
+}
+
+.center, 
+.center-align {
+	text-align: center;
+}
+
+.right-align {
+	text-align: right;
+}
+
+img, svg {
+	max-width: 100%;
+}
+
+.site {
+	position: relative;
+}
+
+/* custom scroll */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    box-shadow: 0px 0px 7px 2px rgba(102, 102, 102, 0.3) inset;
+    background: rgba(102, 102, 102, 0.1);
+}

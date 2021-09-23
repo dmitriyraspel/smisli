@@ -1,0 +1,50 @@
+a {
+	color: $color__link;
+	transition: $base-transition;
+	// text-decoration: none;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+	&.button {
+		&:hover,
+		&:focus,
+		&:active,
+		&:visited {
+			color: $button-color;
+		}
+	}
+}
+
+
+// a {
+//   text-decoration: none;
+//   transition: 0.7s;
+//   color: inherit;
+// }
+
+// .link {
+// 	color: $primary;
+//     text-decoration: underline;
+
+//   @include desktop{
+//       &:hover{
+//         color: $primary-dark;
+//       }
+//   }
+// }
