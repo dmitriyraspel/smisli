@@ -2,11 +2,11 @@
 /**
  * SVG Icons class
  *
- * @package architect
+ * @package rspl_theme
  * @since 1.0.0
  */
 
-class architect_SVG_Icons {
+class rspl_theme_SVG_Icons {
 
 	/**
 	 * Gets the SVG code for a given icon.

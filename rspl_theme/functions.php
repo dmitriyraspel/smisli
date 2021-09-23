@@ -283,7 +283,7 @@ require get_template_directory() . '/inc/template-functions.php';
 /**
  * SVG Icons class.
  */
-require get_template_directory() . '/classes/class-architect-svg-icons.php';
+require get_template_directory() . '/classes/class-rspl_theme-svg-icons.php';
 
 /**
  * SVG Icons related functions.
