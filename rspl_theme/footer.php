@@ -8,10 +8,13 @@
  *
  * @package rspl-theme
  */
-
+$footer_wrapper_classes  = 'site-footer';
+$footer_wrapper_classes .= is_active_sidebar( 'sidebar-2' ) ? ' has-footer-widget-area' : '';
+$footer_wrapper_classes .= has_nav_menu( 'social' ) ? ' has-social-menu' : '';
+$footer_wrapper_classes .= has_nav_menu( 'footer' ) ? ' has-footer-menu' : '';
 ?>
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="<?php echo esc_attr( $footer_wrapper_classes ); ?>">
 
 	<?php
 		if ( has_nav_menu( 'social' ) ) : 
