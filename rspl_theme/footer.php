@@ -13,7 +13,11 @@
 
 	<footer id="colophon" class="site-footer">
 
-
+	<?php
+		if ( has_nav_menu( 'social' ) ) : 
+			get_template_part( 'template-parts/navigation/social-nav' );
+		endif; 
+	?>
 
 	<div class="container site-info">
 			
