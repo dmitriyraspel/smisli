@@ -12,19 +12,27 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'rspl_theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'rspl_theme' ), 'WordPress' );
-				?>
-			</a>
+
+
+
+	<div class="container site-info">
+			
+			<span class="site-name"><?php echo get_bloginfo( 'name' ); ?></span>
+			<span class="copyright">&copy; <?php echo esc_html( date_i18n( __( 'Y', 'rspl_theme' ) ) ); ?></span>
+			<?php
+			if ( function_exists( 'the_privacy_policy_link' ) ) {
+				the_privacy_policy_link();
+			}
+			?>
+
 			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'rspl_theme' ), 'rspl_theme', '<a href="https://raspel.ru/">Dmitriy Raspel</a>' );
-				?>
+			<?php
+			/* translators: 1: Theme name, 2: Theme author. */
+			printf( esc_html__( 'RSPL_theme by %2$s', 'rspl_theme' ), 'rspl_theme', '<a class="theme-author" href="http://raspel.ru">Raspel</a>' );
+			?>
+			
 		</div><!-- .site-info -->
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
