@@ -1053,6 +1053,25 @@ select::-ms-expand {
 
 /* Blocks */
 /* Alignments */
+/**
+ * wp-block-button
+ */
+.wp-block-button__link {
+  color: #fff;
+  background-color: #e16a36;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.is-style-outline > .wp-block-button__link {
+  padding: 6px 14px;
+}
+
+.is-style-outline > .wp-block-button__link:not(.has-text-color) {
+  color: #e16a36;
+}
+
 .alignleft {
   /*rtl:ignore*/
   float: left;

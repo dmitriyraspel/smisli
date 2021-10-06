@@ -1,0 +1,21 @@
+/**
+ * wp-block-button
+ */
+
+.wp-block-button__link {
+  color: $button-color;
+  background-color: $button-background-color;
+  border-radius: $button-border-radius;
+  font-size: $button-font-size;
+  padding: $button-padding;
+}
+
+.is-style-outline {
+  & > .wp-block-button__link {
+    padding: $button-padding-is-style-outline;
+
+    &:not(.has-text-color) {
+      color: $button-border-color;
+    }
+  }
+}
