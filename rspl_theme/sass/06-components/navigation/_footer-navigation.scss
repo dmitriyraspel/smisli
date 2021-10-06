@@ -1,0 +1,23 @@
+.footer-navigation {
+  max-width: 100%;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-left: 1em;
+      // &:first-child {
+      //   margin-left: 0;
+      // }
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}
