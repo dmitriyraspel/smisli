@@ -400,7 +400,7 @@ img, svg {
   border-radius: 50px;
   -webkit-box-shadow: 0px 0px 7px 2px rgba(102, 102, 102, 0.3) inset;
           box-shadow: 0px 0px 7px 2px rgba(102, 102, 102, 0.3) inset;
-  background: rgba(102, 102, 102, 0.1);
+  background: rgba(102, 102, 102, 0.3);
 }
 
 .container {
@@ -1116,19 +1116,104 @@ select::-ms-expand {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-.main-navigation {
+.site-header {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.site-header .header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.site-header .header-inner-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  max-width: calc( 100% - 36px);
+}
+
+.site-header .site-logo {
+  margin-right: 1em;
+}
+
+.site-header .site-logo .custom-logo {
+  width: auto;
+  max-width: 300px;
+  max-height: 100px;
+}
+
+.site-header .custom-logo-link {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.site-header .site-branding .site-title {
+  margin: 0 1em 0 0;
+  max-width: 100%;
+}
+
+.site-header .site-branding .site-title a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #111;
+}
+
+.site-header .site-branding .site-description {
+  margin: 0 1em 0 0;
+}
+
+.header-top-widget-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-top-widget-area .widget {
+  margin: 0;
+  margin-right: 1em;
+}
+
+.header-top-widget-area .widget:last-child {
+  margin-right: 0;
+}
+
+.header-top-widget-area ul, .header-top-widget-area ol {
+  margin: 0;
+}
+
+.header-top-widget-area p {
+  margin: 0.5em 0 0 0;
+}
+
+.primary-navigation {
   display: block;
   width: 100%;
 }
 
-.main-navigation ul {
+.primary-navigation ul {
   display: none;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-.main-navigation ul ul {
+.primary-navigation ul ul {
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -1138,38 +1223,38 @@ select::-ms-expand {
   z-index: 99999;
 }
 
-.main-navigation ul ul ul {
+.primary-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
+.primary-navigation ul ul li:hover > ul,
+.primary-navigation ul ul li.focus > ul {
   display: block;
   left: auto;
 }
 
-.main-navigation ul ul a {
+.primary-navigation ul ul a {
   width: 200px;
 }
 
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+.primary-navigation ul li:hover > ul,
+.primary-navigation ul li.focus > ul {
   left: auto;
 }
 
-.main-navigation li {
+.primary-navigation li {
   position: relative;
 }
 
-.main-navigation a {
+.primary-navigation a {
   display: block;
   text-decoration: none;
 }
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+.primary-navigation.toggled ul {
   display: block;
 }
 
@@ -1177,7 +1262,7 @@ select::-ms-expand {
   .menu-toggle {
     display: none;
   }
-  .main-navigation ul {
+  .primary-navigation ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1352,11 +1437,6 @@ select::-ms-expand {
   padding: 0;
 }
 
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-  display: inline-block;
-}
-
 .wp-caption {
   margin-bottom: 1.5em;
   max-width: 100%;
@@ -1453,7 +1533,6 @@ select::-ms-expand {
 }
 
 .site-info a.privacy-policy-link {
-  border-bottom: 1px dotted;
   display: inline-block;
 }
 

@@ -1,0 +1,22 @@
+.header-top-widget-area {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  
+  .widget {
+    margin: 0;
+    margin-right: 1em;
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+  ul, ol {
+    margin: 0;
+  }
+  p {
+    margin: 0.5em 0 0 0;
+  }
+}

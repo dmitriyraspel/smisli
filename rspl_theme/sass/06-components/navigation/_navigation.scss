@@ -1,4 +1,4 @@
-.main-navigation {
+.primary-navigation {
 	display: block;
 	width: 100%;
 
@@ -59,7 +59,7 @@
 
 	a {
 		display: block;
-		text-decoration: none;
+		text-decoration: none; 
 	}
 
 	.current_page_item > a,
@@ -71,7 +71,7 @@
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+.primary-navigation.toggled ul {
 	display: block;
 }
 
@@ -81,7 +81,7 @@
 		display: none;
 	}
 
-	.main-navigation ul {
+	.primary-navigation ul {
 		display: flex;
 	}
 }

@@ -1,0 +1,47 @@
+.site-header {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .header-inner-left {
+    display: flex;
+    justify-content: flex-start;
+    max-width: calc( 100% - 36px);
+  }
+  .site-logo {
+    margin-right: 1em;
+    .custom-logo {
+      width: auto;
+      max-width: $branding-logo-max-width;
+      max-height: $branding-logo-max-height;
+    }
+  }
+  .custom-logo-link {
+    max-width: 100%;
+    max-height: 100%;
+    // display: block;
+  }
+
+  .site-branding {
+    
+    .site-title {
+      margin: 0 1em 0 0;
+      max-width: 100%;
+
+      a {
+        text-decoration: none;
+        font-size: $site-title-font-size;
+        color: $site-title-color;
+      }
+    }
+    .site-description {
+      margin: 0 1em 0 0;
+    }
+  }
+}
