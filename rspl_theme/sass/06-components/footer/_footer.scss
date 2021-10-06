@@ -1,5 +1,12 @@
+.site-footer {
+
+   .social-navigation ul {
+      overflow-x: auto;
+   }
+} 
+
 .site-info {
-    margin-top: 20px;
+    margin-top: $spacing-vertical;
     text-align: center;
     font-size: 14px;
     
@@ -17,6 +24,7 @@
     a.privacy-policy-link {
        border-bottom: 1px dotted;
        padding-bottom: 1pt;
+       display: inline-block
     }
     .sep {
        color: $primary;

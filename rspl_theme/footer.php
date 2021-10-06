@@ -17,6 +17,19 @@ $footer_wrapper_classes .= has_nav_menu( 'footer' ) ? ' has-footer-menu' : '';
 	<footer id="colophon" class="<?php echo esc_attr( $footer_wrapper_classes ); ?>">
 
 	<?php
+		if ( has_nav_menu( 'footer' ) ) : 
+			get_template_part( 'template-parts/navigation/footer-nav' );
+		endif; 
+	?>
+
+	<?php
+		if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+			<div class="widget-area container footer-widget-area">
+				<?php dynamic_sidebar( 'sidebar-2' ); ?>
+			</div><!-- .footer-widget-area -->
+		<?php endif; ?>
+
+	<?php
 		if ( has_nav_menu( 'social' ) ) : 
 			get_template_part( 'template-parts/navigation/social-nav' );
 		endif; 
