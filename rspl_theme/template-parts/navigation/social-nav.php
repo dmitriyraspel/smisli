@@ -6,7 +6,7 @@
  */
 
 ?>
-   <nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'architect' ); ?>">
+   <nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'rspl_theme' ); ?>">
       <?php
       wp_nav_menu(
          array(
