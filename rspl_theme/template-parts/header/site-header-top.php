@@ -12,4 +12,4 @@ if ( ! is_active_sidebar( 'sidebar-4' ) ) {
 
 <div class="header-top-widget-area">
 	<?php dynamic_sidebar( 'sidebar-4' ); ?>
-</div><!-- #secondary -->
+</div><!-- .header-top-widget-area -->
