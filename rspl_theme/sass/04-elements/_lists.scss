@@ -2,12 +2,6 @@ ul,
 ol {
 	margin: 0 0 $spacing-vertical $spacing-horizontal;
 
-	a {
-		color: $color__link;
-		&:visited {
-			color: $color__link;
-		}
-	}
 }
 
 ul {
