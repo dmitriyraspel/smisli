@@ -6,6 +6,20 @@
  * @since 1.0.0
  */
 
+function rspl_theme_add_sub_menu_toggle( $output, $item, $depth, $args ) {
+	if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) ) {
+
+		// Add toggle button.
+		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="rsplthemeExpandSubMenu(this)">';
+		// $output .= '<span class="icon-plus">' . rspl_theme_get_icon_svg( 'arrow-down-circled', 16 ) . '</span>';
+		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'rspl_theme' ) . '</span>';
+		$output .= '</button>';
+	}
+	return $output;
+}
+add_filter( 'walker_nav_menu_start_el', 'rspl_theme_add_sub_menu_toggle', 10, 4 );
+
+
 /**
  * Gets the SVG code for a given icon.
  */
