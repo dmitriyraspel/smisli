@@ -3,6 +3,7 @@
   max-width: 100%;
   position: relative;
   z-index: 2;
+  transition: $base-transition;
 
   .header-inner {
     display: flex;
@@ -12,6 +13,7 @@
   .header-inner-left {
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     max-width: calc( 100% - 36px);
   }
   .site-logo {

@@ -51,6 +51,22 @@ $font__pre: "Courier 10 Pitch", courier, monospace;
 // $font__line-height-body: 1.5;
 // $font__line-height-pre: 1.6;
 
+// Containers
+$containerWidth: var(--container-width);
+$containerMax: var(--container-max);
+$text-container: 640px;
+$content-width: 720px;
+
+// Media queries
+$tablet-width: 760px !default; // Tablets
+$desktop-width: 999px !default; // Desktops & Laptops
+$huge-width: 1440px !default; // Large Desktops
+
+/* Spacing */
+$spacing-horizontal: 15px;
+$spacing-vertical: 20px;
+$block-spacing-vertical: 1.5em;
+
 // Buttons
 $button-font-size: $font-size;
 $button-line-height: 1.5;
@@ -87,24 +103,17 @@ $branding-logo-max-height: 100px;
 $site-title-font-size: $font-size-l;
 $site-title-color: $text-dark;
 
+// Primary navigation
+$burger-color: $primary;
+$primary-nav-color-link: $text;
+$primary-nav-color-link-hover: $text;
+$primary-nav-font-size-mobile: $font-size-l;
+$primary-nav-font-size-pc: $font-size-m;
+$primary-nav-submenu-background: $background;
+$primary-nav-breakpoint: $tablet-width;
+
 // Other variables
 $radius: 20px;
 $box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
 $radius-block: 10px;
 $base-transition: 0.7s;
-
-// Containers
-$containerWidth: var(--container-width);
-$containerMax: var(--container-max);
-$text-container: 640px;
-$content-width: 720px;
-
-// Media queries
-$tablet-width: 760px !default; // Tablets
-$desktop-width: 999px !default; // Desktops & Laptops
-$huge-width: 1440px !default; // Large Desktops
-
-/* Spacing */
-$spacing-horizontal: 15px;
-$spacing-vertical: 20px;
-$block-spacing-vertical: 1.5em;

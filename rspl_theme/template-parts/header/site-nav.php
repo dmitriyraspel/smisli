@@ -9,15 +9,18 @@
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
   <nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'rspl_theme' ); ?>">
     
-    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'rspl_theme' ); ?></button>
+    
     
     <?php
     wp_nav_menu(
       array(
-        'theme_location' => 'primary',
-        'menu_id'        => 'primary-menu145132',
-      )
-    );
+        'theme_location'  => 'primary',
+				'menu_class'      => 'menu-wrapper',
+				'container_class' => 'primary-menu-container',
+				'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
+				'fallback_cb'     => false,
+			)
+		);
     ?>
   </nav><!-- #site-navigation -->
 <?php endif; ?>

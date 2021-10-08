@@ -22,6 +22,14 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-primary-menu' : '';
 			<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 		</div><!-- /.header-inner-left -->
 
+		<button id="primary-menu-toggle" class="menu-toggle" aria-controls="primary-menu-list" aria-expanded="false">
+      <span class="screen-reader-text"><?php esc_html_e( 'Primary Menu', 'rspl_theme' ); ?></span>
+      <div class="burger">
+        <div class="burger__inner">
+        </div>
+      </div>
+    </button>
+
 	</div><!-- /.header-inner -->
 	
 	<?php get_template_part( 'template-parts/header/site-nav' ); ?>
