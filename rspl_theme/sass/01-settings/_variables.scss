@@ -98,10 +98,14 @@ $label-color: $text;
 $label-font-size: 14px;
 
 // Site-branding
-$branding-logo-max-width: 300px;
-$branding-logo-max-height: 100px;
-$site-title-font-size: $font-size-l;
+$branding-logo-max-width-mobile: 120px;
+$branding-logo-max-height-mobile: 60px;
+$branding-logo-max-width-pc: 300px;
+$branding-logo-max-height-pc: 100px;
+$site-title-font-size-mobile: 24px;
+$site-title-font-size-pc: 28px;
 $site-title-color: $text-dark;
+$site-tagline-font-size: $font-size;
 
 // Primary navigation
 $burger-color: $primary;
