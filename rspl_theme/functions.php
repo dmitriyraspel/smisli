@@ -293,5 +293,7 @@ require get_template_directory() . '/inc/icon-functions.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/classes/class-rspl-theme-customize.php';
+
+
 
