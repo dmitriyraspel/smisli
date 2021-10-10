@@ -1293,11 +1293,18 @@ select::-ms-expand {
 }
 
 @media (min-width: 760px) {
+  .primary-navigation {
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--container-width);
+    max-width: var(--container-max);
+  }
   .primary-navigation .primary-menu-container {
     max-height: 1000px;
     overflow: initial;
   }
   .primary-navigation > div > .menu-wrapper {
+    padding: 1em 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1318,6 +1325,7 @@ select::-ms-expand {
     position: absolute;
     top: calc(100% - 10px);
     left: 0;
+    padding-left: 0;
     min-width: -webkit-max-content;
     min-width: -moz-max-content;
     min-width: max-content;
@@ -1601,9 +1609,25 @@ button.menu-toggle.active .burger__inner::after {
   display: block;
 }
 
-.post,
-.page {
-  margin: 0 0 1.5em;
+.entry-header,
+.entry-footer,
+.page-header {
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--container-width);
+  max-width: 720px;
+}
+
+.entry-header a,
+.entry-footer a,
+.page-header a {
+  color: #666;
+  text-decoration: none;
+}
+
+.entry-title,
+.entry-title a {
+  color: #111;
 }
 
 .entry-date:not(.published) {
@@ -1639,6 +1663,12 @@ button.menu-toggle.active .burger__inner::after {
 
 .widget select {
   max-width: 100%;
+}
+
+.svg-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
 }
 
 .page-content .wp-smiley,

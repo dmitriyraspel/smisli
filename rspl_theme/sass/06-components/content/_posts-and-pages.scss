@@ -2,10 +2,36 @@
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
+// .post,
+// .page {
+// 	margin: 0 0 1.5em;
+// }
+
+.entry-header,
+.entry-footer,
+.page-header {
+	@include container-content;
+
+	a {
+    color: $text;
+    text-decoration: none;
+  }
+
 }
+
+.entry-title,
+.entry-title a {
+	color: $text-dark;
+
+}
+
+// .entry-meta {
+//   a {
+//     color: $text;
+//     text-decoration: none;
+//   }
+// }
+
 .entry-date:not(.published) {
 	display: none;
 }
