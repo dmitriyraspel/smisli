@@ -73,6 +73,7 @@
 
 @media (min-width: $primary-nav-breakpoint) {
   .primary-navigation {
+    @include container;
 
     .primary-menu-container {
       max-height: 1000px;
@@ -80,6 +81,7 @@
     }
     
     > div > .menu-wrapper {
+      padding: 1em 0;
       display: flex;
       justify-content: center;
 
@@ -98,6 +100,7 @@
           position: absolute;
           top: calc(100% - 10px);
           left: 0;
+          padding-left: 0;
           min-width: max-content;
           background-color: $primary-nav-submenu-background;
           box-shadow: 1px 1px 2px 0px #fff;
