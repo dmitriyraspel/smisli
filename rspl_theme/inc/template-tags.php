@@ -37,21 +37,21 @@ if ( ! function_exists( 'rspl_theme_posted_on' ) ) {
 	}
 }
 
-if ( ! function_exists( 'rspl_theme_posted_by' ) ) :
+if ( ! function_exists( 'rspl_theme_posted_by' ) ) {
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
 	function rspl_theme_posted_by() {
-		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'rspl_theme' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		printf(
+			/* translators: 1: SVG icon. 2: post author, only visible to screen readers. 3: author link. */
+			'<span class="byline">%1$s<span class="screen-reader-text">%2$s</span><span class="author vcard"><a class="url fn n" href="%3$s">%4$s</a></span></span>',
+			rspl_theme_get_icon_svg( 'person', 16 ),
+			__( 'Posted by', 'rspl_theme' ),
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			esc_html( get_the_author() )
 		);
-
-		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
 	}
-endif;
+}
 
 if ( ! function_exists( 'rspl_theme_entry_footer' ) ) :
 	/**
