@@ -7,6 +7,7 @@
  * @package rspl-theme
  */
 
+//  Posted_on date & Updated.
 if ( ! function_exists( 'rspl_theme_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
@@ -37,6 +38,7 @@ if ( ! function_exists( 'rspl_theme_posted_on' ) ) {
 	}
 }
 
+// By author.
 if ( ! function_exists( 'rspl_theme_posted_by' ) ) {
 	/**
 	 * Prints HTML with meta information for the current author.
@@ -53,51 +55,68 @@ if ( ! function_exists( 'rspl_theme_posted_by' ) ) {
 	}
 }
 
-if ( ! function_exists( 'rspl_theme_entry_footer' ) ) :
+// Comments link.
+if ( ! function_exists( 'rspl_theme_comment_link' ) ) {
 	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
+	 * Prints HTML with the comment link for the current post.
 	 */
-	function rspl_theme_entry_footer() {
-		// Hide category and tag text for pages.
-		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'rspl_theme' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'rspl_theme' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'rspl_theme' ) );
-			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'rspl_theme' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-		}
-
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+	function rspl_theme_comment_link() {
+		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
+			echo rspl_theme_get_icon_svg( 'comment', 16 );
+
+			/* translators: %s: Name of current post. Only visible to screen readers. */
 			comments_popup_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'rspl_theme' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					wp_kses_post( get_the_title() )
-				)
-			);
+				sprintf( 
+					__( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'rspl_theme' ), 
+					get_the_title() ) );
+
 			echo '</span>';
 		}
+	}
+}
 
+// Categories.
+if ( ! function_exists( 'rspl_theme_category_list' ) ) {
+	function rspl_theme_category_list() {
+		/* translators: used between list items, there is a space after the comma. */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'rspl_theme' ) );
+		if ( $categories_list ) {
+			printf(
+				/* translators: 1: SVG icon. 2: Posted in - screen reader text. 3: List of categories. */
+				'<span class="cat-links">%1$s<span class="screen-reader-text">%2$s</span>%3$s</span>',
+				rspl_theme_get_icon_svg( 'category', 16 ),
+				esc_html__( 'Posted in', 'rspl_theme' ),
+				$categories_list
+			); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
+}
+
+// Tags.
+if ( ! function_exists( 'rspl_theme_tag_list' ) ) {
+	function rspl_theme_tag_list() {
+		/* translators: used between list items, there is a space after the comma. */
+		$tags_list = get_the_tag_list( '', __( ', ', 'rspl_theme' ) );
+		if ( $tags_list ) {
+			printf(
+				/* translators: 1: SVG icon. 2: Posted in - screen reader text. 3: List of tags. */
+				'<span class="tags-links">%1$s<span class="screen-reader-text">%2$s</span>%3$s</span>',
+				rspl_theme_get_icon_svg( 'tag', 16 ),
+				__( 'Tags:', 'rspl_theme' ),
+				$tags_list
+			); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
+}
+
+// Edit link.
+if ( ! function_exists( 'rspl_theme_edit_link' ) ) {
+	function rspl_theme_edit_link() {
 		edit_post_link(
 			sprintf(
 				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
+					/* translators: %s: Name of current post. Only visible to screen readers. */
 					__( 'Edit <span class="screen-reader-text">%s</span>', 'rspl_theme' ),
 					array(
 						'span' => array(
@@ -105,11 +124,31 @@ if ( ! function_exists( 'rspl_theme_entry_footer' ) ) :
 						),
 					)
 				),
-				wp_kses_post( get_the_title() )
+				get_the_title()
 			),
-			'<span class="edit-link">',
+			'<span class="edit-link">' . rspl_theme_get_icon_svg( 'edit', 16 ),
 			'</span>'
 		);
+	}
+}
+
+
+if ( ! function_exists( 'rspl_theme_entry_footer' ) ) :
+	/**
+	 * Prints HTML with meta information for the categories, tags and comments.
+	 */
+	function rspl_theme_entry_footer() {
+
+		rspl_theme_category_list();
+		
+		if ( is_singular() ) {
+			rspl_theme_tag_list();
+		}
+
+		rspl_theme_comment_link();
+
+		rspl_theme_edit_link();
+
 	}
 endif;
 
@@ -154,13 +193,3 @@ if ( ! function_exists( 'rspl_theme_post_thumbnail' ) ) :
 	}
 endif;
 
-// if ( ! function_exists( 'wp_body_open' ) ) :
-// 	/**
-// 	 * Shim for sites older than 5.2.
-// 	 *
-// 	 * @link https://core.trac.wordpress.org/ticket/12563
-// 	 */
-// 	function wp_body_open() {
-// 		do_action( 'wp_body_open' );
-// 	}
-// endif;
