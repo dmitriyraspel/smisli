@@ -1606,6 +1606,10 @@ button.menu-toggle.active .burger__inner::after {
   margin: 0 0 1.5em;
 }
 
+.entry-date:not(.published) {
+  display: none;
+}
+
 .updated:not(.published) {
   display: none;
 }

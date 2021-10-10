@@ -7,14 +7,17 @@
  * @package rspl-theme
  */
 
-if ( ! function_exists( 'rspl_theme_posted_on' ) ) :
+if ( ! function_exists( 'rspl_theme_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
 	function rspl_theme_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			// change for update data display
+			// $time_string = '<time class="entry-date" datetime="%1$s">%2$s</time><time class="updated published" datetime="%3$s">%4$s</time>';
 		}
 
 		$time_string = sprintf(
@@ -25,16 +28,14 @@ if ( ! function_exists( 'rspl_theme_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'rspl_theme' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		printf(
+			'<span class="posted-on">%1$s<a href="%2$s" rel="bookmark">%3$s</a></span>',
+			rspl_theme_get_icon_svg( 'calendar', 16 ),
+			esc_url( get_permalink() ),
+			$time_string
 		);
-
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
 	}
-endif;
+}
 
 if ( ! function_exists( 'rspl_theme_posted_by' ) ) :
 	/**
@@ -153,13 +154,13 @@ if ( ! function_exists( 'rspl_theme_post_thumbnail' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'wp_body_open' ) ) :
-	/**
-	 * Shim for sites older than 5.2.
-	 *
-	 * @link https://core.trac.wordpress.org/ticket/12563
-	 */
-	function wp_body_open() {
-		do_action( 'wp_body_open' );
-	}
-endif;
+// if ( ! function_exists( 'wp_body_open' ) ) :
+// 	/**
+// 	 * Shim for sites older than 5.2.
+// 	 *
+// 	 * @link https://core.trac.wordpress.org/ticket/12563
+// 	 */
+// 	function wp_body_open() {
+// 		do_action( 'wp_body_open' );
+// 	}
+// endif;
