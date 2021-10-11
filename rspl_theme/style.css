@@ -553,7 +553,8 @@ blockquote {
 
 ul,
 ol {
-  margin: 0 0 20px 15px;
+  margin: 0 0 20px 0;
+  padding-left: 20px;
 }
 
 ul {
@@ -1085,14 +1086,16 @@ select::-ms-expand {
   margin-right: auto;
 }
 
-.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator) {
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator),
+.entry-summary > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator) {
   margin-left: auto;
   margin-right: auto;
   width: var(--container-width);
   max-width: 720px;
 }
 
-.entry-content > *:not(.alignfull) {
+.entry-content > *:not(.alignfull),
+.entry-summary > *:not(.alignfull) {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -1722,6 +1725,25 @@ a.read-more {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+.error404 .page-header,
+.search-no-results .page-header {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.error404 .page-content,
+.search-no-results .page-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--container-width);
+  max-width: 720px;
+}
+
+.search-results .page-header {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .comments-area {
