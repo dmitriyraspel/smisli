@@ -22,11 +22,13 @@
 	@include center-block;
 }
 
-.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator) {
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator),
+.entry-summary > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator) {
 	@include container-content;
 }
 
-.entry-content > *:not(.alignfull) {
+.entry-content > *:not(.alignfull),
+.entry-summary > *:not(.alignfull) {
 	margin-top: $spacing-vertical;
 	margin-bottom: $spacing-vertical;
 }
