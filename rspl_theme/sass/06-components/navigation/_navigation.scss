@@ -37,3 +37,35 @@
 		
 	}
 }
+
+.navigation.post-navigation {
+	@include container-content;
+	margin-top: $spacing-vertical*2;
+
+	.nav-links {
+		display: flex;
+		justify-content: space-between;
+
+		& > *:not(:last-child) {
+			margin-right: 1em;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: $text;
+	}
+
+	.nav-next {
+		text-align: right;
+	}
+
+	.nav-subtitle {
+		font-size: $font-size-xs;
+	}
+	.nav-title {
+		display: block;
+		color: $text-dark;
+		// font-size: $font-size-l;
+	}
+}
