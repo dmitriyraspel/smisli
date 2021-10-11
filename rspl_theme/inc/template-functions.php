@@ -35,3 +35,12 @@ function rspl_theme_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'rspl_theme_pingback_header' );
+
+/**
+ * Change the excerpt more string
+ */
+function rspl_theme_excerpt_more() {
+
+	return '...';
+}
+add_filter( 'excerpt_more', 'rspl_theme_excerpt_more' );
