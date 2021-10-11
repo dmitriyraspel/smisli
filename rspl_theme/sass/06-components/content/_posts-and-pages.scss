@@ -11,38 +11,46 @@
 .entry-footer,
 .page-header {
 	@include container-content;
-
-	a {
-    color: $text;
-    text-decoration: none;
-  }
-
 }
 
 .entry-title,
 .entry-title a {
+	text-decoration: none;
 	color: $text-dark;
 
 }
 
-// .entry-meta {
-//   a {
-//     color: $text;
-//     text-decoration: none;
-//   }
-// }
+.post-thumbnail {
+	@include container-content;
+}
+.post-thumbnail-inner {
+	display: block;
+	text-decoration: none;
+	outline: none;
+}
+
+a.read-more {
+	text-decoration: none;
+	color: $text-dark;
+}
+
+.entry-meta,
+.entry-footer {
+  
+	a {
+    color: $text;
+    text-decoration: none;
+  }
+	& > *:not(:last-child) {
+		margin-right: 1em;
+	}
+}
 
 .entry-date:not(.published) {
 	display: none;
 }
 .updated:not(.published) {
 	display: none;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
 }
 
 .page-links {
