@@ -1723,12 +1723,137 @@ a.read-more {
   margin: 0 0 1.5em;
 }
 
-.comment-content a {
+.comments-area {
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--container-width);
+  max-width: 720px;
+  max-width: 600px;
+  margin-top: 40px;
+}
+
+.comments-area ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.comments-area a {
+  color: #666;
+  text-decoration: none;
+  border-bottom: 1px solid #e16a36;
+}
+
+.comments-area .comments-title,
+.comments-area .comment-reply-title {
+  color: #666;
+}
+
+.comments-area .comment-content p {
+  margin: 0.5em 0;
+}
+
+.comments-area .comment-content a {
   word-wrap: break-word;
+}
+
+.comments-area .reply {
+  margin-bottom: 1em;
+}
+
+.comment-list > li > .children {
+  padding-left: 1em;
+}
+
+.comment-list li {
+  margin-bottom: 24px;
+}
+
+.comment-list .comment-meta .avatar {
+  border-radius: 100%;
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.comment-list .comment-meta a {
+  border: none;
+}
+
+.comment-list .comment-meta .comment-metadata {
+  font-size: 12px;
+  margin-top: 0.5em;
+}
+
+.comment-respond .comment-reply-title {
+  margin-bottom: 0;
+}
+
+.comment-respond .comment-reply-title small {
+  display: block;
+  font-size: 16px;
+}
+
+.comment-form p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.comment-form p:last-child {
+  margin-bottom: 0;
+}
+
+.comment-form p textarea {
+  margin-bottom: 0;
+}
+
+.comment-form p > input {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.comment-form .comment-notes {
+  font-size: 12px;
+}
+
+.comment-form .logged-in-as {
+  padding-left: 10pt;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"] {
+  width: 100%;
+}
+
+.comment-form .comment-form-cookies-consent {
+  font-size: 14px;
 }
 
 .bypostauthor {
   display: block;
+  margin-top: 20px;
+}
+
+@media (min-width: 600px) {
+  .comment-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .comment-form > * {
+    width: 100%;
+    max-width: 100%;
+  }
+  .comment-form .comment-form-author,
+  .comment-form .comment-form-email {
+    width: 48%;
+  }
 }
 
 .widget {

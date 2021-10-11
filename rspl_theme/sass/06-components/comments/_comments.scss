@@ -1,7 +1,140 @@
-.comment-content a {
-	word-wrap: break-word;
+.comments-area {
+	@include container-content;
+	max-width: 600px;
+	margin-top: $spacing-vertical*2;
+
+	ol {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	a {
+		color: $text;
+		text-decoration: none;
+		border-bottom: 1px solid $primary;
+	}
+
+	.comments-title,
+	.comment-reply-title {
+		color: $text;
+	}
+
+	.comment-content {
+
+		p {
+			margin: 0.5em 0;
+		}
+		a {
+			word-wrap: break-word;
+		}
+
+	}
+
+	.reply {
+		margin-bottom: 1em;
+	}
 }
+
+.comment-list {
+
+	& > li > .children {
+		padding-left: 1em;
+	}
+
+	li {
+		margin-bottom: 24px;
+	}
+
+	.comment-meta {
+			.avatar {
+				border-radius: 100%;
+				float: left;
+				width: 40px;
+				height: 40px;
+				margin-right: 12px;
+			}
+			a {
+				border: none;
+			}
+			.comment-metadata {
+				font-size: $font-size-xs;
+				margin-top: 0.5em;
+			}
+		}
+}
+
+.comment-respond {
+
+	.comment-reply-title {
+		margin-bottom: 0;
+		
+		small {
+			display: block;
+			font-size: $font-size;
+		}
+	}
+}
+
+.comment-form {
+
+	p {
+		margin-top: 0;
+		margin-bottom: 1em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		textarea {
+			margin-bottom: 0;
+		}
+
+		& > input {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	.comment-notes {
+		font-size: $font-size-xs;
+	}
+
+	.logged-in-as {
+		padding-left: 10pt;
+	}
+
+	input[type="text"],
+	input[type="email"] {
+		width: 100%;
+	}
+
+	.comment-form-cookies-consent {
+		font-size: $font-size-s;
+	}
+}
+
 
 .bypostauthor {
 	display: block;
+	margin-top: $spacing-vertical;
+}
+
+@media (min-width: 600px) {
+
+	.comment-form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		& > * {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.comment-form-author,
+		.comment-form-email {
+			width: 48%;
+		}
+
+	}
 }

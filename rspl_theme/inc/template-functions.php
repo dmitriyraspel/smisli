@@ -44,3 +44,19 @@ function rspl_theme_excerpt_more() {
 	return '...';
 }
 add_filter( 'excerpt_more', 'rspl_theme_excerpt_more' );
+
+
+/**
+ * Remove field "Site" from comment_form.
+ *
+ * @param array $fields
+ *
+ * @return array
+ */
+function rspl_theme_comment_form_default_fields( $fields ) {
+	
+	unset( $fields['url'] );
+	
+	return $fields;
+}
+add_filter( 'comment_form_default_fields', 'rspl_theme_comment_form_default_fields' );
