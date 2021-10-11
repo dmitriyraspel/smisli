@@ -194,3 +194,29 @@ if ( ! function_exists( 'rspl_theme_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+/**
+ * Pagination
+*/
+if ( ! function_exists( 'rspl_theme_the_posts_navigation' ) ) {
+	/**
+	 * Documentation for function.
+	 */
+	function rspl_theme_the_posts_navigation() {
+		the_posts_pagination(
+			array(
+				'mid_size'  => 2,
+				'prev_text' => sprintf(
+					'%s <span class="nav-prev-text">%s</span>',
+					rspl_theme_get_icon_svg( 'chevron_left', 19 ),
+					__( 'Newer posts', 'rspl_theme' )
+				),
+				'next_text' => sprintf(
+					'<span class="nav-next-text">%s</span> %s',
+					__( 'Older posts', 'rspl_theme' ),
+					rspl_theme_get_icon_svg( 'chevron_right', 19 )
+				),
+			)
+		);
+	}
+}

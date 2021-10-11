@@ -1,22 +1,39 @@
-// Other navigation
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
+// posts-navigation
+.navigation.pagination {
+	@include container-content;
+	margin-top: $spacing-vertical*2;
+	// margin-bottom: $spacing-vertical;
 
 	.nav-links {
 		display: flex;
-	}
+		justify-content: space-between;
 
-	.nav-previous {
-		flex: 1 0 50%;
-	}
+		& > * {
+			color: $text;
+			text-decoration: none;
+			font-size: $font-size;
+			margin-left: 1em;
+			margin-right: 1em;
 
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			&.prev {
+				margin-right: auto;
+			}
+			&.next {
+				margin-left: auto;
+				.svg-icon {
+					margin-right: 0;
+				}
+			}
+			&.current {
+				border-bottom: 1px solid $primary;
+			}
+		}
+		
 	}
 }

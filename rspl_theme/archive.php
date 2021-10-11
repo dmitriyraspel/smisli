@@ -35,7 +35,7 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			rspl_theme_the_posts_navigation();
 
 		else :
 
