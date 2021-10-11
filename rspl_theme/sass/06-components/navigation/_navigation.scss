@@ -31,7 +31,7 @@
 				}
 			}
 			&.current {
-				border-bottom: 1px solid $primary;
+				opacity: 0.7;
 			}
 		}
 		
@@ -65,7 +65,8 @@
 	}
 	.nav-title {
 		display: block;
-		color: $text-dark;
+		color: $text;
+		font-weight: $bold;
 		// font-size: $font-size-l;
 	}
 }

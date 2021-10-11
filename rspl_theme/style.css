@@ -1422,7 +1422,7 @@ body.primary-navigation-open .primary-menu-container,
 }
 
 .navigation.pagination .nav-links > *.current {
-  border-bottom: 1px solid #e16a36;
+  opacity: 0.7;
 }
 
 .navigation.post-navigation {
@@ -1461,7 +1461,8 @@ body.primary-navigation-open .primary-menu-container,
 
 .navigation.post-navigation .nav-title {
   display: block;
-  color: #111;
+  color: #666;
+  font-weight: 700;
 }
 
 .social-navigation > ul {
