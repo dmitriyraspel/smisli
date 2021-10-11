@@ -1883,6 +1883,12 @@ a.read-more {
   margin: 0 0 1.5em;
 }
 
+.widget a {
+  text-decoration: none;
+  color: #666;
+  border-bottom: 1px dotted #e16a36;
+}
+
 .widget select {
   max-width: 100%;
 }

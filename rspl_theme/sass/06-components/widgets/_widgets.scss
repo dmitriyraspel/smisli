@@ -1,6 +1,12 @@
 .widget {
 	margin: 0 0 1.5em;
 
+	a {
+		text-decoration: none;
+		color: $text;
+		border-bottom: 1px dotted $primary;
+	}
+
 	// Make sure select elements fit in widgets.
 	select {
 		max-width: 100%;
