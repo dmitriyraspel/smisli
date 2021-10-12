@@ -12,9 +12,18 @@
  * @return array
  */
 function rspl_theme_body_classes( $classes ) {
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
+
+	if ( is_singular() ) {
+		// Adds `singular` to singular pages.
+		$classes[] = 'singular';
+	} else {
+		// Adds `hfeed` to non singular pages.
 		$classes[] = 'hfeed';
+	}
+
+	// Add body class if page has full-width content.
+	if ( is_page_template( array( 'templates/template-full-width.php' ) ) ) {
+		$classes[] = 'has-full-width-content';
 	}
 
 	// Adds a class of no-sidebar when there is no sidebar present.
