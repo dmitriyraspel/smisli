@@ -1666,6 +1666,10 @@ button.menu-toggle.active .burger__inner::after {
   transition: bottom 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.2s 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+.page {
+  position: relative;
+}
+
 .sticky {
   display: block;
 }
