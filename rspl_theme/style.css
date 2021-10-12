@@ -1849,7 +1849,8 @@ a.read-more {
 }
 
 .comment-form input[type="text"],
-.comment-form input[type="email"] {
+.comment-form input[type="email"],
+.comment-form input[type="url"] {
   width: 100%;
 }
 

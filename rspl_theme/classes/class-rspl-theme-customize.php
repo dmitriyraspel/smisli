@@ -106,9 +106,9 @@ if ( ! class_exists( 'RSPL_Theme_Customize' ) ) {
 				)
 			);
 
-			// Enable Header Search.
+			// Remove field "URL" from Comment form.
 			$wp_customize->add_setting(
-				'enable_header_search',
+				'remove_comment_field_url',
 				array(
 					'capability'        => 'edit_theme_options',
 					'default'           => true,
@@ -117,12 +117,12 @@ if ( ! class_exists( 'RSPL_Theme_Customize' ) ) {
 			);
 
 			$wp_customize->add_control(
-				'enable_header_search',
+				'remove_comment_field_url',
 				array(
 					'type'     => 'checkbox',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'Show search in header & mobile-nav', 'rspl_theme' ),
+					'label'    => __( 'Remove field "URL" from Comment form', 'rspl_theme' ),
 				)
 			);
 
