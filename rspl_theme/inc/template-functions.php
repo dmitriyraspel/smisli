@@ -23,7 +23,7 @@ function rspl_theme_body_classes( $classes ) {
 
 	// Add body class if page has full-width content.
 	if ( is_page_template( array( 'templates/template-full-width.php' ) ) ) {
-		$classes[] = 'has-full-width-content';
+		$classes[] = 'rspl-no-post-thumbnail rspl-no-entry-title';
 	}
 
 	// Adds a class of no-sidebar when there is no sidebar present.
