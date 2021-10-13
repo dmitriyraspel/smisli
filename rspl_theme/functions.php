@@ -185,8 +185,8 @@ function rspl_theme_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here to appear in your header.', 'rspl_theme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 
@@ -197,8 +197,8 @@ function rspl_theme_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'rspl_theme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 
@@ -209,8 +209,8 @@ function rspl_theme_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here to appear in your before header.', 'rspl_theme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title screen-reader-text">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h3 class="widget-title screen-reader-text">',
+			'after_title'   => '</h3>',
 		)
 	);
 
@@ -221,8 +221,8 @@ function rspl_theme_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'rspl_theme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 }
