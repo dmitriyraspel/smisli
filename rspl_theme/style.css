@@ -1481,6 +1481,7 @@ body.primary-navigation-open .primary-menu-container,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .social-navigation > ul > li {
@@ -1515,6 +1516,7 @@ body.primary-navigation-open .primary-menu-container,
   fill: #e16a36;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+  margin: 0;
 }
 
 .social-navigation > ul a:hover, .social-navigation > ul a:focus {
@@ -1891,7 +1893,6 @@ a.read-more {
 .widget a {
   text-decoration: none;
   color: #666;
-  border-bottom: 1px dotted #e16a36;
 }
 
 .widget select {
@@ -1991,17 +1992,51 @@ a.read-more {
 
 /* Footer */
 .site-footer {
-  padding: 1em;
+  padding-top: 20px;
+  background: #15256b;
+  color: #fff;
+}
+
+.site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5,
+.site-footer h6, .site-footer a, .site-footer p {
+  color: #fff;
+}
+
+.site-footer ul, .site-footer ol, .site-footer li {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5em;
+}
+
+.site-footer .social-navigation {
+  padding: 20px 0;
 }
 
 .site-footer .social-navigation ul {
   overflow-x: auto;
 }
 
+.site-footer .social-navigation a {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.site-footer .social-navigation a svg {
+  fill: #fff;
+}
+
+.site-footer .social-navigation a:hover svg, .site-footer .social-navigation a:focus svg {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .site-info {
-  margin-top: 20px;
+  padding: 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
+  background-color: #0033ED;
+  color: #fff;
 }
 
 .site-info a {
@@ -2012,8 +2047,43 @@ a.read-more {
   display: inline-block;
 }
 
-.site-info .sep {
-  color: #e16a36;
+.footer-widget-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 12px;
+}
+
+.footer-widget-area .widget {
+  width: 48%;
+}
+
+@media (min-width: 999px) {
+  .footer-widget-area .widget {
+    width: 24%;
+  }
+}
+
+.footer-widget-area .widget > * {
+  max-width: 100%;
+}
+
+.footer-widget-area .widget-title {
+  font-size: 18px;
+}
+
+@media (min-width: 600px) {
+  .footer-widget-area {
+    font-size: 16px;
+  }
+  .footer-widget-area .widget-title {
+    font-size: unset;
+  }
 }
 
 /*--------------------------------------------------------------

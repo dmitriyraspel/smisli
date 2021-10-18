@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     & > li {
       position: relative;
@@ -30,6 +31,7 @@
       svg {
         fill: $color__social-link;
         transition: $base-transition;
+        margin: 0;
       }
 
       &:hover,
