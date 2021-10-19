@@ -1,5 +1,5 @@
 // Colors
-$primary: #e16a36;
+$primary: #15256b;
 $secondary: #4641FF;
 $accent: #06d19c;
 $primary-dark: darken($primary,8%);
@@ -73,14 +73,15 @@ $button-line-height: 1.5;
 $button-color: #fff;
 $button-color-hover: #fff;
 $button-border-color: $primary;
-$button-border-color-hover: $primary-dark;
+$button-border-color-hover: darken($button-border-color,8%);
 $button-background-color: $primary;
-$button-background-color-hover: $primary-dark;
-$button-border-radius: 6px;
+$button-background-color-hover: darken($button-border-color,8%);
+$button-border-radius: 100px;
 $button-padding: 8px 16px;
 $button-padding-is-style-outline: 6px 14px;
-// $button-padding: 0.5em 1em;
-// $button-padding-is-style-outline: calc(0.5em - 2px) calc(1em - 2px);
+
+$button-padding-vertical: 8px;
+$button-padding-horizontal: 16px;
 
 // Forms
 $input-font-size: $font-size;

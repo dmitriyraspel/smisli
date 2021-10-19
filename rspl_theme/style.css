@@ -540,7 +540,7 @@ body {
 
 hr,
 .wp-block-separator {
-  background-color: #e16a36;
+  background-color: #15256b;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
@@ -602,17 +602,17 @@ table {
 }
 
 a {
-  color: #e16a36;
+  color: #15256b;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
 a:visited {
-  color: #e6845a;
+  color: #1c318d;
 }
 
 a:hover, a:focus, a:active {
-  color: #cf551f;
+  color: #0e1949;
 }
 
 a:focus {
@@ -638,11 +638,11 @@ input[type="submit"] {
   line-height: 1.5;
   font-weight: 400;
   color: #fff;
-  background-color: #e16a36;
-  border: 1px solid #e16a36;
+  background-color: #15256b;
+  border: 1px solid #15256b;
   padding: 8px 16px;
   margin-bottom: 1.5em;
-  border-radius: 6px;
+  border-radius: 100px;
   text-decoration: none;
   -webkit-transition: 0.7s;
   transition: 0.7s;
@@ -655,8 +655,8 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   color: #fff;
-  background-color: #cf551f;
-  border-color: #cf551f;
+  background-color: #0e1949;
+  border-color: #0e1949;
 }
 
 .button__accent {
@@ -727,7 +727,7 @@ input[type="submit"]:hover {
   left: 2px;
   width: 20px;
   height: 20px;
-  background: #e16a36;
+  background: #15256b;
 }
 
 form {
@@ -780,7 +780,7 @@ textarea {
      -moz-appearance: none;
           appearance: none;
   display: inline-block;
-  border: 1px solid #eeac8f;
+  border: 1px solid #2642c0;
   width: 280px;
   max-width: 100%;
   color: #666;
@@ -811,7 +811,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  border-color: #cf551f;
+  border-color: #0e1949;
   outline: 0;
   background-color: #ffffff;
   color: #111;
@@ -826,7 +826,7 @@ textarea {
 
 select {
   display: block;
-  border: 1px solid #eeac8f;
+  border: 1px solid #2642c0;
   width: 280px;
   max-width: 100%;
   color: #666;
@@ -947,8 +947,8 @@ select::-ms-expand {
 
 [type="radio"]:checked + label:after {
   border-radius: 50%;
-  border: 1px solid #e16a36;
-  background-color: #e16a36;
+  border: 1px solid #15256b;
+  background-color: #15256b;
   z-index: 0;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
@@ -1050,8 +1050,8 @@ select::-ms-expand {
  */
 .wp-block-button__link {
   color: #fff;
-  background-color: #e16a36;
-  border-radius: 6px;
+  background-color: #15256b;
+  border-radius: 100px;
   font-size: 16px;
   padding: 8px 16px;
 }
@@ -1061,7 +1061,15 @@ select::-ms-expand {
 }
 
 .is-style-outline > .wp-block-button__link:not(.has-text-color) {
-  color: #e16a36;
+  color: #15256b;
+}
+
+.entry-content .wp-block-button__link {
+  padding: 12px 24px;
+}
+
+.entry-content .is-style-outline > .wp-block-button__link {
+  padding: 10px 22px;
 }
 
 .alignleft {
@@ -1210,7 +1218,7 @@ button.menu-toggle {
 .burger .burger__inner,
 .burger .burger__inner::before,
 .burger .burger__inner::after {
-  background: #e16a36;
+  background: #15256b;
   width: 24px;
   height: 2px;
   position: absolute;
@@ -1350,7 +1358,7 @@ button.menu-toggle.active .burger__inner::after {
   display: block;
   width: 8px;
   height: 2px;
-  background-color: #e16a36;
+  background-color: #15256b;
 }
 
 .primary-navigation > div > .menu-wrapper li .sub-menu-toggle::before {
@@ -1442,7 +1450,7 @@ button.menu-toggle.active .burger__inner::after {
   .primary-navigation a::after {
     content: "";
     display: block;
-    border-bottom: solid 1px #e16a36;
+    border-bottom: solid 1px #15256b;
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -1602,7 +1610,7 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   width: 36px;
   height: 36px;
   padding: 0;
-  color: #e16a36;
+  color: #15256b;
   border-radius: 50%;
   overflow: hidden;
   -webkit-transition: 0.7s;
@@ -1612,14 +1620,14 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 }
 
 .social-navigation > ul a svg {
-  fill: #e16a36;
+  fill: #15256b;
   -webkit-transition: 0.7s;
   transition: 0.7s;
   margin: 0;
 }
 
 .social-navigation > ul a:hover, .social-navigation > ul a:focus {
-  color: #cf551f;
+  color: #0e1949;
   opacity: 1;
 }
 
@@ -1661,7 +1669,7 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   margin: 0 0 1.5em;
 }
 
-.widget a {
+.widget a:not(.wp-block-button__link) {
   text-decoration: none;
   color: #666;
 }
@@ -1957,7 +1965,7 @@ a.read-more {
 .comments-area a {
   color: #666;
   text-decoration: none;
-  border-bottom: 1px solid #e16a36;
+  border-bottom: 1px solid #15256b;
 }
 
 .comments-area .comments-title,

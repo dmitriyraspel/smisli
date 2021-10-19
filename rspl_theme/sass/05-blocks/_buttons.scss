@@ -7,15 +7,26 @@
   background-color: $button-background-color;
   border-radius: $button-border-radius;
   font-size: $button-font-size;
-  padding: $button-padding;
+  padding: $button-padding-vertical $button-padding-horizontal;
 }
 
 .is-style-outline {
   & > .wp-block-button__link {
-    padding: $button-padding-is-style-outline;
+    padding: $button-padding-vertical - 2 $button-padding-horizontal - 2;
 
     &:not(.has-text-color) {
       color: $button-border-color;
+    }
+  }
+}
+
+.entry-content {
+  .wp-block-button__link {
+    padding: $button-padding-vertical*1.5 $button-padding-horizontal*1.5;
+  }
+  .is-style-outline {
+    & > .wp-block-button__link {
+      padding: ($button-padding-vertical*1.5) - 2 ($button-padding-horizontal*1.5) - 2;
     }
   }
 }
