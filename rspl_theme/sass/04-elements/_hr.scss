@@ -4,6 +4,6 @@ hr,
 	border: 0;
 	height: 1px;
 	margin-bottom: $block-spacing-vertical;
-	width: $containerMax;
+	width: var(--alignwide-width);
 	max-width: 100%;
 }

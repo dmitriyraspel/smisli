@@ -8,15 +8,15 @@
 @mixin container {
 	margin-left: auto;
 	margin-right: auto;
-	width: $containerWidth;
-	max-width: $containerMax;
+	width: var(--responsive--alignwide-width);
+	max-width: var(--alignwide-width);
 }
 
 @mixin container-content {
 	margin-left: auto;
 	margin-right: auto;
-	width: $containerWidth;
-	max-width: $content-width;
+	width: var(--responsive--aligndefault-width);
+	max-width: var(--aligndefault-width);
 }
 
 // Column width with margin

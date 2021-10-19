@@ -14,13 +14,15 @@ Text Domain: rspl_theme
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 :root {
-  --container-width: min(calc(100vw - 30px), 90%);
-  --container-max: 1180px;
+  --aligndefault-width: 720px;
+  --alignwide-width: 1180px;
+  --responsive--aligndefault-width: min(calc(100vw - 30px), var(--aligndefault-width) );
+  --responsive--alignwide-width: min(calc(100vw - 30px), var(--alignwide-width) );
 }
 
 @media (min-width: 1440px) {
   :root {
-    --container-max: 1400px;
+    --alignwide-width: 1400px;
   }
 }
 
@@ -405,15 +407,15 @@ img, svg {
 }
 
 .container {
-  width: var(--container-width);
-  max-width: var(--container-max);
+  width: var(--responsive--alignwide-width);
+  max-width: var(--alignwide-width);
   margin: 0 auto;
   position: relative;
 }
 
 .content-container {
-  width: var(--container-width);
-  max-width: 720px;
+  width: var(--responsive--aligndefault-width);
+  max-width: var(--aligndefault-width);
   margin-left: auto;
   margin-right: auto;
 }
@@ -544,7 +546,7 @@ hr,
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
-  width: var(--container-max);
+  width: var(--alignwide-width);
   max-width: 100%;
 }
 
@@ -1099,8 +1101,7 @@ select::-ms-expand {
 .entry-summary > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator) {
   margin-left: auto;
   margin-right: auto;
-  width: var(--container-width);
-  max-width: 720px;
+  max-width: var(--responsive--aligndefault-width);
 }
 
 .entry-content > *:not(.alignfull),
@@ -1113,13 +1114,13 @@ select::-ms-expand {
 .alignwide {
   margin-left: auto;
   margin-right: auto;
-  width: var(--container-width);
-  max-width: var(--container-max);
+  max-width: var(--responsive--alignwide-width);
   position: relative;
 }
 
 .alignfull {
   max-width: 100%;
+  clear: both;
 }
 
 /*--------------------------------------------------------------
@@ -1489,8 +1490,8 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 .navigation.pagination {
   margin-left: auto;
   margin-right: auto;
-  width: var(--container-width);
-  max-width: 720px;
+  width: var(--responsive--aligndefault-width);
+  max-width: var(--aligndefault-width);
   margin-top: 40px;
 }
 
@@ -1538,8 +1539,8 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 .navigation.post-navigation {
   margin-left: auto;
   margin-right: auto;
-  width: var(--container-width);
-  max-width: 720px;
+  width: var(--responsive--aligndefault-width);
+  max-width: var(--aligndefault-width);
   margin-top: 40px;
 }
 
@@ -1876,8 +1877,8 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 .page-header {
   margin-left: auto;
   margin-right: auto;
-  width: var(--container-width);
-  max-width: 720px;
+  width: var(--responsive--aligndefault-width);
+  max-width: var(--aligndefault-width);
 }
 
 .entry-title,
@@ -1889,8 +1890,8 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 .post-thumbnail {
   margin-left: auto;
   margin-right: auto;
-  width: var(--container-width);
-  max-width: 720px;
+  width: var(--responsive--aligndefault-width);
+  max-width: var(--aligndefault-width);
 }
 
 .post-thumbnail-inner {
@@ -1938,8 +1939,8 @@ a.read-more {
 .search-no-results .page-content {
   margin-left: auto;
   margin-right: auto;
-  width: var(--container-width);
-  max-width: 720px;
+  width: var(--responsive--aligndefault-width);
+  max-width: var(--aligndefault-width);
 }
 
 .search-results .page-header {
@@ -1950,8 +1951,8 @@ a.read-more {
 .comments-area {
   margin-left: auto;
   margin-right: auto;
-  width: var(--container-width);
-  max-width: 720px;
+  width: var(--responsive--aligndefault-width);
+  max-width: var(--aligndefault-width);
   max-width: 600px;
   margin-top: 40px;
 }
@@ -2252,7 +2253,7 @@ a.read-more {
 
 @media (min-width: 999px) {
   .desktop-container {
-    max-width: var(--container-max);
+    max-width: var(--alignwide-width);
   }
 }
 

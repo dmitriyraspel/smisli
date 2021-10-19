@@ -24,7 +24,9 @@
 
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator),
 .entry-summary > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator) {
-	@include container-content;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: var(--responsive--aligndefault-width);
 }
 
 .entry-content > *:not(.alignfull),
@@ -32,20 +34,16 @@
 	margin-top: $spacing-vertical;
 	margin-bottom: $spacing-vertical;
 }
-// .entry-content > *:first-child {
-// 	margin-top: 0;
-// }
-// .entry-content > *:last-child {
-// 	margin-bottom: 0;
-// }
 
 /* Wide */
-
 .alignwide {
-	@include container;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: var(--responsive--alignwide-width);
 	position: relative;
 }
 
 .alignfull {
 	max-width: 100%;
+	clear: both;
 }
