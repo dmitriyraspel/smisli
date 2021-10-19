@@ -1,7 +1,7 @@
 .widget {
 	margin: 0 0 1.5em;
 
-	a {
+	a:not(.wp-block-button__link) {
 		text-decoration: none;
 		color: $text;
 		// border-bottom: 1px dotted $primary;
