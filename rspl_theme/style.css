@@ -2161,6 +2161,10 @@ a.read-more {
   }
 }
 
+.footer-widget-area .widget a {
+  color: #fff;
+}
+
 .footer-widget-area .widget > * {
   max-width: 100%;
 }
@@ -2282,6 +2286,10 @@ a.label {
   height: 25px;
   line-height: 25px;
   font-size: 0.9em;
+}
+
+.bottom-dotted {
+  border-bottom: 1px dotted #15256b;
 }
 
 .font-normal {

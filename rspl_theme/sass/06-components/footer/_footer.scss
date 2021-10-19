@@ -87,6 +87,10 @@
     @include desktop {
       width: 24%;
     }
+
+    a {
+      color: #fff;
+    }
     
     & > * {
       max-width: 100%;

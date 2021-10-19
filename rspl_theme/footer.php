@@ -48,7 +48,7 @@ $footer_wrapper_classes .= has_nav_menu( 'footer' ) ? ' has-footer-menu' : '';
 			<span class="sep"> | </span>
 			<?php
 			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'By %2$s', 'rspl_theme' ), 'rspl_theme', '<a class="theme-author" href="http://raspel.ru">Raspel</a>' );
+			printf( esc_html__( 'By %2$s', 'rspl_theme' ), 'rspl_theme', '<a target="_blank" class="theme-author" href="http://raspel.ru">Raspel</a>' );
 			?>
 			
 		</div><!-- .site-info -->
