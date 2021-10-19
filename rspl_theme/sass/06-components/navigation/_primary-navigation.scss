@@ -1,6 +1,6 @@
 .primary-navigation {
-  display: block;
-	width: 100%;
+  // display: none;
+	// width: 100%;
 
   ul,
   li {
@@ -18,36 +18,53 @@
   }
 
   .primary-menu-container {
-    max-height: 0px;
-    overflow: hidden;
+    position: fixed;
+    top: -99px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100vh;
+    padding: 100px 20px 20px;
+    background: $background;
     transition: $base-transition;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
+  ////////
 
   > div > .menu-wrapper {
     margin: 0;
     padding: 1em;
     padding-bottom: 60px;
+    // For mobile open
+    display: none;
     
     li {
       position: relative;
       // padding: 0.5em 1em 0px 1em;
 
+      a {
+        padding-right: 1.2em;
+      }
+
       .sub-menu {
         padding-left: 1em;
+        max-height: 1px;
+        overflow: hidden;
+        transition: $base-transition;
       }
 
       .sub-menu-toggle {
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 20px;
-        height: 100%;
         padding: 0;
         margin: 0;
+        top: 8px;
+        right: 0;
         background-color: transparent;
+        width: 24px;
+        height: 24px;
         border: none;
-        /* Don't show small screen */
-        display: none;
 
         &::before,
         &::after {
@@ -67,21 +84,37 @@
           right: 3px;
         }
       }
-    } 
+      &.sub-menu-open {
+        .sub-menu {
+          max-height: 1000px;
+        }
+        .sub-menu-toggle {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    
+
   }
 }
 
 @media (min-width: $primary-nav-breakpoint) {
   .primary-navigation {
-    @include container;
+    display: block;
+    margin-top: 2em;
 
     .primary-menu-container {
-      max-height: 1000px;
-      overflow: initial;
+      position: relative;
+      padding: 0;
+      visibility: visible;
+      top: initial;
+      overflow-y: initial;
+      overflow-x: initial;
+      background: transparent;
     }
     
     > div > .menu-wrapper {
-      padding: 1em 0;
+      padding: 0px 0 10px 0;
       display: flex;
       justify-content: center;
 
@@ -94,12 +127,16 @@
 
         .sub-menu-toggle {
           display: block;
+          top: 6px;
+          width: 19px;
+          height: 19px;
         }
 
         .sub-menu {
           position: absolute;
           top: calc(100% - 10px);
-          left: 0;
+          // left: 0;
+          right: 0;
           padding-left: 0;
           min-width: max-content;
           background-color: $primary-nav-submenu-background;
@@ -107,6 +144,7 @@
           transition: $base-transition;
           opacity: 0;
           visibility: hidden;
+          max-height: 1000px;
         }
         
         /* Submenu active */
@@ -144,19 +182,26 @@
         }
       }
     }
-    // .current_page_item > a,
-    // .current-menu-item > a {
-    //   &::after {
-    //     transform: scaleX(1);
-    //   }
-    // }
   }
 }
 
-/* Menu active */
-body.primary-navigation-open,
-.toggled {
-  .primary-menu-container {
-    max-height: 1000px;
+body.primary-navigation-open {
+  .site {
+    max-height: 100vh;
+    overflow-y: hidden;
+  }
+  
+  .primary-navigation {
+    display: block;
+
+    .primary-menu-container {
+      z-index: 50;
+      visibility: visible;
+      top: 0;
+    }
+
+    > div > .menu-wrapper {
+      display: block;
+    }
   }
 }

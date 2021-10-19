@@ -20,7 +20,17 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-primary-menu' : '';
 
 	<div class="container header-inner">
 
-		<?php get_template_part( 'template-parts/header/site-branding' ); ?>
+		
+
+      <?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+        <div class="widget-area header-widget-area">
+            <?php dynamic_sidebar( 'sidebar-3' ); ?>
+        </div><!-- .header-widget-area -->
+      <?php endif; ?>
+
+    <?php get_template_part( 'template-parts/header/site-branding' ); ?>
+
+    <?php get_template_part( 'template-parts/navigation/site-nav' ); ?>
 
 		<button id="primary-menu-toggle" class="menu-toggle" aria-controls="primary-menu-list" aria-expanded="false">
       <span class="screen-reader-text"><?php esc_html_e( 'Primary Menu', 'rspl_theme' ); ?></span>
@@ -30,8 +40,9 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-primary-menu' : '';
       </div>
     </button>
 
+
 	</div><!-- /.header-inner -->
 	
-	<?php get_template_part( 'template-parts/navigation/site-nav' ); ?>
+	
 
 </header><!-- #masthead -->

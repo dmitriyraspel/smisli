@@ -99,9 +99,9 @@ $label-font-size: 14px;
 
 // Site-branding
 $branding-logo-max-width-mobile: 120px;
-$branding-logo-max-height-mobile: 60px;
-$branding-logo-max-width-pc: 300px;
-$branding-logo-max-height-pc: 100px;
+$branding-logo-max-height-mobile: 50px;
+$branding-logo-max-width-pc: 240px;
+$branding-logo-max-height-pc: 80px;
 $site-title-font-size-mobile: 24px;
 $site-title-font-size-pc: 28px;
 $site-title-color: $text-dark;
@@ -114,7 +114,7 @@ $primary-nav-color-link-hover: $text;
 $primary-nav-font-size-mobile: $font-size-l;
 $primary-nav-font-size-pc: $font-size-m;
 $primary-nav-submenu-background: $background;
-$primary-nav-breakpoint: $tablet-width;
+$primary-nav-breakpoint: $desktop-width;
 
 // Other variables
 $radius: 20px;

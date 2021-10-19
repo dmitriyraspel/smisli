@@ -6,17 +6,20 @@
   transition: $base-transition;
 
   .header-inner {
-    display: flex;
-    justify-content: space-between;
-    // align-items: center;
     margin-top: 1em;
     margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site-branding {
+    display: flex;
   }
 
   .site-logo {
-    margin-right: 1em;
-    // display: inline-block;
+    margin-right: $spacing-horizontal;
   }
+
   .custom-logo-link {
     text-decoration: none;
     margin: 0;
@@ -27,17 +30,21 @@
   }
 
   .custom-logo {
-    width: 100%;
+    width: auto;
     height: auto;
     max-width: $branding-logo-max-width-mobile;
     max-height: $branding-logo-max-height-mobile;
   }
 
-  .site-branding {
-    max-width: calc( 100% - 40px);
+  .site-title-wrapper {
+    display: none;
+    @media (min-width: 600px) {
+      display: inline-block;
+    }
   }
+
   .site-title {
-    margin: 0 1em 0 0;
+    margin: 0 $spacing-horizontal 0 0;
     max-width: 100%;
     font-size: $site-title-font-size-mobile;
     line-height: 1.5;
@@ -50,16 +57,18 @@
   } 
   .site-description {
     font-size: $site-tagline-font-size;
-    margin: 0 1em 0 0;
+    margin: 0 $spacing-horizontal 0 0;
   }
 
-  .site-title-wrapper {
-    // display: inline-block;
-  }
 
 }
+
 @media (min-width: $primary-nav-breakpoint) {
   .site-header {
+
+    .header-inner {
+      align-items: flex-end;
+    }
     .custom-logo {
       max-width: $branding-logo-max-width-pc;
       max-height: $branding-logo-max-height-pc;
@@ -67,5 +76,11 @@
     .site-title {
       font-size: $site-title-font-size-pc;
     }
+  }
+
+  .header-widget-area {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
