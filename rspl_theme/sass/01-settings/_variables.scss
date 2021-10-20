@@ -13,6 +13,10 @@ $line: #eee;
 $success: #06d19c;
 $error: tomato;
 
+$color__headings: $primary;
+$color__social-link: $primary;
+$color__social-link-hover: $primary-dark;
+
 $color__background-screen: #f1f1f1;
 $color__background-hr: $primary;
 $color__background-pre: #eee;
@@ -24,8 +28,6 @@ $color__link-visited: lighten($color__link,8%);
 $color__link-hover: darken($color__link,8%);
 $color__border-abbr: #666;
 
-$color__social-link: $primary;
-$color__social-link-hover: $primary-dark;
 
 $font-size-xs: 12px;
 $font-size-s: 14px;
@@ -37,7 +39,8 @@ $font-size-xxxl: 48px;
 $font-h3: 1.44em;
 
 // Typography
-$font: 'Roboto', sans-serif;
+// $font: 'Roboto', sans-serif;
+$font: 'Montserrat', sans-serif;
 $font__system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 $font-size: 16px;
 $line-height: 1.7;

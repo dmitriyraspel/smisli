@@ -11,8 +11,8 @@
 	
 	a {
 		color: $text;
-		text-decoration: none;
-		border-bottom: 1px solid $primary;
+		// text-decoration: none;
+		border-bottom: 1px dotted $color__social-link;
 	}
 
 	.comments-title,

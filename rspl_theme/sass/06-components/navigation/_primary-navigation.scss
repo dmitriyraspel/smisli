@@ -101,7 +101,8 @@
 @media (min-width: $primary-nav-breakpoint) {
   .primary-navigation {
     display: block;
-    margin-top: 2em;
+    // margin-top: 2em;
+    margin-top: 40px;
 
     .primary-menu-container {
       position: relative;
@@ -145,6 +146,7 @@
           opacity: 0;
           visibility: hidden;
           max-height: 1000px;
+          z-index: -1;
         }
         
         /* Submenu active */
@@ -155,6 +157,7 @@
             visibility: visible;
             opacity: 1;
             top: 100%;
+            z-index: 10;
           }
 
           .sub-menu-toggle {

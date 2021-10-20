@@ -21,8 +21,7 @@
 .entry-title,
 .entry-title a {
 	text-decoration: none;
-	color: $text-dark;
-
+	// color: $text-dark;
 }
 
 .post-thumbnail {
@@ -35,8 +34,8 @@
 }
 
 a.read-more {
-	text-decoration: none;
-	color: $text-dark;
+	// text-decoration: none;
+	// color: $text-dark;
 }
 
 .entry-meta,
@@ -44,7 +43,7 @@ a.read-more {
   
 	a {
     color: $text;
-    text-decoration: none;
+    // text-decoration: none;
   }
 	& > *:not(:last-child) {
 		margin-right: 1em;
