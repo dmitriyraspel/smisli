@@ -143,21 +143,21 @@ function rspl_theme_fonts_url() {
 	// <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
 	
 	/* Translators: If there are characters in your language that are not
-	* supported by Raleway, translate this to 'off'. Do not translate
+	* supported by Montserrat, translate this to 'off'. Do not translate
 	* into your own language.
 	*/
-	$raleway = esc_html_x( 'off', 'Raleway font: on or off', 'rspl_theme' );
-	// <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+	$montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'rspl_theme' );
+	// <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
 
-	if ( 'off' !== $roboto || 'off' !== $raleway ) {
+	if ( 'off' !== $roboto || 'off' !== $montserrat ) {
 		$font_families = array();
 
 		if ( 'off' !== $roboto ) {
 			$font_families[] = 'Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700'; 
 		}
 
-		if ( 'off' !== $raleway ) {
-			$font_families[] = 'Raleway:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700';
+		if ( 'off' !== $montserrat ) {
+			$font_families[] = 'Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700';
 		}
 
 		$query_args = array(
