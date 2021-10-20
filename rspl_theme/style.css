@@ -1110,6 +1110,14 @@ select::-ms-expand {
   margin-bottom: 20px;
 }
 
+.entry-content > *:first-child:not(.alignfull) {
+  margin-top: 40px;
+}
+
+.entry-content > *:last-child:not(.alignfull) {
+  margin-bottom: 40px;
+}
+
 /* Wide */
 .alignwide {
   margin-left: auto;

@@ -35,6 +35,13 @@
 	margin-bottom: $spacing-vertical;
 }
 
+.entry-content > *:first-child:not(.alignfull) {
+	margin-top: $spacing-vertical*2;
+}
+.entry-content > *:last-child:not(.alignfull) {
+	margin-bottom: $spacing-vertical*2;
+}
+
 /* Wide */
 .alignwide {
 	margin-left: auto;
