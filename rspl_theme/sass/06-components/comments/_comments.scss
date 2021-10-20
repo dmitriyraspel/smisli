@@ -93,6 +93,9 @@
 			margin-top: 0;
 			margin-bottom: 0;
 		}
+		& > input[type="submit"] {
+			padding: $button-padding-vertical*1.5 $button-padding-horizontal*1.5;
+		}
 	}
 
 	.comment-notes {

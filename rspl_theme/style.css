@@ -2050,6 +2050,10 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   margin-bottom: 0;
 }
 
+.comment-form p > input[type="submit"] {
+  padding: 12px 24px;
+}
+
 .comment-form .comment-notes {
   font-size: 12px;
 }
