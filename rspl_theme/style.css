@@ -644,7 +644,7 @@ input[type="submit"] {
   border: 1px solid #15256b;
   padding: 8px 16px;
   margin-bottom: 1.5em;
-  border-radius: 100px;
+  border-radius: 30px;
   text-decoration: none;
   -webkit-transition: 0.7s;
   transition: 0.7s;
@@ -790,7 +790,7 @@ textarea {
   font-weight: 400;
   line-height: 1.5;
   padding: 8px 10px;
-  border-radius: 100px;
+  border-radius: 30px;
   background-color: #f7f7f7;
   margin-bottom: 1.5em;
   -webkit-transition: 0.7s;
@@ -824,7 +824,7 @@ textarea {
   resize: none;
   min-height: 8em;
   outline: 0;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 select {
@@ -838,7 +838,7 @@ select {
   line-height: 1.5;
   padding: 8px 10px;
   margin-bottom: 1.5em;
-  border-radius: 100px;
+  border-radius: 30px;
   background-color: #f7f7f7;
   outline: 0;
   -webkit-transition: 0.7s;
@@ -1054,7 +1054,7 @@ select::-ms-expand {
 .wp-block-button__link {
   color: #fff;
   background-color: #15256b;
-  border-radius: 100px;
+  border-radius: 30px;
   font-size: 16px;
   padding: 8px 16px;
 }

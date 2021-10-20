@@ -74,7 +74,7 @@ $button-border-color: $primary;
 $button-border-color-hover: darken($button-border-color,8%);
 $button-background-color: $primary;
 $button-background-color-hover: darken($button-border-color,8%);
-$button-border-radius: 100px;
+$button-border-radius: 30px;
 $button-padding: 8px 16px;
 $button-padding-is-style-outline: 6px 14px;
 
@@ -90,9 +90,9 @@ $input-border-color: lighten($primary, 20%);
 $input-border-color-hover: $primary-dark;
 $input-background: $background-alt;
 $input-background-hover: $background;
-$input-border-radius: 100px;
+$input-border-radius: 30px;
 $input-padding: 8px 10px;
-$textarea-border-radius: 20px;
+$textarea-border-radius: 30px;
 
 $label-color: $text;
 $label-font-size: 14px;
