@@ -824,6 +824,7 @@ textarea {
   resize: none;
   min-height: 8em;
   outline: 0;
+  border-radius: 20px;
 }
 
 select {

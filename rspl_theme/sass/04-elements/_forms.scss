@@ -69,6 +69,7 @@ textarea {
 	resize: none;
 	min-height: 8em;
 	outline: 0;
+	border-radius: $textarea-border-radius;
 }
 
 // Select
