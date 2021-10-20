@@ -18,6 +18,9 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
   --alignwide-width: 1180px;
   --responsive--aligndefault-width: min(calc(100vw - 30px), var(--aligndefault-width) );
   --responsive--alignwide-width: min(calc(100vw - 30px), var(--alignwide-width) );
+  --leyka-font-main: 'Montserrat', sans-serif;
+  --leyka-color-main: #15256b;
+  --leyka-color-main-inactive: #15256b7c;
 }
 
 @media (min-width: 1440px) {
@@ -2194,6 +2197,76 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   }
 }
 
+/* Front page */
+.front-page-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 760px) {
+  .front-page-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width: 999px) {
+  .front-page-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.front-page-section-2_p {
+  min-height: 80px;
+}
+
+.front-page-events {
+  background-color: #edf6fe;
+}
+
+.front-page-events .wp-block-latest-posts {
+  margin-top: 30px;
+}
+
+.front-page-section-cta .leyka-pf-star {
+  margin-top: 0;
+}
+
+.front-page-section-projects {
+  background-color: #edf6fe;
+  margin-top: 30px;
+}
+
+.front-page-section-projects .wp-block-latest-posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.front-page-section-projects .wp-block-latest-posts li {
+  width: 300px;
+  max-width: 100vw;
+  padding: 10px;
+}
+
+.front-page-section-projects .wp-block-latest-posts li .wp-block-latest-posts__featured-image {
+  margin-bottom: 20px;
+  height: 200px;
+}
+
+.front-page-section-projects .wp-block-latest-posts li a {
+  font-size: 20px;
+}
+
+.front-page-section-partners-img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
@@ -2306,6 +2379,22 @@ a.label {
 
 .font-normal {
   font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* Dark mode */

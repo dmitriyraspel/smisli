@@ -1,0 +1,68 @@
+.frontpage-hero-slider {}
+
+.front-page-section {
+  padding-top: $spacing-vertical;
+  padding-bottom: $spacing-vertical;
+  @media (min-width: $tablet-width) {
+    padding-top: $spacing-vertical*2;
+    padding-bottom: $spacing-vertical*2;
+  }
+  @media (min-width: $desktop-width) {
+    padding-top: $spacing-vertical*3;
+    padding-bottom: $spacing-vertical*3;
+  }
+}
+.front-page-section-1 {
+  
+}
+.front-page-section-2 {
+}
+.front-page-section-2_p {
+  min-height: 80px;
+}
+
+.front-page-events {
+  background-color: #edf6fe;
+  .wp-block-latest-posts {
+    margin-top: 30px;
+  }
+}
+.front-page-section-cta {
+  .leyka-pf-star {
+    margin-top: 0;
+  }
+}
+
+.front-page-section-projects {
+  // border: 1px solid red;
+  background-color: #edf6fe;
+  margin-top: 30px;
+  
+  .wp-block-latest-posts {
+    display: flex;
+    justify-content: center;
+    li {
+      width: 300px;
+      
+      max-width: 100vw;
+      padding: 10px;
+      
+      .wp-block-latest-posts__featured-image {
+        margin-bottom: $spacing-vertical;
+        height: 200px;
+      }
+      a {
+        font-size: $font-size-l;
+      }
+    }
+  }
+}
+
+.front-page-section-partners {}
+.front-page-section-partners-img {
+  max-width: 100px;
+  max-height: 100px;
+}
+.front-page-section-partners-columns {
+
+}
