@@ -126,30 +126,26 @@ if ( ! class_exists( 'RSPL_Theme_Customize' ) ) {
 				)
 			);
 
-			// Display full content or excerpts on the blog and archives.
+			// Display the_post_navigation on Campaign page.
 			$wp_customize->add_setting(
-				'display_excerpt_or_full_post',
+				'display_post_navigation_campaign_page',
 				array(
 					'capability'        => 'edit_theme_options',
-					'default'           => 'excerpt',
-					'sanitize_callback' => function( $value ) {
-						return 'excerpt' === $value || 'full' === $value ? $value : 'excerpt';
-					},
+					'default'           => false,
+					'sanitize_callback' => array( __CLASS__, 'sanitize_checkbox' ),
 				)
 			);
 
 			$wp_customize->add_control(
-				'display_excerpt_or_full_post',
+				'display_post_navigation_campaign_page',
 				array(
-					'type'    => 'radio',
-					'section' => 'options',
-					'label'   => esc_html__( 'On Archive Pages, posts show:', 'rspl_theme' ),
-					'choices' => array(
-						'excerpt' => esc_html__( 'Summary', 'rspl_theme' ),
-						'full'    => esc_html__( 'Full text', 'rspl_theme' ),
-					),
+					'type'     => 'checkbox',
+					'section'  => 'options',
+					'priority' => 10,
+					'label'    => __( 'Display Post navigation on Campaign page', 'rspl_theme' ),
 				)
 			);
+
 		}
 
 		/**
