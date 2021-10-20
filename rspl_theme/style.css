@@ -1551,6 +1551,7 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   width: var(--responsive--aligndefault-width);
   max-width: var(--aligndefault-width);
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .navigation.post-navigation .nav-links {
@@ -1882,8 +1883,9 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 }
 
 .entry-header,
-.entry-footer,
-.page-header {
+.page-header,
+.entry-meta,
+.entry-footer {
   margin-left: auto;
   margin-right: auto;
   width: var(--responsive--aligndefault-width);
@@ -1923,6 +1925,11 @@ a.read-more {
 .entry-meta > *:not(:last-child),
 .entry-footer > *:not(:last-child) {
   margin-right: 1em;
+}
+
+.entry-footer {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .entry-date:not(.published) {

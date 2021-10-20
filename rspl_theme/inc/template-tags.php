@@ -138,8 +138,6 @@ if ( ! function_exists( 'rspl_theme_entry_footer' ) ) :
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
 	function rspl_theme_entry_footer() {
-
-		rspl_theme_category_list();
 		
 		if ( is_singular() ) {
 			rspl_theme_tag_list();

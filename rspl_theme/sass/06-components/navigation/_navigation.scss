@@ -41,6 +41,7 @@
 .navigation.post-navigation {
 	@include container-content;
 	margin-top: $spacing-vertical*2;
+	margin-bottom: $spacing-vertical*2;
 
 	.nav-links {
 		display: flex;

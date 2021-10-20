@@ -12,8 +12,9 @@
 // }
 
 .entry-header,
-.entry-footer,
-.page-header {
+.page-header,
+.entry-meta,
+.entry-footer {
 	@include container-content;
 }
 
@@ -48,6 +49,11 @@ a.read-more {
 	& > *:not(:last-child) {
 		margin-right: 1em;
 	}
+}
+
+.entry-footer {
+	margin-top: $spacing-vertical;
+	margin-bottom: $spacing-vertical;
 }
 
 .entry-date:not(.published) {
