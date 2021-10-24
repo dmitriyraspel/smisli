@@ -193,12 +193,15 @@ body.primary-navigation-open {
     max-height: 100vh;
     overflow-y: hidden;
   }
+  button.slick-arrow {
+    display: none;
+  }
   
   .primary-navigation {
     display: block;
 
     .primary-menu-container {
-      z-index: 50;
+      z-index: 99;
       visibility: visible;
       top: 0;
     }
