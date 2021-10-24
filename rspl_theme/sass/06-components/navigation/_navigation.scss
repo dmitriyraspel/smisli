@@ -72,3 +72,17 @@
 		// font-size: $font-size-l;
 	}
 }
+
+// Slider
+.slick-slider {
+  .slick-dots {
+    button,
+    button:hover,
+    button:focus {
+      background: #818181;
+    }
+    li.slick-active button {
+      background: $primary;
+    }
+  }
+}
