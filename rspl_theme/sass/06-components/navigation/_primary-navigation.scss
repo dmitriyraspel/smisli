@@ -128,7 +128,7 @@
 
         .sub-menu-toggle {
           display: block;
-          top: 6px;
+          top: 9px;
           width: 19px;
           height: 19px;
         }
@@ -192,9 +192,6 @@ body.primary-navigation-open {
   .site {
     max-height: 100vh;
     overflow-y: hidden;
-  }
-  button.slick-arrow {
-    display: none;
   }
   
   .primary-navigation {
