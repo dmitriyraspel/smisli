@@ -113,10 +113,11 @@ $site-tagline-font-size: $font-size;
 
 // Primary navigation
 $burger-color: $primary;
-$primary-nav-color-link: $text;
-$primary-nav-color-link-hover: $text;
-$primary-nav-font-size-mobile: $font-size-l;
-$primary-nav-font-size-pc: $font-size-m;
+$primary-nav-color-link: $primary;
+$primary-nav-color-link-hover: $primary;
+$primary-nav-font-size-mobile: 22px;
+$primary-nav-font-size-pc: 18px;
+$primary-nav-font-weight: $bold;
 $primary-nav-submenu-background: $background;
 $primary-nav-breakpoint: $desktop-width;
 

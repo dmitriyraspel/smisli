@@ -1337,8 +1337,9 @@ button.menu-toggle.active .burger__inner::after {
 
 .primary-navigation a {
   text-decoration: none;
-  color: #666;
-  font-size: 20px;
+  color: #15256b;
+  font-size: 22px;
+  font-weight: 700;
   display: block;
   padding: 0.5em 1em 0px 1em;
 }
@@ -1455,7 +1456,7 @@ button.menu-toggle.active .burger__inner::after {
   }
   .primary-navigation > div > .menu-wrapper li .sub-menu-toggle {
     display: block;
-    top: 6px;
+    top: 9px;
     width: 19px;
     height: 19px;
   }
@@ -1488,7 +1489,7 @@ button.menu-toggle.active .burger__inner::after {
             transform: rotate(180deg);
   }
   .primary-navigation a {
-    font-size: 16px;
+    font-size: 18px;
     padding: 0.5em 1em;
   }
   .primary-navigation a::after {
@@ -1503,7 +1504,7 @@ button.menu-toggle.active .burger__inner::after {
     transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   }
   .primary-navigation a:hover {
-    color: #666;
+    color: #15256b;
   }
   .primary-navigation a:hover::after {
     -webkit-transform: scaleX(1);
@@ -1514,10 +1515,6 @@ button.menu-toggle.active .burger__inner::after {
 body.primary-navigation-open .site {
   max-height: 100vh;
   overflow-y: hidden;
-}
-
-body.primary-navigation-open button.slick-arrow {
-  display: none;
 }
 
 body.primary-navigation-open .primary-navigation {
@@ -1834,7 +1831,7 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   width: 100%;
   max-width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 20;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
@@ -1919,7 +1916,7 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   .header-widget-area {
     position: absolute;
     top: 0;
-    right: 133px;
+    right: 150px;
   }
 }
 
@@ -1939,6 +1936,12 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   margin-right: auto;
   width: var(--responsive--aligndefault-width);
   max-width: var(--aligndefault-width);
+}
+
+.single .entry-header,
+.single .post-thumbnail {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .entry-title,
