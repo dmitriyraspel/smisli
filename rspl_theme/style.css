@@ -1214,6 +1214,10 @@ select::-ms-expand {
   margin: 0;
 }
 
+.header-widget-area .wp-block-buttons .wp-block-button .wp-block-button__link {
+  background-color: #F6108B;
+}
+
 /* Menu toggle */
 button.menu-toggle {
   display: -webkit-inline-box;
@@ -1915,7 +1919,7 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   .header-widget-area {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 133px;
   }
 }
 
@@ -2237,10 +2241,6 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 
 /* Front page */
 /* Front Page */
-.front-page-hero-slider {
-  background-color: #f1f1f0;
-}
-
 .front-page-hero-slider button.slick-arrow {
   top: calc((100vh - 50px) / 2);
 }
