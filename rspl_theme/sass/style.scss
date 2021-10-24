@@ -32,7 +32,9 @@
 // @import "05-utilities/blocks";
   
 /* Alignments */
+  @import "05-blocks/p";
   @import "05-blocks/buttons";
+  @import "05-blocks/wp-block-media-text";
   @import "05-blocks/alignments";
 
 
@@ -73,7 +75,7 @@
 @import "06-components/footer/footer";
 
 /* Front page */
-@import "06-components/content/front-page";
+// @import "06-components/content/front-page";
 
 
 /*--------------------------------------------------------------
