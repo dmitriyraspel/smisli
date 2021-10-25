@@ -1846,6 +1846,9 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .site-header .site-branding {
@@ -1872,6 +1875,13 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   height: auto;
   max-width: 120px;
   max-height: 50px;
+}
+
+@media (min-width: 760px) {
+  .site-header .custom-logo {
+    max-width: 240px;
+    max-height: 56px;
+  }
 }
 
 .site-header .site-title-wrapper {

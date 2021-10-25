@@ -10,6 +10,7 @@
     margin-bottom: 1em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .site-branding {
@@ -34,6 +35,10 @@
     height: auto;
     max-width: $branding-logo-max-width-mobile;
     max-height: $branding-logo-max-height-mobile;
+    @media (min-width: $tablet-width) {
+      max-width: $branding-logo-max-width-tablet;
+      max-height: $branding-logo-max-height-tablet;
+    }
   }
 
   .site-title-wrapper {
