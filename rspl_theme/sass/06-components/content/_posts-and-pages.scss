@@ -18,6 +18,12 @@
 	@include container-content;
 }
 
+.single .entry-header,
+.single .post-thumbnail {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
 .entry-title,
 .entry-title a {
 	text-decoration: none;
