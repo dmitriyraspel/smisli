@@ -2312,14 +2312,17 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   padding: 15px;
 }
 
-.front-page-section-projects .front-page-section-projects-list .wp-block-latest-posts__featured-image img {
-  border-radius: 6px;
+.front-page-section-projects .front-page-section-projects-list li > a {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.front-page-section-projects .front-page-section-projects-list .wp-block-latest-posts__featured-image {
   margin-bottom: 1em;
 }
 
-.front-page-section-projects .front-page-section-projects-list a {
-  font-size: 20px;
-  font-weight: 700;
+.front-page-section-projects .front-page-section-projects-list .wp-block-latest-posts__featured-image img {
+  border-radius: 6px;
 }
 
 .front-page-section-projects .front-page-section-projects-list time {
@@ -2341,7 +2344,20 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
             justify-content: space-between;
   }
   .front-page-section-projects .front-page-section-projects-list li {
-    width: 30%;
+    width: 33%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .front-page-section-projects .front-page-section-projects-list li > a {
+    margin-top: 1em;
+  }
+  .front-page-section-projects .front-page-section-projects-list .wp-block-latest-posts__featured-image {
+    margin-bottom: auto;
   }
 }
 
@@ -2438,6 +2454,9 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .front-page-section-events .front-page-section-events-list li {
     width: 33%;
@@ -2450,10 +2469,22 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
             flex-direction: column;
   }
   .front-page-section-events .front-page-section-events-list li > a {
-    margin-top: 1em;
+    margin-top: 24px;
   }
   .front-page-section-events .front-page-section-events-list .wp-block-latest-posts__featured-image {
     margin-bottom: auto;
+    position: relative;
+    width: 360px;
+    max-width: 100%;
+    height: 360px;
+    max-height: 100%;
+  }
+  .front-page-section-events .front-page-section-events-list .wp-block-latest-posts__featured-image img {
+    position: absolute;
+    width: auto;
+    max-height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
