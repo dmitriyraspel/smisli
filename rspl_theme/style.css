@@ -19,8 +19,8 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
   --responsive--aligndefault-width: min(calc(100vw - 30px), var(--aligndefault-width) );
   --responsive--alignwide-width: min(calc(100vw - 30px), var(--alignwide-width) );
   --leyka-font-main: 'Montserrat', sans-serif;
-  --leyka-color-main: #15256b;
-  --leyka-color-main-inactive: #15256b7c;
+  --leyka-color-main: #F6108B;
+  --leyka-color-main-inactive: #f897cb;
 }
 
 @media (min-width: 1440px) {
@@ -2295,6 +2295,155 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   }
   .front-page-hero-slider .slick-dots {
     bottom: 20px;
+  }
+}
+
+.front-page-section-projects .front-page-section-projects-list li {
+  padding: 15px;
+}
+
+.front-page-section-projects .front-page-section-projects-list .wp-block-latest-posts__featured-image img {
+  border-radius: 6px;
+  margin-bottom: 1em;
+}
+
+.front-page-section-projects .front-page-section-projects-list a {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.front-page-section-projects .front-page-section-projects-list time {
+  padding-left: 1em;
+  margin-top: 1em;
+  position: relative;
+}
+
+@media (min-width: 760px) {
+  .front-page-section-projects {
+    margin-top: 30px;
+  }
+  .front-page-section-projects .front-page-section-projects-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .front-page-section-projects .front-page-section-projects-list li {
+    width: 30%;
+  }
+}
+
+.front-page-section-campaign-cards {
+  margin-top: 30px;
+}
+
+.front-page-section-campaign-cards .front-page-section-campaign-card {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  padding-bottom: 80px;
+}
+
+.front-page-section-campaign-cards .front-page-section-campaign-card .wp-block-media-text__media {
+  display: block;
+  position: relative;
+  width: 400px;
+  max-width: 100%;
+}
+
+.front-page-section-campaign-cards .front-page-section-campaign-card .wp-block-media-text__content {
+  position: absolute;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 80%;
+  left: 10%;
+  bottom: 0;
+}
+
+@media (min-width: 760px) {
+  .front-page-section-campaign-cards .wp-block-group__inner-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .front-page-section-campaign-cards .front-page-section-campaign-card {
+    width: 30%;
+  }
+}
+
+.front-page-section-how-to-help .front-page-section-how-to-help-title {
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.front-page-section-how-to-help h4 {
+  font-weight: 700;
+}
+
+.front-page-section-how-to-help .front-page-section-how-to-help-link a {
+  color: #F6108B;
+}
+
+.front-page-section-events .front-page-section-events-list li {
+  padding: 15px;
+}
+
+.front-page-section-events .front-page-section-events-list li > a {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.front-page-section-events .front-page-section-events-list li time {
+  padding-left: 1em;
+  margin-top: 1em;
+  position: relative;
+}
+
+.front-page-section-events .front-page-section-events-list .wp-block-latest-posts__featured-image {
+  margin-bottom: 1em;
+}
+
+.front-page-section-events .front-page-section-events-list .wp-block-latest-posts__featured-image img {
+  border-radius: 6px;
+}
+
+@media (min-width: 760px) {
+  .front-page-section-events {
+    margin-top: 30px;
+  }
+  .front-page-section-events .front-page-section-events-title {
+    font-weight: 700;
+  }
+  .front-page-section-events .front-page-section-events-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .front-page-section-events .front-page-section-events-list li {
+    width: 33%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .front-page-section-events .front-page-section-events-list li > a {
+    margin-top: 1em;
+  }
+  .front-page-section-events .front-page-section-events-list .wp-block-latest-posts__featured-image {
+    margin-bottom: auto;
   }
 }
 
