@@ -21,6 +21,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
   --leyka-font-main: 'Montserrat', sans-serif;
   --leyka-color-main: #F6108B;
   --leyka-color-main-inactive: #f897cb;
+  --leyka-color-gray-superlight: #ababab;
 }
 
 @media (min-width: 1440px) {
@@ -2445,6 +2446,12 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   .front-page-section-events .front-page-section-events-list .wp-block-latest-posts__featured-image {
     margin-bottom: auto;
   }
+}
+
+/* Leyka */
+.leyka-tpl-star-form .section .section__fields .donor__oferta input:checked + label:before,
+.leyka-screen-form .section .section__fields .donor__oferta input:checked + label:before {
+  border-color: transparent;
 }
 
 /*--------------------------------------------------------------
