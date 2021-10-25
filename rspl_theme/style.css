@@ -20,7 +20,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
   --responsive--alignwide-width: min(calc(100vw - 30px), var(--alignwide-width) );
   --leyka-font-main: 'Montserrat', sans-serif;
   --leyka-color-main: #F6108B;
-  --leyka-color-main-inactive: #f897cb;
+  --leyka-color-main-inactive: #f6108b8a;
   --leyka-color-gray-superlight: #ababab;
 }
 
