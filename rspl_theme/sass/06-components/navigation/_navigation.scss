@@ -1,8 +1,8 @@
 // posts-navigation
 .navigation.pagination {
 	@include container-content;
-	margin-top: $spacing-vertical*2;
-	// margin-bottom: $spacing-vertical;
+	margin-top: $spacing-vertical*1.5;
+	margin-bottom: $spacing-vertical*1.5;
 
 	.nav-links {
 		display: flex;
@@ -40,25 +40,16 @@
 
 .navigation.post-navigation {
 	@include container-content;
-	margin-top: $spacing-vertical*2;
-	margin-bottom: $spacing-vertical*2;
+	margin-top: $spacing-vertical*1.5;
+	margin-bottom: $spacing-vertical*1.5;
 
-	.nav-links {
-		display: flex;
-		justify-content: space-between;
-
-		& > *:not(:last-child) {
-			margin-right: 1em;
-		}
+	.nav-previous {
+		margin: 0 0 1em 0;
 	}
 
 	a {
 		text-decoration: none;
 		color: $text;
-	}
-
-	.nav-next {
-		text-align: right;
 	}
 
 	.nav-subtitle {
@@ -67,11 +58,31 @@
 	.nav-title {
 		display: block;
 		color: $color__headings;
-		// color: $text;
 		font-weight: $bold;
-		// font-size: $font-size-l;
 	}
 }
+@media (min-width: $desktop-width) {
+	.navigation.pagination {
+		margin-top: $spacing-vertical*2;
+		margin-bottom: $spacing-vertical*2;
+	}
+
+	.navigation.post-navigation {
+		margin-top: $spacing-vertical*2;
+		margin-bottom: $spacing-vertical*2;
+		.nav-links {
+			display: flex;
+			justify-content: space-between;
+		}
+		.nav-previous {
+			margin: 0 1em 0 0;
+		}
+		.nav-next {
+			text-align: right;
+		}
+	}
+}
+
 
 // Slider
 .slick-slider {
