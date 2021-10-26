@@ -18,6 +18,8 @@
 if ( post_password_required() ) {
 	return;
 }
+
+$rspl_theme_comment_count = get_comments_number();
 ?>
 
 <div id="comments" class="comments-area">
@@ -27,23 +29,17 @@ if ( post_password_required() ) {
 	if ( have_comments() ) :
 		?>
 		<h3 class="comments-title">
-			<?php
-			$rspl_theme_comment_count = get_comments_number();
-			if ( '1' === $rspl_theme_comment_count ) {
+			<?php if ( '1' === $rspl_theme_comment_count ) : ?>
+				<?php esc_html_e( '1 comment', 'rspl_theme' ); ?>
+			<?php else : ?>
+				<?php
 				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'rspl_theme' ),
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
+					/* translators: %s: Comment count number. */
+					esc_html( _nx( '%s comment', '%s comments', $rspl_theme_comment_count, 'Comments title', 'rspl_theme' ) ),
+					esc_html( number_format_i18n( $rspl_theme_comment_count ) )
 				);
-			} else {
-				printf( 
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $rspl_theme_comment_count, 'comments title', 'rspl_theme' ) ),
-					number_format_i18n( $rspl_theme_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
-				);
-			}
-			?>
+				?>
+			<?php endif; ?>
 		</h3><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>

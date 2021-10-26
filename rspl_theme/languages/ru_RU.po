@@ -1,0 +1,218 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rspl_theme 1.0\n"
+"Language-Team: Dmitriy Raspel\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-10-26 00:03+0300\n"
+"PO-Revision-Date: 2021-10-26 03:08+0300\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Domain: rspl_theme\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru_RU\n"
+
+#. Theme Name of the theme
+msgid "rspl_theme"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://raspel.ru/themes"
+msgstr ""
+
+#. Author of the theme
+msgid "Dmitriy Raspel"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://raspel.ru/"
+msgstr ""
+
+#: 404.php:17
+msgid "Oops! Nothing here."
+msgstr "Упс! Тут ничего нет."
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Похоже, что по этому адресу ничего не найдено. Возможно, стоит попробовать "
+"воспользоваться поиском?"
+
+#: comments.php:35
+msgid "1 comment"
+msgstr "1 Комментарий"
+
+#. translators: %s: Comment count number.
+#: comments.php:38
+msgctxt "Comments title"
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] "%s комментарий"
+msgstr[1] "%s комментария"
+msgstr[2] "%s комментариев"
+
+#: comments.php:64
+msgid "Comments are closed."
+msgstr "Обсуждение закрыто."
+
+#: footer.php:40
+msgid "Y"
+msgstr "г"
+
+#: functions.php:53 template-parts/header/site-header.php:36
+msgid "Primary menu"
+msgstr "Основное меню"
+
+#: functions.php:54 template-parts/navigation/social-nav.php:9
+msgid "Social Links menu"
+msgstr "Меню Социальных ссылок"
+
+#: functions.php:55 template-parts/navigation/footer-nav.php:9
+msgid "Footer menu"
+msgstr "Меню подвала сайта"
+
+#: functions.php:183
+msgid "Header"
+msgstr "Шапка сайта"
+
+#: functions.php:185
+msgid "Add widgets here to appear in your header."
+msgstr "Добавьте сюда виджеты для отображения в шапке сайта."
+
+#: functions.php:195
+msgid "Footer"
+msgstr "Подвал сайта"
+
+#: functions.php:197
+msgid "Add widgets here to appear in your footer."
+msgstr "Добавьте сюда виджеты для отображения в подвале сайта."
+
+#: functions.php:207
+msgid "Header-top"
+msgstr "Верх шапки сайта"
+
+#: functions.php:209
+msgid "Add widgets here to appear in your before header."
+msgstr "Добавьте сюда виджеты для отображения перед шаркой сайта."
+
+#: functions.php:219
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:221
+msgid "Add widgets here."
+msgstr "Добавьте сюда виджеты."
+
+#: inc/icon-functions.php:15
+msgid "Open menu"
+msgstr "Открыть меню"
+
+#: header.php:26
+msgid "Skip to content"
+msgstr "Перейти к содержимому"
+
+#: inc/template-tags.php:51
+msgid "Posted by"
+msgstr "Автор"
+
+#: inc/template-tags.php:71
+#, php-format
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Добавить комментарий<span class=\"screen-reader-text\"> on %s</span>"
+
+#: inc/template-tags.php:83 inc/template-tags.php:100
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:89
+msgid "Posted in"
+msgstr "Категория:"
+
+#: inc/template-tags.php:106
+msgid "Tags:"
+msgstr "Метки:"
+
+#: inc/template-tags.php:120 template-parts/content/content-page.php:54
+#: template-parts/content-page.php:54
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Редактировать <span class=\"screen-reader-text\">%s</span>"
+
+#: inc/template-tags.php:210
+msgid "Newer posts"
+msgstr "Следующие:"
+
+#: inc/template-tags.php:214
+msgid "Older posts"
+msgstr "Предыдущие:"
+
+#. translators: %s: search query.
+#: search.php:22
+msgid "Search Results for: %s"
+msgstr "Результат поиска по запросу: %s"
+
+#: single.php:24 single.php:32
+msgid "Previous:"
+msgstr "Предыдущая запись:"
+
+#: single.php:25 single.php:33
+msgid "Next:"
+msgstr "Следующая запись:"
+
+#: template-parts/content/content-none.php:14
+msgid "Nothing here"
+msgstr "Тут ничего нет"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content/content-none.php:24
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Готовы опубликовать свою первую запись? <a href=\"%1$s\">Начните здесь</a>."
+
+#: template-parts/content/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Извините, по вашему запросу ничего не найдено. Попробуйте другие ключевые "
+"слова."
+
+#: template-parts/content/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Похоже, нам не удалось найти то, что вы искали. Попробуйте воспользоваться "
+"поиском."
+
+#: template-parts/content-page.php:25 template-parts/content.php:53
+msgid "Pages:"
+msgstr "Страницы:"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:40
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Читать далее<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: classes/class-rspl-theme-customize.php:72
+msgid "Display Site Title"
+msgstr "Отображать название сайта"
+
+#: classes/class-rspl-theme-customize.php:93
+msgid "Display Site Description"
+msgstr "Отображать подзаголовок сайта"
+
+#: classes/class-rspl-theme-customize.php:103
+msgid "Theme Options"
+msgstr "Опции темы"
+
+#: classes/class-rspl-theme-customize.php:125
+msgid "Remove field \"URL\" from Comment form"
+msgstr "Удалить поле \"Сайт\" из формы комментариев"
+
+#: classes/class-rspl-theme-customize.php:145
+msgid "Display Post navigation on Campaign page"
+msgstr "Отображать пагинацию на страницах Кампании"
