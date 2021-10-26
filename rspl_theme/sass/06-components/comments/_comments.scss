@@ -1,7 +1,8 @@
 .comments-area {
 	@include container-content;
-	max-width: 600px;
-	margin-top: $spacing-vertical*2;
+	// max-width: 600px;
+	margin-top: $spacing-vertical*1.5;
+	margin-bottom: $spacing-vertical*1.5;
 
 	ol {
 		list-style: none;
@@ -87,6 +88,7 @@
 
 		textarea {
 			margin-bottom: 0;
+			line-height: 1.1;
 		}
 
 		& > input {
@@ -140,5 +142,12 @@
 			width: 48%;
 		}
 
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.comments-area {
+		margin-top: $spacing-vertical*2;
+		margin-bottom: $spacing-vertical*2;
 	}
 }
