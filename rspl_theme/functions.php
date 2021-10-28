@@ -246,7 +246,7 @@ add_action( 'after_setup_theme', 'rspl_theme_content_width', 0 );
  */
 function rspl_theme_scripts() {
 	// Enqueue Google fonts
-	wp_enqueue_style( 'rspl_theme-fonts', rspl_theme_fonts_url(), array(), null );
+	// wp_enqueue_style( 'rspl_theme-fonts', rspl_theme_fonts_url(), array(), null );
 
 	// wp_enqueue_style( 'rspl_theme-style', get_stylesheet_uri(), array(), _S_VERSION );
 	// wp_style_add_data( 'rspl_theme-style', 'rtl', 'replace' );

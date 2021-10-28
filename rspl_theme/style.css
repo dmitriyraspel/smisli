@@ -26,7 +26,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
   --alignwide-width: 1180px;
   --responsive--aligndefault-width: min(calc(100vw - 30px), var(--aligndefault-width) );
   --responsive--alignwide-width: min(calc(100vw - 30px), var(--alignwide-width) );
-  --leyka-font-main: 'Montserrat', sans-serif;
+  --leyka-font-main: 'Roboto', sans-serif;
   --leyka-color-main: #F6108B;
   --leyka-color-main-inactive: #f6108b8a;
   --leyka-color-gray-superlight: #ababab;
@@ -466,7 +466,7 @@ input,
 select,
 optgroup,
 textarea {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 p {
@@ -799,7 +799,7 @@ textarea {
   width: 280px;
   max-width: 100%;
   color: #666;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.5;
   padding: 8px 10px;
@@ -846,7 +846,7 @@ select {
   width: 280px;
   max-width: 100%;
   color: #666;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.5;
   padding: 8px 10px;
