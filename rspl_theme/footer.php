@@ -33,11 +33,11 @@ $footer_wrapper_classes .= has_nav_menu( 'footer' ) ? ' has-footer-menu' : '';
 				?>
 			
 		</div><!-- /.container -->
-
+		
 		<div class="site-info">
 			
 			<span class="site-name"><?php echo get_bloginfo( 'name' ); ?></span>
-			<span class="copyright">&copy; <?php echo esc_html( date_i18n( __( 'Y', 'rspl_theme' ) ) ); ?></span>
+			<span class="copyright">&copy; <?php echo date('Y'); ?></span>
 			
 			<?php
 			//if ( function_exists( 'the_privacy_policy_link' ) ) {
