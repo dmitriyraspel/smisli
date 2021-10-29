@@ -22,7 +22,7 @@ function rspl_theme_body_classes( $classes ) {
 	}
 
 	// Add body class if page has full-width content.
-	if ( is_page_template( array( 'templates/template-full-width.php' ) ) ) {
+	if ( is_page_template( array( 'templates/template-without-title-and-thumbnail.php' ) ) ) {
 		$classes[] = 'rspl-no-post-thumbnail rspl-no-entry-title';
 	}
 

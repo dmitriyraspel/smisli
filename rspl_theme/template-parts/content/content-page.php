@@ -13,7 +13,7 @@
 
 	<?php 
 	// Don't show Title for Front page
-	if ( is_front_page() || is_page_template( array( 'templates/template-full-width.php' ) ) ) : ?>
+	if ( is_front_page() ) : ?>
 
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title screen-reader-text">', '</h1>' ); ?>

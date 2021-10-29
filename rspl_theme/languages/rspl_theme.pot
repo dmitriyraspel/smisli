@@ -27,6 +27,10 @@ msgstr ""
 msgid "https://raspel.ru/"
 msgstr ""
 
+#. Template Name of the theme
+msgid "Template without title and thumbnail"
+msgstr ""
+
 #: 404.php:17
 msgid "Oops! Nothing here."
 msgstr ""
