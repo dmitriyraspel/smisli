@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Template without title and thumbnail
- * Template Post Type: post, page
+ * Template Post Type: post, page, leyka_campaign
  * 
  * @link https://developer.wordpress.org/themes/template-files-section/page-template-files/
  *

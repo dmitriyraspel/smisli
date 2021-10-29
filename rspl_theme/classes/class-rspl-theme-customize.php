@@ -128,7 +128,7 @@ if ( ! class_exists( 'RSPL_Theme_Customize' ) ) {
 
 			// Display the_post_navigation on Campaign page.
 			$wp_customize->add_setting(
-				'display_post_navigation_campaign_page',
+				'display_post_navigation',
 				array(
 					'capability'        => 'edit_theme_options',
 					'default'           => false,
@@ -137,12 +137,12 @@ if ( ! class_exists( 'RSPL_Theme_Customize' ) ) {
 			);
 
 			$wp_customize->add_control(
-				'display_post_navigation_campaign_page',
+				'display_post_navigation',
 				array(
 					'type'     => 'checkbox',
 					'section'  => 'options',
 					'priority' => 10,
-					'label'    => __( 'Display Post navigation on Campaign page', 'rspl_theme' ),
+					'label'    => __( 'Display Post navigation', 'rspl_theme' ),
 				)
 			);
 

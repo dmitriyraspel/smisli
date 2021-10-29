@@ -210,7 +210,7 @@ msgid "Remove field \"URL\" from Comment form"
 msgstr ""
 
 #: classes/class-rspl-theme-customize.php:145
-msgid "Display Post navigation on Campaign page"
+msgid "Display Post navigation"
 msgstr ""
 
 
