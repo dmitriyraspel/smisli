@@ -2282,6 +2282,11 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 }
 
 /* Front page */
+.front-page-hero-slider {
+  max-height: calc(100vh - 100px);
+  overflow: hidden;
+}
+
 .front-page-hero-slider button.slick-arrow {
   top: calc((100vh - 50px) / 2);
 }
@@ -2289,6 +2294,11 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 .front-page-hero-slider .slick-dots {
   margin: 0;
   padding: 0 0 20px;
+}
+
+.front-page-hero-slider.slick-initialized {
+  max-height: none;
+  overflow: initial;
 }
 
 @media (min-width: 760px) {

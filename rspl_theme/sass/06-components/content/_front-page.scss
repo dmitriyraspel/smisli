@@ -1,12 +1,19 @@
 // ------------ Section Slider ---------------
 .front-page-hero-slider {
   // Slider arrow & dots for this section
+  max-height: calc(100vh - 100px);
+  overflow: hidden;
+
   button.slick-arrow {
     top: calc((100vh - 50px) / 2);
   }
   .slick-dots {
     margin: 0;
     padding: 0 0 20px;
+  }
+  &.slick-initialized {
+    max-height: none;
+    overflow: initial;
   }
 }
 
