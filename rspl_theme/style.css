@@ -26,10 +26,6 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
   --alignwide-width: 1180px;
   --responsive--aligndefault-width: min(calc(100vw - 30px), var(--aligndefault-width) );
   --responsive--alignwide-width: min(calc(100vw - 30px), var(--alignwide-width) );
-  --leyka-font-main: 'Roboto', sans-serif;
-  --leyka-color-main: #F6108B;
-  --leyka-color-main-inactive: #f6108b8a;
-  --leyka-color-gray-superlight: #ababab;
 }
 
 @media (min-width: 1440px) {
@@ -2528,6 +2524,14 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 }
 
 /* Leyka */
+:root {
+  --leyka-font-main: 'Roboto', sans-serif;
+  --leyka-color-main: #F6108B;
+  --leyka-color-main-inactive: #f6108b8a;
+  --leyka-color-gray-superlight: #ababab;
+  --leyka-color-main-second: #f7b1d6;
+}
+
 .leyka-tpl-star-form .section .section__fields .donor__oferta input:checked + label:before,
 .leyka-screen-form .section .section__fields .donor__oferta input:checked + label:before {
   border-color: transparent;
