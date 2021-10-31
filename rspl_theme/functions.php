@@ -296,5 +296,9 @@ require get_template_directory() . '/inc/icon-functions.php';
  */
 require get_template_directory() . '/classes/class-rspl-theme-customize.php';
 
+/**
+ * Block Patterns.
+ */
+require get_template_directory() . '/inc/block-patterns.php';
 
 
