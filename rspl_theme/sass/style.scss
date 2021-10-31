@@ -32,12 +32,13 @@
 @import "04-elements/forms";
 
 /* Blocks */
-// @import "05-utilities/blocks";
+@import "05-blocks/p";
+@import "05-blocks/buttons";
+@import "05-blocks/wp-block-media-text";
+@import "05-blocks/wp-block-latest-posts";
+@import "05-blocks/wp-block-leyka-card";
   
 /* Alignments */
-  @import "05-blocks/p";
-  @import "05-blocks/buttons";
-  @import "05-blocks/wp-block-media-text";
   @import "05-blocks/alignments";
 
 
