@@ -1,0 +1,55 @@
+.rspl-template-left-right {
+  article {
+    @include container;
+    margin-top: $spacing-vertical;
+
+    .post-thumbnail {
+      margin-bottom: $spacing-vertical;
+    }
+    .entry-title {
+      font-size: $font-h2;
+    }
+  }
+  .entry-content > *:first-child {
+    margin-top: 0;
+  }
+}
+@media (min-width: $tablet-width) {
+  .rspl-template-left-right {
+    
+    article {
+      margin-top: $spacing-vertical*1.5;
+
+      .post-thumbnail {
+        float: left;
+        max-width: 48%;
+        margin-right: $spacing-vertical;
+        margin-bottom: 0;
+      }
+      .entry-title {
+        display: initial;
+        // font-size: $font-h2;
+      }
+    }
+
+    .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator) {
+      max-width: var(--responsive--alignwide-width);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .rspl-template-left-right {
+    article {
+      margin-top: $spacing-vertical*2;
+
+      .post-thumbnail {
+        margin-right: $spacing-vertical*1.5;
+      }
+
+      .entry-title {
+        font-size: $font-h1;
+      }
+    }
+  }
+}

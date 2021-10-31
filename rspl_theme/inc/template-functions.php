@@ -26,6 +26,11 @@ function rspl_theme_body_classes( $classes ) {
 		$classes[] = 'rspl-no-post-thumbnail rspl-no-entry-title';
 	}
 
+	// Add body class if page has full-width content.
+	if ( is_page_template( array( 'templates/template-left-right.php' ) ) ) {
+		$classes[] = 'rspl-template-left-right';
+	}
+
 	// Adds a class of no-sidebar when there is no sidebar present.
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'no-sidebar';
