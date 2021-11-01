@@ -59,15 +59,19 @@ input[type="submit"] {
 // Utility classes
 .button-l {
 	width: 160px;
+	max-width: 100%;
 }
 .button-xl {
 	width: 280px;
+	max-width: 100%;
 }
 .button-text {
 	width: $text-container;
+	max-width: 100%;
 }
 .button-max {
 	width: 100%;
+	max-width: 100%;
 }
 
 .button-icon,
