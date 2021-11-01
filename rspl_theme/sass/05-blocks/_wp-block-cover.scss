@@ -1,0 +1,21 @@
+.wp-block-cover__inner-container {
+  
+  &> *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--responsive--aligndefault-width);
+  }
+  
+  &> *:not(.alignfull) {
+    margin-top: $spacing-vertical;
+    margin-bottom: $spacing-vertical;
+  }
+
+  &> *:first-child {
+    margin-top: 0;
+  }
+
+  &> *:last-child {
+    margin-bottom: 0;
+  }
+}
