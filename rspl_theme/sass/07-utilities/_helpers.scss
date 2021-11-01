@@ -65,3 +65,17 @@ a.label {
 	font-family: Pribambas;
 	letter-spacing: -0.015em;
 }
+.mobile-100,
+input.mobile-100 {
+	@media (max-width: $tablet-width) {
+		width: 100%;
+	}
+}
+.tablet-flex {
+	@media (min-width: $tablet-width) {
+		display: flex;
+	}
+}
+.flex-wrap {
+	flex-wrap: wrap;
+}
