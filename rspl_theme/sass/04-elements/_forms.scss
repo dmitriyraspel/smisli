@@ -1,16 +1,5 @@
 form {
 	margin-bottom: $block-spacing-vertical;
-	
-	.double {
-		display: flex;
-		justify-content: space-between;
-		.half {
-			max-width: 48%;
-		}
-	}
-}
-
-.form {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -274,3 +263,21 @@ select {
 	}
 }
 
+form {
+	.double {
+		.half {
+			width: 100%;
+		}
+
+		@media (min-width: $tablet-width) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		
+			.half {
+				width: 48%;
+				max-width: 48%;
+			}
+		}
+	}
+}
