@@ -816,6 +816,26 @@ textarea:focus {
   color: #111;
 }
 
+input[type="text"].background-50,
+input[type="email"].background-50,
+input[type="url"].background-50,
+input[type="password"].background-50,
+input[type="search"].background-50,
+input[type="number"].background-50,
+input[type="tel"].background-50,
+input[type="range"].background-50,
+input[type="date"].background-50,
+input[type="month"].background-50,
+input[type="week"].background-50,
+input[type="time"].background-50,
+input[type="datetime"].background-50,
+input[type="datetime-local"].background-50,
+input[type="color"].background-50,
+textarea.background-50 {
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 textarea {
   width: 720px;
   resize: none;
@@ -1028,8 +1048,8 @@ select::-ms-expand {
   height: 18px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid #06d19c;
-  border-bottom: 2px solid #06d19c;
+  border-right: 2px solid #15256b;
+  border-bottom: 2px solid #15256b;
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
   -webkit-backface-visibility: hidden;
@@ -2489,6 +2509,9 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 }
 
 @media (min-width: 760px) {
+  .front-page-hero-slider {
+    margin-top: 30px;
+  }
   .front-page-hero-slider .wp-block-media-text__media {
     position: relative;
     height: 100%;
@@ -2523,6 +2546,9 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 }
 
 @media (min-width: 999px) {
+  .front-page-hero-slider {
+    margin-top: 40px;
+  }
   .front-page-hero-slider .wp-block-media-text__content p {
     font-size: 22px;
   }

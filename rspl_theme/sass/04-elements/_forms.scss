@@ -51,6 +51,10 @@ textarea {
 		background-color: $input-background-hover;
 		color: $input-color-focus;
 	}
+	&.background-50 {
+		border-color: transparent;
+		background-color: rgba(255, 255, 255, 0.5);
+	}
 }
 
 textarea {
@@ -250,8 +254,8 @@ select {
 		width: 10px; height: 18px;
 		border-top: 2px solid transparent;
 		border-left: 2px solid transparent;
-		border-right: 2px solid $success;
-		border-bottom: 2px solid $success;
+		border-right: 2px solid $primary;
+		border-bottom: 2px solid $primary;
 		transform: rotate(40deg);
 		backface-visibility: hidden;
 		transform-origin: 100% 100%;

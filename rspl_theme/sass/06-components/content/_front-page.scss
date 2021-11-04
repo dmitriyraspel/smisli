@@ -19,6 +19,7 @@
 
 @media (min-width: $tablet-width) {
   .front-page-hero-slider {
+    margin-top: 30px;
     .wp-block-media-text__media {
       position: relative;
       height: 100%;
@@ -55,6 +56,7 @@
 
 @media (min-width: $desktop-width) {
   .front-page-hero-slider {
+    margin-top: 40px;
     .wp-block-media-text__content {
       
       p {
