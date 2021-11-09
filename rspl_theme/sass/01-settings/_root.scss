@@ -1,9 +1,15 @@
-:root {    
+:root {
     --aligndefault-width: 720px;
     --alignwide-width: 1180px;
 
     --responsive--aligndefault-width: min(calc(100vw - 30px), var(--aligndefault-width) );
     --responsive--alignwide-width: min(calc(100vw - 30px), var(--alignwide-width) );
+}
+@media (min-width: 760px) {
+    :root {
+        --responsive--aligndefault-width: min(calc(100vw - 60px), var(--aligndefault-width) );
+        --responsive--alignwide-width: min(calc(100vw - 60px), var(--alignwide-width) );
+    }
 }
 
 @media (min-width: 1440px) { // Large Desktops
