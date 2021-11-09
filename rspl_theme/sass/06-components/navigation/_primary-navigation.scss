@@ -190,10 +190,7 @@
 }
 
 body.primary-navigation-open {
-  .site {
-    max-height: 100vh;
-    overflow-y: hidden;
-  }
+  overflow: hidden;
   
   .primary-navigation {
     display: block;
