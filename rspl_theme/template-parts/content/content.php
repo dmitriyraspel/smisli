@@ -20,8 +20,6 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php rspl_theme_post_thumbnail(); ?>
-
 	<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php
