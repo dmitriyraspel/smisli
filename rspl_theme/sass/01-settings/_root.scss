@@ -4,6 +4,9 @@
 
     --responsive--aligndefault-width: min(calc(100vw - 30px), var(--aligndefault-width) );
     --responsive--alignwide-width: min(calc(100vw - 30px), var(--alignwide-width) );
+
+    --heading--font-size-h2: 32px;
+    --heading--font-size-h3: 24px;
 }
 @media (min-width: 760px) {
     :root {
@@ -12,8 +15,17 @@
     }
 }
 
+@media (min-width: 999px) {
+    :root {
+        --heading--font-size-h2: 40px;
+        --heading--font-size-h3: 28px;
+    }
+}
+
 @media (min-width: 1440px) { // Large Desktops
     :root {
         --alignwide-width: 1400px;
+        --heading--font-size-h2: 42px;
+        --heading--font-size-h3: 32px;
     }
 }
