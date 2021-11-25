@@ -26,6 +26,8 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
   --alignwide-width: 1180px;
   --responsive--aligndefault-width: min(calc(100vw - 30px), var(--aligndefault-width) );
   --responsive--alignwide-width: min(calc(100vw - 30px), var(--alignwide-width) );
+  --heading--font-size-h2: 32px;
+  --heading--font-size-h3: 24px;
 }
 
 @media (min-width: 760px) {
@@ -35,9 +37,18 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
   }
 }
 
+@media (min-width: 999px) {
+  :root {
+    --heading--font-size-h2: 40px;
+    --heading--font-size-h3: 28px;
+  }
+}
+
 @media (min-width: 1440px) {
   :root {
     --alignwide-width: 1400px;
+    --heading--font-size-h2: 42px;
+    --heading--font-size-h3: 32px;
   }
 }
 
@@ -505,11 +516,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.728em;
+  font-size: var(--heading--font-size-h2);
 }
 
 h3 {
-  font-size: 1.44em;
+  font-size: var(--heading--font-size-h3);
 }
 
 h4 {
@@ -1256,7 +1267,7 @@ form .double .half {
 }
 
 .wp-block-leyka-card .campaign-title {
-  font-size: 1.44em;
+  font-size: var(--heading--font-size-h3);
 }
 
 .wp-block-leyka-card .progressbar-unfulfilled {
@@ -2142,6 +2153,7 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 .entry-title,
 .entry-title a {
   text-decoration: none;
+  font-size: var(--heading--font-size-h2);
 }
 
 .post-thumbnail {
@@ -2198,7 +2210,7 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 }
 
 .rspl-template-left-right article .entry-title {
-  font-size: 1.728em;
+  font-size: var(--heading--font-size-h2);
 }
 
 .rspl-template-left-right .entry-content > *:first-child {
@@ -2494,16 +2506,35 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   }
 }
 
+/* Leyka */
+:root {
+  --leyka-font-main: 'Roboto', sans-serif;
+  --leyka-color-main: #F6108B;
+  --leyka-color-main-inactive: #f6108b8a;
+  --leyka-color-gray-superlight: #ababab;
+  --leyka-color-main-second: #f7b1d6;
+}
+
+.leyka-tpl-star-form .section .section__fields .donor__oferta input:checked + label:before,
+.leyka-screen-form .section .section__fields .donor__oferta input:checked + label:before {
+  border-color: transparent;
+}
+
+.leyka-shortcode.campaign-card {
+  width: 700px;
+  max-width: 100% !important;
+}
+
 /* Front page */
 @media (min-width: 760px) {
-  .front-page-section {
+  .entry-content > .front-page-section {
     margin-top: 30px;
     margin-bottom: 30px;
   }
 }
 
 @media (min-width: 999px) {
-  .front-page-section {
+  .entry-content > .front-page-section {
     margin-top: 40px;
     margin-bottom: 40px;
   }
@@ -2551,9 +2582,6 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   .front-page-hero-slider .wp-block-media-text__content > * {
     max-width: 440px;
   }
-  .front-page-hero-slider .front-page-hero-slider-title {
-    font-size: 32px;
-  }
   .front-page-hero-slider button.slick-arrow {
     top: 50%;
   }
@@ -2572,12 +2600,32 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   .front-page-hero-slider .wp-block-media-text__content p {
     font-size: 22px;
   }
-  .front-page-hero-slider .front-page-hero-slider-title {
-    font-size: 48px;
-  }
   .front-page-hero-slider .slick-dots {
     bottom: 20px;
   }
+}
+
+.front-page-section .leyka-shortcode.campaign-card {
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.front-page-section .leyka-shortcode.campaign-card .campaign-title {
+  height: 54px;
+  max-height: 54px;
+  overflow: hidden;
+}
+
+.front-page-section .leyka-shortcode.campaign-card .bottom-line .bottom-line-item {
+  margin-top: 16px;
+  width: 100%;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.front-page-section .leyka-shortcode.campaign-card .bottom-line .target-info .funded {
+  font-size: 16px;
 }
 
 .front-page-section-projects .front-page-section-projects-list li {
@@ -2770,14 +2818,14 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 
 .front-page-section-slider-2 .slick-slider .slick-prev {
   background: none;
-  background-image: url(assets/img/arrow-prev-pink.svg);
+  background-image: url(assets/img/arrow-prev-sini.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .front-page-section-slider-2 .slick-slider .slick-next {
   background: none;
-  background-image: url(assets/img/arrow-next-pink.svg);
+  background-image: url(assets/img/arrow-next-sini.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -2788,7 +2836,7 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   }
   .front-page-section-slider-2 .front-page-section-slider-2-slide-title {
     text-align: center;
-    font-size: 38px;
+    font-size: 36px;
     margin-top: 0;
   }
   .front-page-section-slider-2 .front-page-section-slider-2-slide-img {
@@ -2821,18 +2869,33 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
   }
 }
 
-/* Leyka */
-:root {
-  --leyka-font-main: 'Roboto', sans-serif;
-  --leyka-color-main: #F6108B;
-  --leyka-color-main-inactive: #f6108b8a;
-  --leyka-color-gray-superlight: #ababab;
-  --leyka-color-main-second: #f7b1d6;
+.entry-content > .front-page-section-heading-wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-.leyka-tpl-star-form .section .section__fields .donor__oferta input:checked + label:before,
-.leyka-screen-form .section .section__fields .donor__oferta input:checked + label:before {
-  border-color: transparent;
+.entry-content > .front-page-section-heading-wrapper h2 {
+  line-height: 1em;
+}
+
+@media (min-width: 760px) {
+  .entry-content > .front-page-section-heading-wrapper {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+  .entry-content > .front-page-section-heading-wrapper h2 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 999px) {
+  .entry-content > .front-page-section-heading-wrapper {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+  .entry-content > .front-page-section-heading-wrapper h2 {
+    font-size: 64px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -2888,6 +2951,10 @@ body.primary-navigation-open .primary-navigation > div > .menu-wrapper {
 
 .mt-0 {
   margin-top: 0;
+}
+
+.mt-16 {
+  margin-top: 16px;
 }
 
 @media (max-width: 999px) {

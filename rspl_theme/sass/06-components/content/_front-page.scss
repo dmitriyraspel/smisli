@@ -1,4 +1,4 @@
-.front-page-section {
+.entry-content > .front-page-section {
   @media (min-width: $tablet-width) {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -50,7 +50,7 @@
       }
     }
     .front-page-hero-slider-title {
-      font-size: 32px;
+      // font-size: 32px;
     }
     button.slick-arrow {
       top: 50%;
@@ -73,15 +73,48 @@
         font-size: 22px;
       }
     }
-    .front-page-hero-slider-title {
-      font-size: 48px;
-    }
+    // .front-page-hero-slider-title {
+    //   font-size: 42px; //48px;
+    // }
     .slick-dots {
       bottom: 20px;
     }
   }
 }
+// @media (min-width: $huge-width) {
+//   .front-page-hero-slider {
+//     .front-page-hero-slider-title {
+//       font-size: 48px;
+//     }
+//   }
+// }
+// ------------ Section campaign-cards ---------------
+.front-page-section {
 
+  .leyka-shortcode.campaign-card {
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+
+    .campaign-title {
+      height: 54px;
+      max-height: 54px;
+      overflow: hidden;
+    }
+
+    .bottom-line {
+      .bottom-line-item {
+        margin-top: 16px;
+        width: 100%;
+        text-align: center;
+        border-radius: 30px;
+      }
+      .target-info .funded {
+        font-size: 16px;
+      }
+    } 
+  }
+}
 // ------------ Section Projects ---------------
 .front-page-section-projects {
   .front-page-section-projects-list {
@@ -277,13 +310,13 @@
   }
   .slick-slider .slick-prev {
     background: none;
-    background-image: url(assets/img/arrow-prev-pink.svg);
+    background-image: url(assets/img/arrow-prev-sini.svg); 
     background-repeat: no-repeat;
     background-size: contain;
   }
   .slick-slider .slick-next {
     background: none;
-    background-image: url(assets/img/arrow-next-pink.svg);
+    background-image: url(assets/img/arrow-next-sini.svg);
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -296,7 +329,7 @@
     }
     .front-page-section-slider-2-slide-title {
       text-align: center;
-      font-size: 38px;
+      font-size: 36px;
       margin-top: 0;
     }
 
@@ -332,3 +365,29 @@
   }
 }
 
+.entry-content > .front-page-section-heading-wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  h2 {
+    line-height: 1em;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .entry-content > .front-page-section-heading-wrapper {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    h2 {
+      font-size: 48px;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .entry-content > .front-page-section-heading-wrapper {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    h2 {
+      font-size: 64px;
+    }
+  }
+}
