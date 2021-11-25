@@ -103,7 +103,7 @@
   .primary-navigation {
     display: block;
     // margin-top: 2em;
-    margin-top: 40px;
+    // margin-top: 40px;
 
     .primary-menu-container {
       position: relative;
@@ -116,7 +116,8 @@
     }
     
     > div > .menu-wrapper {
-      padding: 0px 0 10px 0;
+      // padding: 0px 0 10px 0;
+      padding: 0;
       display: flex;
       justify-content: center;
 

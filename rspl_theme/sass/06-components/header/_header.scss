@@ -72,7 +72,8 @@
   .site-header {
 
     .header-inner {
-      align-items: flex-end;
+      // align-items: flex-end;
+      align-items: center;
     }
     .custom-logo {
       max-width: $branding-logo-max-width-pc;
@@ -84,8 +85,10 @@
   }
 
   .header-widget-area {
-    position: absolute;
-    top: 0;
-    right: 96px;
+    order: 3;
+    margin-left: 1em;
+    // position: absolute;
+    // top: 0;
+    // right: 96px;
   }
 }
