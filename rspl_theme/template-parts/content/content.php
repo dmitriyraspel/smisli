@@ -23,9 +23,17 @@
 	<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php
-			rspl_theme_posted_on();
-			rspl_theme_category_list();
+
+			if ( get_theme_mod( 'display_posted_on', true ) ) {
+				rspl_theme_posted_on();
+			}
+
+			if ( get_theme_mod( 'display_category_list', true ) ) {
+				rspl_theme_category_list();
+			}
+			
 			?>
+
 		</div><!-- .entry-meta -->
 	<?php endif; ?>
 

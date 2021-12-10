@@ -146,6 +146,46 @@ if ( ! class_exists( 'RSPL_Theme_Customize' ) ) {
 				)
 			);
 
+			// Display posted_on.
+			$wp_customize->add_setting(
+				'display_posted_on',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => false,
+					'sanitize_callback' => array( __CLASS__, 'sanitize_checkbox' ),
+				)
+			);
+
+			$wp_customize->add_control(
+				'display_posted_on',
+				array(
+					'type'     => 'checkbox',
+					'section'  => 'options',
+					'priority' => 10,
+					'label'    => __( 'Display Post date', 'rspl_theme' ),
+				)
+			);
+
+			// Display category_list.
+			$wp_customize->add_setting(
+				'display_category_list',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => false,
+					'sanitize_callback' => array( __CLASS__, 'sanitize_checkbox' ),
+				)
+			);
+
+			$wp_customize->add_control(
+				'display_category_list',
+				array(
+					'type'     => 'checkbox',
+					'section'  => 'options',
+					'priority' => 10,
+					'label'    => __( 'Display category list', 'rspl_theme' ),
+				)
+			);
+
 		}
 
 		/**

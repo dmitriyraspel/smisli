@@ -6,7 +6,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-10-26 00:03+0300\n"
-"PO-Revision-Date: 2021-10-29 19:44+0300\n"
+"PO-Revision-Date: 2021-12-10 20:46+0300\n"
 "X-Generator: Poedit 2.3.1\n"
 "X-Domain: rspl_theme\n"
 "Last-Translator: \n"
@@ -220,3 +220,11 @@ msgstr "Удалить поле \"Сайт\" из формы комментар�
 #: classes/class-rspl-theme-customize.php:145
 msgid "Display Post navigation"
 msgstr "Отображать пагинацию"
+
+#: classes/class-rspl-theme-customize.php:145
+msgid "Display Post date"
+msgstr "Отображать дату публикации"
+
+#: classes/class-rspl-theme-customize.php:145
+msgid "Display category list"
+msgstr "Отображать категории записи"
