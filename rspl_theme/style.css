@@ -1399,6 +1399,7 @@ form .double .half {
 }
 
 .header-widget-area .wp-block-buttons .wp-block-button .wp-block-button__link {
+  max-width: 160px;
   background-color: #F6108B;
 }
 

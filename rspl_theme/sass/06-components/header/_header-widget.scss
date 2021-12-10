@@ -14,6 +14,7 @@
     .wp-block-button {
       margin: 0;
       .wp-block-button__link {
+        max-width: 160px;
         background-color: $pink;
       }
     }
