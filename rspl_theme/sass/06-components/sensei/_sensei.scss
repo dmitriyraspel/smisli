@@ -1,0 +1,107 @@
+.course, 
+.course-container, 
+.course-container .course {
+  border-bottom: none;
+}
+.course h3.course-title, 
+.course-container h3.course-title, 
+.course-container .course h3.course-title {
+  font-size: $font-h2;
+}
+
+.editor-styles-wrapper .wp-block-sensei-lms-learner-courses__courses-list--is-list-view .course, 
+.wp-block-sensei-lms-learner-courses--is-list-view #sensei-user-courses .course {
+  border-bottom: none;
+}
+
+.course-container a.button, 
+.course-container a.button:visited, 
+.course-container a.comment-reply-link, 
+.course-container #commentform #submit,
+ .course-container .submit, 
+.course-container input[type=submit], 
+.course-container input.button, 
+.course-container button.button, 
+.course a.button, 
+.course a.button:visited, 
+.course a.comment-reply-link, 
+.course #commentform #submit, 
+.course .submit, 
+.course input[type=submit], 
+.course input.button, 
+.course button.button, 
+.lesson a.button, 
+.lesson a.button:visited, 
+.lesson a.comment-reply-link, 
+.lesson #commentform #submit, 
+.lesson .submit, 
+.lesson input[type=submit], 
+.lesson input.button, 
+.lesson button.button, 
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) a.button, 
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) a.button:visited, 
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) a.comment-reply-link, 
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) #commentform #submit, 
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) .submit, 
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) input[type=submit], 
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) input.button, 
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) button.button {
+  padding: $button-padding;
+  text-transform: unset;
+  font-size: unset;
+  color: $button-color;
+	background-color: $button-background-color;
+	border: 1px solid $button-border-color;
+
+  &:hover {
+    color: $button-color;
+    border-color: $button-border-color-hover;
+    background: transparent;
+  }
+}
+
+.entry-content .sensei-breadcrumb {
+  background: transparent;  // Вопрос надо ли?
+  color: $text;
+  font-weight: $normal;
+  font-size: $font-size;
+
+  a {
+    font-weight: $bold;
+    font-size: $font-size;
+  }
+}
+.entry-content > .wp-block-sensei-lms-course-outline {
+  margin-top: $spacing-vertical * 2;
+}
+
+.wp-block-sensei-lms-course-outline .rspl-lesson-thumbnail {
+  width: auto;
+  max-width: 64px;
+  height: auto;
+  max-height: 64px;
+  margin: 0px 0px 4px 0px;
+}
+ 
+.wp-block-sensei-lms-course-outline-lesson__status {
+  order: 9;
+}
+.wp-block-sensei-lms-course-outline-lesson__chevron {
+order: 10;
+}
+// .editor-styles-wrapper .wp-block-sensei-lms-learner-courses__courses-list--is-list-view .course .entry, 
+// .wp-block-sensei-lms-learner-courses--is-list-view #sensei-user-courses .course .entry {
+//   flex-wrap: wrap;
+// }
+// .editor-styles-wrapper .wp-block-sensei-lms-learner-courses__courses-list--is-list-view .course img, 
+// .wp-block-sensei-lms-learner-courses--is-list-view #sensei-user-courses .course img {
+//   width: auto;
+//   height: auto;
+//   max-width: 150px;
+//   max-height: 150px;
+// }
+
+// .editor-styles-wrapper .wp-block-sensei-lms-learner-courses__courses-list--is-list-view .course .wp-block-sensei-lms-learner-courses__courses-list__details:not(:only-child), 
+// .wp-block-sensei-lms-learner-courses--is-list-view #sensei-user-courses .course .wp-block-sensei-lms-learner-courses__courses-list__details:not(:only-child) {
+//   flex-basis: 100%;
+// }

@@ -1,3 +1,6 @@
+var accentColor       = document.body.dataset.secondarycolor;
+var accentHoverColor  = document.body.dataset.primarycolor;
+
 /**
  * File navigation.js.
  *
@@ -5,7 +8,7 @@
 
 function primary_nav() {
 	var siteNavigation = document.getElementById( 'site-navigation' );
-	var button = document.getElementById( 'primary-menu-toggle' );
+	var button = document.getElementById( 'menu-toggle' );
 
 	// Return early if the navigation don't exist.
 	if (!siteNavigation) {
@@ -15,6 +18,9 @@ function primary_nav() {
 	if (!button) {
 		return;
 	}
+	
+	siteNavigation.style.backgroundColor = accentHoverColor;
+
 	// Toggle the .primary-navigation-open class and the aria-expanded value.
 	button.addEventListener( 'click', function () {
 		if (button.getAttribute( 'aria-expanded' ) === 'true' ) {
@@ -44,7 +50,7 @@ function rsplthemeCollapseSiteNavOnClickOutside( event ) {
  * Close opened Primary-navigation
  */
 function rsplthemeCloseSiteNav() {
-	var button = document.getElementById( 'primary-menu-toggle' );
+	var button = document.getElementById( 'menu-toggle' );
 
 	document.body.classList.remove("primary-navigation-open");
 	button.setAttribute( 'aria-expanded', 'false' );

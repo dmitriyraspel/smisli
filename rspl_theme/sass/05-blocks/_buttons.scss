@@ -2,6 +2,13 @@
  * wp-block-button
  */
 
+ .wp-block-button__link:active, 
+ .wp-block-button__link:focus, 
+ .wp-block-button__link:hover, 
+ .wp-block-button__link:visited {
+  color: $text;
+}
+
 .wp-block-button__link {
   color: $button-color;
   background-color: $button-background-color;
@@ -15,7 +22,7 @@
     padding: $button-padding-vertical - 2 $button-padding-horizontal - 2;
 
     &:not(.has-text-color) {
-      color: $button-border-color;
+      color: $button-color;
     }
   }
 }

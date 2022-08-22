@@ -30,15 +30,55 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-primary-menu' : '';
 
     <?php get_template_part( 'template-parts/header/site-branding' ); ?>
 
-    <?php get_template_part( 'template-parts/navigation/site-nav' ); ?>
-
-		<button id="primary-menu-toggle" class="menu-toggle" aria-controls="primary-menu-list" aria-expanded="false">
-      <span class="screen-reader-text"><?php esc_html_e( 'Primary Menu', 'rspl_theme' ); ?></span>
-      <div class="burger">
-        <div class="burger__inner">
-        </div>
-      </div>
+    <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+      <div></div>
+      <div></div>
+      <div></div>
     </button>
+
+    <nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'rspl_theme' ); ?>">
+    
+      <?php if ( has_nav_menu( 'primary' ) ) : 
+      wp_nav_menu(
+        array(
+          'theme_location'  => 'primary',
+          'menu_class'      => 'menu-wrapper',
+          'container_class' => 'primary-menu-container',
+          'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
+          'fallback_cb'     => false,
+          'depth'           => 2,
+        )
+      );
+      endif; 
+    
+      if ( has_nav_menu( 'social' ) ) :
+        ?>
+        <div class="follow-bar">
+          <p class="follow-bar-text">
+          <?php echo __( 'Подписывайтесь', 'rspl_theme' ); ?>
+          </p>
+        
+
+          <?php
+          wp_nav_menu(
+            array(
+              'theme_location'  => 'social',
+              'items_wrap'      => '<ul id="primary-menu-follow-list" class="%2$s">%3$s</ul>',
+              'link_before'     => '<span class="screen-reader-text">',
+              'link_after'      => '</span>' . rspl_theme_get_icon_svg( 'link' ),
+              'depth'           => 1,
+              'container'       => '',
+              )
+          );
+        ?>
+        </div>
+      <?php endif; ?>
+      
+    </nav><!-- #site-navigation -->
+
+		 
+    
+
 
 
 	</div><!-- /.header-inner -->

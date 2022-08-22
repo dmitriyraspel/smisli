@@ -3,7 +3,7 @@
 
 @import "01-settings/file-header";
 
-@import "01-settings/fonts";
+// @import "01-settings/fonts";
 
 @import "01-settings/root";
 @import "01-settings/variables";
@@ -37,7 +37,6 @@
 @import "05-blocks/buttons";
 @import "05-blocks/wp-block-media-text";
 @import "05-blocks/wp-block-latest-posts";
-@import "05-blocks/wp-block-leyka-card";
   
 /* Alignments */
   @import "05-blocks/alignments";
@@ -67,8 +66,11 @@
 @import "06-components/media/captions";
 @import "06-components/media/galleries";
 
+@import "06-components/canvas";
+
 /* Header */
 @import "06-components/header/header";
+@import "06-components/content/site-main";
 
 @import "06-components/content/posts-and-pages";
 @import "06-components/content/template-left-right";
@@ -80,11 +82,13 @@
 /* Footer */
 @import "06-components/footer/footer";
 
-/* Leyka */
-@import "06-components/leyka/leyka";
+/* Tutor LMS */
+// @import "06-components/tutor/tutor";
 
-/* Front page */
-@import "06-components/content/front-page";
+/* Sensei */
+@import "06-components/sensei/sensei";
+/* WooCommerce */
+@import "06-components/woocommerce/woocommerce";
 
 
 

@@ -1,0 +1,173 @@
+root {
+  --tutor-body-color: $text;
+
+  // --tutor-text-size: 16px;
+  --tutor-color-white: #fff;
+  --tutor-color-success: $success;
+  --tutor-color-success-rgb: 6, 208, 154;
+  // --tutor-color-warning: #ED9700;
+  // --tutor-color-warning-rgb: 237,151,0;
+  // --tutor-color-danger: #F44337;
+  // --tutor-color-danger-rgb: 244,67,55;
+  // --tutor-color-secondary: #41454F;
+  // --tutor-color-muted: #757c8e;
+  // --tutor-color-gray: #e3e5eb;
+  // --tutor-color-gray-10: #eff1f6;
+}
+.tutor-btn:not(.tutor-btn-link) {
+  font-weight: $bold;
+  color: $button-color;
+  // background-color: $button-background-color;
+  // border: 1px solid $button-border-color;
+  // border-color: $button-border-color;
+  transition: $base-transition;
+
+  &:hover,
+  &:focus,
+  &:active {
+    // color: $text;
+    // background-color: $button-background-color-hover;
+    border-color: $text
+  }
+}
+
+.tutor-btn-link {
+  color: $color__link;
+  text-decoration: none;
+  font-family: $font-heading;
+  font-weight: $bold;
+
+  &:after {
+    background: $text;
+    transition: width $base-transition ease-in-out;
+  }
+}
+
+.tutor-btn-ghost {
+  border: none;
+
+  &:hover,
+  &:active {
+    color: $text;
+  }
+}
+
+.tutor-btn-primary {
+  background: transparent;
+  color: $text;
+  font-weight: $bold;
+  border-color: #1b1b1b42;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $text;
+    border-color: $text;
+    background-color: transparent;
+  }
+
+}
+
+.tutor-btn-outline-primary {
+  border-color: $button-border-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $text;
+    background-color: $button-background-color-hover;
+    border-color: $text
+  }
+}
+
+.tutor-login-wrap {
+
+  input,
+  input:hover,
+  input:focus {
+    -webkit-box-shadow: inset 0 0 0 50px #fff;
+    -webkit-text-fill-color: #000;
+    width: 100%;
+  }
+
+  .tutor-btn-primary {
+    background: transparent;
+    color: $text;
+    font-weight: $bold;
+    font-size: 20px;
+    font-family: $font;
+    border: 1px solid transparent;
+    border-bottom: 2px solid $text;
+    border-radius: 6px;
+    transition: all $base-transition;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      border-color: $text;
+      border-radius: 1px;
+      color: $text;
+    }
+  }
+
+}
+.tutor-course-single-content-wrapper #tutor-single-entry-content .tutor-course-topic-single-header {
+  z-index: 25;
+}
+
+.tutor-dashboard .tutor-frontend-dashboard-header .tutor-dashboard-header-greetings {
+  display: none;
+}
+
+
+
+
+
+.tutor-screen-frontend-dashboard {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* .ani-border {
+  padding: 1em;
+  border: none; 
+  outline: 2px solid transparent;
+  background-image: 
+  linear-gradient(to bottom, #cacaca 1px, transparent 1px), 
+  linear-gradient(to bottom, #cacaca 1px, transparent 1px), 
+  linear-gradient(to right, #cacaca 1px, transparent 1px, transparent calc(100% - 1px), #cacaca calc(100% - 1px)), 
+  linear-gradient(to top, #cacaca 1px, transparent 1px);
+  background-position: -100% 0%, 200% 0%, 0% 100%, 0% 100%;
+  background-size: 50% 100%, 50% 100%, 100% 1px, 100% 100%;
+  background-repeat: no-repeat;
+  transition: background-size .4s ease-out .6s, background-position .6s ease-in;
+}
+
+.ani-border:focus {
+  background-position: 0% 0%, 100% 0%, 0% 100%, 0% 100%;
+  background-size: 51% 100%, 51% 100%, 100% 100%, 100% 100%;
+  transition: background-size .4s ease-in, background-position .6s ease-out .4s;
+} */
+
+.tutor-option-field textarea,
+.tutor-option-field input[type='text'],
+.tutor-option-field input[type='number'],
+.tutor-option-field input[type='pas.tutor-dashboard-content-innersword'],
+.tutor-form-group textarea,
+.tutor-form-group input[type='text'],
+.tutor-form-group input[type='number'],
+.tutor-form-group input[type='password'] {
+  border: 1px solid transparent;
+  border-bottom: 2px solid $text;
+  border-radius: $input-border-radius;
+  background: transparent;
+  background-color: transparent;
+
+  &:focus {
+    border: 1px solid $text;
+    border-bottom: 2px solid $text;
+    border-radius: $input-border-radius-hover;
+    border-color: $text!important;
+
+  }
+}

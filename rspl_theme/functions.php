@@ -136,28 +136,28 @@ function rspl_theme_fonts_url() {
 	$fonts_url = '';
 
 	/* Translators: If there are characters in your language that are not
-	* supported by Roboto, translate this to 'off'. Do not translate
+	* supported by Lora, translate this to 'off'. Do not translate
 	* into your own language.
 	*/
-	$roboto = esc_html_x( 'on', 'Roboto font: on or off', 'rspl_theme' );
-	// <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+	$lora = esc_html_x( 'on', 'Lora font: on or off', 'rspl_theme' );
+	// <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"" rel="stylesheet">
 	
 	/* Translators: If there are characters in your language that are not
-	* supported by Montserrat, translate this to 'off'. Do not translate
+	* supported by Cormorant, translate this to 'off'. Do not translate
 	* into your own language.
 	*/
-	$montserrat = esc_html_x( 'on', 'Montserrat font: on or off', 'rspl_theme' );
-	// <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+	$cormorant = esc_html_x( 'on', 'Cormorant font: on or off', 'rspl_theme' );
+	// <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-	if ( 'off' !== $roboto || 'off' !== $montserrat ) {
+	if ( 'off' !== $lora || 'off' !== $cormorant ) {
 		$font_families = array();
 
-		if ( 'off' !== $roboto ) {
-			$font_families[] = 'Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700'; 
+		if ( 'off' !== $lora ) {
+			$font_families[] = 'Lora:ital,wght@0,400;0,700;1,400;1,700'; 
 		}
 
-		if ( 'off' !== $montserrat ) {
-			$font_families[] = 'Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700';
+		if ( 'off' !== $cormorant ) {
+			$font_families[] = 'Cormorant:ital,wght@0,400;0,700;1,400;1,700';
 		}
 
 		$query_args = array(
@@ -252,13 +252,15 @@ function rspl_theme_scripts() {
 	// wp_style_add_data( 'rspl_theme-style', 'rtl', 'replace' );
 
 	// Main style temp
-	wp_enqueue_style( 'rspl_theme-style-temp', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css') );
+	wp_enqueue_style( 'rspl_theme-style-temp', get_template_directory_uri() . '/assets/filemtime_files/style.css', array(), filemtime(get_template_directory() . '/assets/filemtime_files/style.css') );
 
 	// wp_enqueue_script( 'rspl_theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	// Main script temp
-	wp_enqueue_script( 'rspl_theme-script-bodyclass-temp', get_template_directory_uri() . '/assets/js/bodyclass.js', array(), filemtime(get_template_directory() . '/assets/js/bodyclass.js') , true );
-	wp_enqueue_script( 'rspl_theme-script-navigation-temp', get_template_directory_uri() . '/assets/js/navigation.js', array(), filemtime(get_template_directory() . '/assets/js/navigation.js') , true );
+	wp_enqueue_script( 'rspl_theme-script-bodyclass-temp', get_template_directory_uri() . '/assets/filemtime_files/bodyclass.js', array(), filemtime(get_template_directory() . '/assets/filemtime_files/bodyclass.js') , true );
+	wp_enqueue_script( 'rspl_theme-script-navigation-temp', get_template_directory_uri() . '/assets/filemtime_files/navigation.js', array(), filemtime(get_template_directory() . '/assets/filemtime_files/navigation.js') , true );
+    wp_enqueue_script( 'rspl_theme-script-canvas-temp', get_template_directory_uri() . '/assets/filemtime_files/canvas.js', array(), filemtime(get_template_directory() . '/assets/filemtime_files/canvas.js') , true );
+	wp_enqueue_script( 'rspl_theme-script-audio-temp', get_template_directory_uri() . '/assets/filemtime_files/audio.js', array(), filemtime(get_template_directory() . '/assets/filemtime_files/audio.js') , true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -299,6 +301,25 @@ require get_template_directory() . '/classes/class-rspl-theme-customize.php';
 /**
  * Block Patterns.
  */
-require get_template_directory() . '/inc/block-patterns.php';
+// require get_template_directory() . '/inc/block-patterns.php';
 
 
+/**
+ * User roles.
+ */
+require get_template_directory() . '/inc/user_roles.php';
+
+/**
+ * checkout fields.
+ */
+// require get_template_directory() . '/inc/checkout-fields.php';
+
+/**
+ * checkout fields.
+ */
+require get_template_directory() . '/inc/woocom.php';
+
+/**
+ * Random accent-color to head.
+ */
+require get_template_directory() . '/inc/random-color.php';

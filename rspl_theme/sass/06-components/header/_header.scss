@@ -1,16 +1,15 @@
 .site-header {
-  width: 100%;
-  max-width: 100%;
-  position: relative;
-  z-index: 20;
-  transition: $base-transition;
+  // width: 100%;
+  // max-width: 100%;
+  // position: relative;
+  // z-index: 20;
+  // transition: $base-transition;
+  margin-bottom: $spacing-vertical*3;
 
   .header-inner {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    padding: 42px 46px 42px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   .site-branding {
@@ -72,6 +71,7 @@
   .site-header {
 
     .header-inner {
+      padding: 34px 46px 34px 0;
       // align-items: flex-end;
       align-items: center;
     }

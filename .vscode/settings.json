@@ -4,7 +4,7 @@
       {
          "format": "expanded",
          "extensionName": ".css",
-         "savePath": "/",
+         "savePath": "/rspl_theme/assets/filemtime_files",
       }
    ],
    "liveSassCompile.settings.generateMap": false,

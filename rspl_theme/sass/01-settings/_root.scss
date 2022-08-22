@@ -2,29 +2,34 @@
     --aligndefault-width: 720px;
     --alignwide-width: 1180px;
 
-    --responsive--aligndefault-width: min(calc(100vw - 30px), var(--aligndefault-width) );
-    --responsive--alignwide-width: min(calc(100vw - 30px), var(--alignwide-width) );
+    --responsive--aligndefault-width: min(75vw, var(--aligndefault-width) );
+    --responsive--alignwide-width: min(75vw, var(--alignwide-width) );
 
     --heading--font-size-h2: 32px;
     --heading--font-size-h3: 24px;
 }
-@media (min-width: 760px) {
+@media (min-width: 581px) {
     :root {
-        --responsive--aligndefault-width: min(calc(100vw - 60px), var(--aligndefault-width) );
-        --responsive--alignwide-width: min(calc(100vw - 60px), var(--alignwide-width) );
+        --responsive--aligndefault-width: min(88vw, var(--aligndefault-width) );
+        --responsive--alignwide-width: min(88vw, var(--alignwide-width) );
     }
 }
-
-@media (min-width: 999px) {
+@media (min-width: 769px) {
+    :root {
+        --responsive--aligndefault-width: min(90vw, var(--aligndefault-width) );
+        --responsive--alignwide-width: min(90vw, var(--alignwide-width) );
+    }
+}
+@media (min-width: 1281px) {
     :root {
         --heading--font-size-h2: 40px;
         --heading--font-size-h3: 28px;
     }
 }
 
-@media (min-width: 1440px) { // Large Desktops
+
+@media (min-width: 1600px) { // Large Desktops
     :root {
-        --alignwide-width: 1400px;
         --heading--font-size-h2: 42px;
         --heading--font-size-h3: 32px;
     }

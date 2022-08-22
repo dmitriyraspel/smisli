@@ -1,0 +1,60 @@
+.woocommerce form .form-row .optional {
+  display: none;
+}
+// .woocommerce-billing-fields__field-wrapper .form-row span.optional {
+//   display: none;
+// }
+.woocommerce-error, 
+.woocommerce-info, 
+.woocommerce-message {
+  border-top: 2px solid rgb(66, 100, 251); // --accent-color
+}
+.woocommerce-message {
+  border-top-color: #06d19c; // --accent-hover-color
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button, 
+.woocommerce button.button,
+.woocommerce input.button {
+  border: solid 1px $button-border-color;
+  background-color: transparent;
+  border-radius: $button-border-radius;
+  color: $button-color;
+}
+
+.woocommerce #respond input#submit:hover, 
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover, 
+.woocommerce input.button:hover {
+  background-color: transparent;
+  color: $button-color;
+  border-color: $button-border-color-hover;
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt {
+  // background-color: #a46497;
+  // color: $button-color;
+  font-weight: $bold;
+  background-color: $primary;
+}
+.woocommerce #respond input#submit.alt:hover, 
+.woocommerce a.button.alt:hover, 
+.woocommerce button.button.alt:hover, 
+.woocommerce input.button.alt:hover {
+  background-color: $secondary;
+  // color: #fff;
+}
+
+.woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text a {
+  color: var(--accent-color, $primary);
+}
+
+.course:not(body), 
+.course-container, 
+.course-container .course {
+  border-bottom: none;
+}

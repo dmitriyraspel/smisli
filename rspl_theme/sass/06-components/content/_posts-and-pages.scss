@@ -27,8 +27,18 @@
 .entry-title,
 .entry-title a {
 	text-decoration: none;
-	font-size: $font-h2;
-	// color: $text-dark;
+	font-size: 54px; 
+	// font-size: 100px;
+	font-weight: $bold;
+	@media (min-width: 581px) {
+		font-size: 54px;
+	}
+	@media (min-width: 581px) {
+		font-size: 72px;
+	}
+	@media (min-width: 768px) {
+		font-size: 100px;
+	}
 }
 
 .post-thumbnail {

@@ -1,20 +1,20 @@
 // Colors
-$primary: #15256b;
-$secondary: #4641FF;
+$primary: rgb(53, 86, 231);
+$secondary: rgb(66, 100, 251);
 $accent: #06d19c;
 $primary-dark: darken($primary,8%);
-$text: #666;
-$text-dark: #111;
+$text: #1b1b1b;
+$text-dark: #1b1b1b;
 $background: #ffffff;
-$background-alt: #f7f7f7; // fix-menu #f9f8f8
+$background-alt: #f7f7f7;
 $background-dark: #333C44;
-$background-dark-color: #d9d9d9;
+$background-dark-color: #fff;
 $line: #eee;
 $success: #06d19c;
 $error: tomato;
 $pink: #F6108B;
 
-$color__headings: $primary;
+$color__headings: $text;
 $color__social-link: $primary;
 $color__social-link-hover: $primary-dark;
 
@@ -24,9 +24,9 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
 $color__text-screen: #21759b;
-$color__link: $primary;
-$color__link-visited: lighten($color__link,8%);
-$color__link-hover: darken($color__link,8%);
+$color__link: $text-dark;
+$color__link-visited: $text;
+$color__link-hover: $text-dark;
 $color__border-abbr: #666;
 
 
@@ -42,11 +42,11 @@ $font-h2: var(--heading--font-size-h2);
 $font-h3: var(--heading--font-size-h3);
 
 // Typography
-$font: 'Roboto', sans-serif;
-// $font: 'Montserrat', sans-serif;
+$font: 'Lora', serif;
+$font-heading: 'Cormorant', serif;
+$font-heading-weight: 700;
 $font__system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$font-pribambas: 'Pribambas', sans-serif;
-$font-helvetica: helvetica, sans-serif;
+$font-cormorant: 'Cormorant', serif;
 $font-size: 16px;
 $line-height: 1.7;
 $light: 100;
@@ -60,13 +60,14 @@ $font__pre: "Courier 10 Pitch", courier, monospace;
 // $font__line-height-pre: 1.6;
 
 // Containers
-$text-container: 640px;
-$content-width: 720px;
+$text-container: 1480px;
+$content-width: 1480px;
 
 // Media queries
-$tablet-width: 760px !default; // Tablets
-$desktop-width: 999px !default; // Desktops & Laptops
-$huge-width: 1440px !default; // Large Desktops
+$mobile-width: 581px !default; // Mobile
+$tablet-width: 769px !default; // Tablets
+$desktop-width: 1281px !default; // Desktops & Laptops
+$huge-width: 1600px !default; // Large Desktops
 
 /* Spacing */
 $spacing-horizontal: 15px;
@@ -74,15 +75,15 @@ $spacing-vertical: 20px;
 $block-spacing-vertical: 1.5em;
 
 // Buttons
-$button-font-size: $font-size;
+$button-font-size: 20px;
 $button-line-height: 1.5;
-$button-color: #fff;
-$button-color-hover: #fff;
-$button-border-color: $primary;
-$button-border-color-hover: darken($button-border-color,8%);
-$button-background-color: $primary;
-$button-background-color-hover: darken($button-border-color,8%);
-$button-border-radius: 30px;
+$button-color: $text;
+$button-color-hover: $primary;
+$button-border-color: #1b1b1b42;
+$button-border-color-hover: $primary;
+$button-background-color: transparent;
+$button-background-color-hover: transparent;
+$button-border-radius: 0px;
 $button-padding: 8px 16px;
 $button-padding-is-style-outline: 6px 14px;
 
@@ -93,25 +94,26 @@ $button-padding-horizontal: 16px;
 $input-font-size: $font-size;
 $input-line-height: 1.5;
 $input-color: $text;
-$input-color-focus: $text-dark;
-$input-border-color: lighten($primary, 20%);
-$input-border-color-hover: $primary-dark;
-$input-background: $background-alt;
+$input-color-focus: $text;
+$input-border-color: #1b1b1b42;
+$input-border-color-hover: $text;
+$input-background: transparent;
 $input-background-hover: $background;
-$input-border-radius: 30px;
+$input-border-radius: 0;
+$input-border-radius-hover: 1px;
 $input-padding: 8px 10px;
-$textarea-border-radius: 30px;
+$textarea-border-radius: 0px;
 
 $label-color: $text;
 $label-font-size: 14px;
 
 // Site-branding
-$branding-logo-max-width-mobile: 120px;
-$branding-logo-max-height-mobile: 50px;
-$branding-logo-max-width-tablet: 240px;
-$branding-logo-max-height-tablet: 56px;
-$branding-logo-max-width-pc: 240px;
-$branding-logo-max-height-pc: 80px;
+$branding-logo-max-width-mobile: 100px;
+$branding-logo-max-height-mobile: 40px;
+$branding-logo-max-width-tablet: 110px;
+$branding-logo-max-height-tablet: 45px;
+$branding-logo-max-width-pc: 120px;
+$branding-logo-max-height-pc: 50px;
 $site-title-font-size-mobile: 24px;
 $site-title-font-size-pc: 28px;
 $site-title-color: $text-dark;
@@ -124,6 +126,7 @@ $primary-nav-color-link-hover: $primary;
 $primary-nav-font-size-mobile: 22px;
 $primary-nav-font-size-pc: 18px;
 $primary-nav-font-weight: $bold;
+$primary-nav-background: $secondary;
 $primary-nav-submenu-background: $background;
 $primary-nav-breakpoint: 1068px;
 

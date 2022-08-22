@@ -1,84 +1,113 @@
 /* Menu toggle */
-button.menu-toggle {
-   display: inline-flex;
-   z-index: 999;
-   background-color: transparent;
-   box-shadow: none;
-   margin: 0;
-   padding: 0px;
-   border: none;
-   position: relative;
-   overflow: hidden;
-   outline: none;
 
-   @media (min-width: $primary-nav-breakpoint) {
-      display: none;
-   }
+#menu-toggle {
+	background: transparent;
+	border: none;
+	pointer-events: bounding-box;
+	position: fixed;
+	display: block;
+	width: 60px;
+	height: 60px;
+	right: calc(3.75vw - 24px);
+	top: 14px;
+	z-index: 500;
+	transition: transform 0.5s ease-in-out 0.125s;
 }
 
-.burger {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 36px;
-   height: 36px;
-   cursor: pointer;
-   position: relative;
-
-   .burger__inner,
-   .burger__inner::before,
-   .burger__inner::after {
-      background: $burger-color;
-      width: 24px;
-      height: 2px;
-      position: absolute;
-   }
-
-   .burger__inner {
-      display: block;
-      top: 50%;
-      transition-duration: 0.2s;
-      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-   }
-
-   .burger__inner::before,
-   .burger__inner::after {
-      content: "";
-      display: block;
-   }
-   .burger__inner::before {
-      top: -8px;
-      transition: top 0.2s 0.3s ease, opacity 0.2s ease;
-   }
-   .burger__inner::after {
-      bottom: -8px;
-      transition: bottom 0.2s 0.3s ease;
-      // -webkit-transform 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-      transition: bottom 0.2s 0.3s ease, transform 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-      transition: bottom 0.2s 0.3s ease, transform 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19), 
-      // -webkit-transform 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-   }
+#menu-toggle div {
+  position: absolute;
+  left: 24px;
+  width: 16px;
+  height: 2px;
+  background-color: #1b1b1b;
+  background: var(--button-color, #1b1b1b);
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
+    transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s,
+    background-color 0.25s linear;
 }
 
-/* Button active */
-body.primary-navigation-open,
-button.menu-toggle.active {
-   
-   .burger__inner {
-      transform: rotate(45deg);
-      transition-delay: 0.4s;
-      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-   }
-   
-   .burger__inner::before {
-      top: 0;
-      opacity: 0;
-      transition: top 0.4s ease, opacity 0.1s 0.2s ease;
-   }
-   
-   .burger__inner::after {
-      bottom: 0;
-      transform: rotate(-90deg);
-      transition: bottom 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.2s 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
-   }
+#menu-toggle.animating div {
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
+    transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s;
+}
+
+#menu-toggle.light div {
+  background: white;
+}
+
+#menu-toggle div:nth-child(1),
+#menu-toggle div:nth-child(2),
+#menu-toggle:hover div {
+  width: 24px;
+}
+
+#menu-toggle div:nth-child(1) {
+  top: 29px;
+}
+
+#menu-toggle div:nth-child(2) {
+  top: 35px;
+}
+
+#menu-toggle div:nth-child(3) {
+  top: 41px;
+}
+
+#menu-toggle.opened,
+.primary-navigation-open #menu-toggle {
+  transform: rotate(90deg);
+  transition: transform 0.5s ease-in-out 0.375s;
+}
+
+#menu-toggle.opened div,
+.primary-navigation-open #menu-toggle div {
+  width: 24px;
+	background-color: white;
+  transition: width 0.125s ease-in-out 0.875s, 
+		top 0.25s ease-in-out 0.25s,
+    transform 0.25s ease-out 0.5s, 
+		opacity 0.001s linear 0.5s, 
+		background-color 0.25s linear;
+}
+
+.primary-navigation-open #menu-toggle div:nth-child(1) {
+  top: 35px;
+  transform: rotate(45deg);
+}
+
+.primary-navigation-open #menu-toggle div:nth-child(2) {
+  opacity: 0;
+}
+
+.primary-navigation-open #menu-toggle div:nth-child(3) {
+  top: 35px;
+  transform: rotate(-45deg);
+}
+
+#menu-toggle.closing div {
+  width: 24px;
+}
+
+// @media only screen and (min-width: 1600px) {
+//   #menu-toggle {
+//     right: 36px;
+//   }
+// }
+
+@media only screen and (max-width: 1280px) {
+  #menu-toggle {
+    right: calc(5vw - 24px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #menu-toggle {
+    right: calc(6vw - 24px);
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  #menu-toggle {
+    right: calc(12.5vw - 24px);
+  }
 }

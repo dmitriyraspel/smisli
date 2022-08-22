@@ -5,9 +5,10 @@ input[type="reset"],
 input[type="submit"] {
 	cursor: pointer;
 	display: inline-block;
+	font-family: $font;
 	font-size: $button-font-size;
 	line-height: $button-line-height;
-	font-weight: $normal;
+	font-weight: $bold;
 	color: $button-color;
 	background-color: $button-background-color;
 	border: 1px solid $button-border-color;
@@ -20,8 +21,8 @@ input[type="submit"] {
 	overflow: hidden;
 
 	&:hover{
-		color: $button-color-hover;
-		background-color: $button-background-color-hover;
+		// color: $button-color-hover;
+		// background-color: $button-background-color-hover;
 		border-color: $button-border-color-hover;
 	}
 }
