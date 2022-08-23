@@ -7430,6 +7430,8 @@ ul#primary-menu-follow-list {
   justify-content: center;
   align-items: center;
   font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .pages-screen-footer-social-links li,

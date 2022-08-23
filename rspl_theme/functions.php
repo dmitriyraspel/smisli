@@ -303,12 +303,6 @@ require get_template_directory() . '/classes/class-rspl-theme-customize.php';
  */
 // require get_template_directory() . '/inc/block-patterns.php';
 
-
-/**
- * User roles.
- */
-require get_template_directory() . '/inc/user_roles.php';
-
 /**
  * checkout fields.
  */
@@ -323,3 +317,8 @@ require get_template_directory() . '/inc/woocom.php';
  * Random accent-color to head.
  */
 require get_template_directory() . '/inc/random-color.php';
+
+/**
+ * Metaboxes
+ */
+require get_template_directory() . '/inc/cmb2.php';
