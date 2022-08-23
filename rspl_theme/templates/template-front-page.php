@@ -24,8 +24,8 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
     />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
 
-    <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/course-promo.js?38"></script>
-    <link href="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/front.css?38" rel="stylesheet" />
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/course-promo.js?40"></script>
+    <link href="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/front.css?40" rel="stylesheet" />
 
     <title><?php bloginfo('name'); ?></title>
     <meta name="description" content="<?php bloginfo('description'); ?>" />
@@ -321,7 +321,7 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
           <a class="pages-inner-block" href="<?php echo get_home_url(); ?>/course-promo-3/">
             <h2 class="pages-inner-title"><?php echo get_post_meta($post-> ID, 'rspl_theme_frontpage_screen_5_title', true ); ?></h2>
 
-            <!-- <h3 class=" ">Для друзей</h3> -->
+            <h3 class=" ">Для друзей</h3>
 
             <p>
               <?php echo get_post_meta($post-> ID, 'rspl_theme_frontpage_screen_5_description', true ); ?>
@@ -349,8 +349,8 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
             data-selection-color="rgba(187,213,220,0.25)"
           >
           <div class="pages-inner-block">
-            <!-- <h3>Отзывы</h3> -->
-            <h2 class="pages-inner-title"><?php echo get_post_meta($post-> ID, 'rspl_theme_frontpage_screen_6_title', true ); ?></h2>
+            <h3><?php echo get_post_meta($post-> ID, 'rspl_theme_frontpage_screen_6_title', true ); ?></h3>
+            <!-- <h2 class="pages-inner-title">Отзывы</h2> -->
             <!-- <h3 class="pages-inner-title">Отзывы</h3> -->
 
             <p class="display-none">
@@ -361,39 +361,43 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
               прочитать отзывы.
             </p>
 
-            <div id="front-page-reviews" class="front-page-reviews">
-              <div class="front-page-review">
-                <h6 class="front-page-review_title">Имя</h6>
-                <p class="front-page-review_content">
-                  Текст отзыва накладывается на все тот же фон с лентой
-                  (возможно на полупрозрачную подложку). Листая вправо или
-                  влево можно прочитать отзывы.
-                </p>
+            <!-- Разметка для слайдера -->
+          <div id="front-page-reviews" class="front-page-reviews itcss"> 
+            <div class="front-page-review__wrapper itcss__wrapper">
+              <div class="front-page-review__items itcss__items">
+                
+                <div class="front-page-review__item itcss__item">
+                  <h6 class="front-page-review__item_title">Имя 1</h6>
+                  <p class="front-page-review__item_content">
+                    Текст отзыва накладывается на все тот же фон с лентой
+                    (возможно на полупрозрачную подложку). Листая вправо или
+                    влево можно прочитать отзывы.
+                  </p>
+                </div>
+
+                <div class="front-page-review__item itcss__item">
+                  <h6 class="front-page-review__item_title">Имя 2</h6>
+                  <p class="front-page-review__item_content">
+                    Текст отзыва накладывается на все тот же фон с лентой
+                    (возможно на полупрозрачную подложку). Листая вправо или
+                    влево можно прочитать отзывы.
+                  </p>
+                </div>
+
+                <div class="front-page-review__item itcss__item">
+                  <h6 class="front-page-review__item_title">Имя 3</h6>
+                  <p class="front-page-review__item_content">
+                    Текст отзыва накладывается на все тот же фон с лентой
+                    (возможно на полупрозрачную подложку). Листая вправо или
+                    влево можно прочитать отзывы.
+                  </p>
+                </div>
+                
               </div>
-              <!-- front-page-review -->
-
-              <!-- <div class="front-page-review">
-                <h6 class="front-page-review_title">Имя 2</h6>
-                <p class="front-page-review_content">
-                  Текст отзыва накладывается на все тот же фон с лентой
-                  (возможно на полупрозрачную подложку). Листая вправо или
-                  влево можно прочитать отзывы.
-                </p>
-              </div> -->
-              <!-- front-page-review -->
-
-              <!-- <div class="front-page-review">
-                <h6 class="front-page-review_title">Имя 3</h6>
-                <p class="front-page-review_content">
-                  Текст отзыва накладывается на все тот же фон с лентой
-                  (возможно на полупрозрачную подложку). Листая вправо или
-                  влево можно прочитать отзывы.
-                </p>
-              </div> -->
-              <!-- front-page-review -->
-
             </div>
-            <!-- front-page-reviews для slider -->
+          </div>
+            
+            
 
             <!-- Скрыто через класс, потом убрать -->
             <div class="arrow">
@@ -602,8 +606,11 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
         }
       );
 
-      
     </script>
+
+    
+
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/simple-adaptive-slider/simple-adaptive-slider.js?40"></script>
 
   </body>
 </html>
