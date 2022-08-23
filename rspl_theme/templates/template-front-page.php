@@ -204,7 +204,7 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
             data-midcolor="#e79d40"
             data-selection-color="rgba(231,157,64,0.25)"
           >
-          <a class="pages-inner-block" href="#pages-screen-1">
+          <div class="pages-inner-block" href="#pages-screen-1">
             <h2 class="pages-inner-title">Смыслы</h2>
             <!-- <h3>Про нас</h3> -->
             <p>
@@ -212,12 +212,13 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
               проектировщиками и фронтендерами, когда нужно быстро заполнить
               макеты или прототипы содержимым.
             </p>
-            <div class="arrow">
+            <div class="arrow display-none">
+              <!-- Если нужна стрелка, убрать класс display-none -->
               <div class="circle"></div>
               <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/home-arrow.svg" />
               <div class="spine"></div>
             </div>
-          </a>
+          </div>
           </li>
 
           <!-- экран 2 Идеи для проекта-->
@@ -234,7 +235,7 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
             data-midcolor="#338fb9"
             data-selection-color="rgba(51,143,185,0.25)"
           >
-          <a class="pages-inner-block" href="#pages-screen-2">
+          <div class="pages-inner-block" href="#pages-screen-2">
             <h2 class="pages-inner-title">Идеи для проекта</h2>
 
             <!-- <h3>Про наши идеи</h3> -->
@@ -247,12 +248,13 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
               используется дизайнерами, проектировщиками и фронтендерами,
               когда нужно быстро заполнить макеты или прототипы содержимым.
             </p>
-            <div class="arrow">
+            <div class="arrow display-none">
+              <!-- Если нужна стрелка, убрать класс display-none -->
               <div class="circle"></div>
               <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/home-arrow.svg" />
               <div class="spine"></div>
             </div>
-          </a>
+          </div>
           </li>
 
            <!-- экран 3 Лекция 1-->
@@ -269,7 +271,7 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
             data-midcolor="#ec8058"
             data-selection-color="rgba(236,128,88,0.25)"
           >
-          <a class="pages-inner-block" href="<?php echo get_home_url(); ?>/lekcziya-1-promo/">
+          <a class="pages-inner-block" href="<?php echo get_home_url(); ?>/course-promo-1/">
             <h2 class="pages-inner-title">Лекция 1</h2>
             <p>
               3 страницa- Тема лекции с кнопкой "подробнее" и стрелкой как в
@@ -298,7 +300,7 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
             data-midcolor="#f0c854"
             data-selection-color="rgba(240,200,84,0.25)"
           >
-          <a class="pages-inner-block" href="<?php echo get_home_url(); ?>/lekcziya-2-promo/">
+          <a class="pages-inner-block" href="<?php echo get_home_url(); ?>/course-promo-2/">
             <h2 class="pages-inner-title">Лекция 2</h2>
 
             <!-- <h3>Подробнее</h3> -->
@@ -330,7 +332,7 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
             data-midcolor="#f152d8"
             data-selection-color="rgba(241,82,216,0.25)"
           >
-          <a class="pages-inner-block" href="<?php echo get_home_url(); ?>/lekcziya-3-promo/">
+          <a class="pages-inner-block" href="<?php echo get_home_url(); ?>/course-promo-3/">
             <h2 class="pages-inner-title">Лекция 3</h2>
 
             <h3 class=" ">Для друзей</h3>

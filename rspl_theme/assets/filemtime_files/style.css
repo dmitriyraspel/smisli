@@ -1387,29 +1387,17 @@ form .double .half {
   height: 2px;
   background-color: #1b1b1b;
   background: var(--button-color, #1b1b1b);
-  -webkit-transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
- opacity 0.001s linear 0.5s,
- background-color 0.25s linear, -webkit-transform 0.25s ease-out 0.25s;
-  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
- opacity 0.001s linear 0.5s,
- background-color 0.25s linear, -webkit-transform 0.25s ease-out 0.25s;
-  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
- transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s,
- background-color 0.25s linear;
-  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
- transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s,
- background-color 0.25s linear, -webkit-transform 0.25s ease-out 0.25s;
+  -webkit-transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, opacity 0.001s linear 0.5s, background-color 0.25s linear, -webkit-transform 0.25s ease-out 0.25s;
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, opacity 0.001s linear 0.5s, background-color 0.25s linear, -webkit-transform 0.25s ease-out 0.25s;
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s, background-color 0.25s linear;
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s, background-color 0.25s linear, -webkit-transform 0.25s ease-out 0.25s;
 }
 
 #menu-toggle.animating div {
-  -webkit-transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
- opacity 0.001s linear 0.5s, -webkit-transform 0.25s ease-out 0.25s;
-  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
- opacity 0.001s linear 0.5s, -webkit-transform 0.25s ease-out 0.25s;
-  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
- transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s;
-  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
- transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s, -webkit-transform 0.25s ease-out 0.25s;
+  -webkit-transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, opacity 0.001s linear 0.5s, -webkit-transform 0.25s ease-out 0.25s;
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, opacity 0.001s linear 0.5s, -webkit-transform 0.25s ease-out 0.25s;
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s;
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s, -webkit-transform 0.25s ease-out 0.25s;
 }
 
 #menu-toggle.light div {
@@ -1448,27 +1436,10 @@ form .double .half {
 .primary-navigation-open #menu-toggle div {
   width: 24px;
   background-color: white;
-  -webkit-transition: width 0.125s ease-in-out 0.875s, 
- top 0.25s ease-in-out 0.25s,
- opacity 0.001s linear 0.5s, 
- background-color 0.25s linear, 
- -webkit-transform 0.25s ease-out 0.5s;
-  transition: width 0.125s ease-in-out 0.875s, 
- top 0.25s ease-in-out 0.25s,
- opacity 0.001s linear 0.5s, 
- background-color 0.25s linear, 
- -webkit-transform 0.25s ease-out 0.5s;
-  transition: width 0.125s ease-in-out 0.875s, 
- top 0.25s ease-in-out 0.25s,
- transform 0.25s ease-out 0.5s, 
- opacity 0.001s linear 0.5s, 
- background-color 0.25s linear;
-  transition: width 0.125s ease-in-out 0.875s, 
- top 0.25s ease-in-out 0.25s,
- transform 0.25s ease-out 0.5s, 
- opacity 0.001s linear 0.5s, 
- background-color 0.25s linear, 
- -webkit-transform 0.25s ease-out 0.5s;
+  -webkit-transition: width 0.125s ease-in-out 0.875s,  top 0.25s ease-in-out 0.25s, opacity 0.001s linear 0.5s,  background-color 0.25s linear,  -webkit-transform 0.25s ease-out 0.5s;
+  transition: width 0.125s ease-in-out 0.875s,  top 0.25s ease-in-out 0.25s, opacity 0.001s linear 0.5s,  background-color 0.25s linear,  -webkit-transform 0.25s ease-out 0.5s;
+  transition: width 0.125s ease-in-out 0.875s,  top 0.25s ease-in-out 0.25s, transform 0.25s ease-out 0.5s,  opacity 0.001s linear 0.5s,  background-color 0.25s linear;
+  transition: width 0.125s ease-in-out 0.875s,  top 0.25s ease-in-out 0.25s, transform 0.25s ease-out 0.5s,  opacity 0.001s linear 0.5s,  background-color 0.25s linear,  -webkit-transform 0.25s ease-out 0.5s;
 }
 
 .primary-navigation-open #menu-toggle div:nth-child(1) {
@@ -2616,6 +2587,46 @@ body.primary-navigation-open .primary-navigation {
   padding: 8px 16px;
   text-transform: unset;
   font-size: unset;
+  color: #1b1b1b;
+  background-color: transparent;
+  border: 1px solid #1b1b1b42;
+}
+
+.course-container a.button:hover,
+.course-container a.button:visited:hover,
+.course-container a.comment-reply-link:hover,
+.course-container #commentform #submit:hover,
+.course-container .submit:hover,
+.course-container input[type=submit]:hover,
+.course-container input.button:hover,
+.course-container button.button:hover,
+.course a.button:hover,
+.course a.button:visited:hover,
+.course a.comment-reply-link:hover,
+.course #commentform #submit:hover,
+.course .submit:hover,
+.course input[type=submit]:hover,
+.course input.button:hover,
+.course button.button:hover,
+.lesson a.button:hover,
+.lesson a.button:visited:hover,
+.lesson a.comment-reply-link:hover,
+.lesson #commentform #submit:hover,
+.lesson .submit:hover,
+.lesson input[type=submit]:hover,
+.lesson input.button:hover,
+.lesson button.button:hover,
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) a.button:hover,
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) a.button:visited:hover,
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) a.comment-reply-link:hover,
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) #commentform #submit:hover,
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) .submit:hover,
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) input[type=submit]:hover,
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) input.button:hover,
+.quiz:not(.quiz-blocks):not(.sensei-course-theme) button.button:hover {
+  color: #1b1b1b;
+  border-color: #3556e7;
+  background: transparent;
 }
 
 .entry-content .sensei-breadcrumb {
@@ -2628,6 +2639,30 @@ body.primary-navigation-open .primary-navigation {
 .entry-content .sensei-breadcrumb a {
   font-weight: 700;
   font-size: 16px;
+}
+
+.entry-content > .wp-block-sensei-lms-course-outline {
+  margin-top: 40px;
+}
+
+.wp-block-sensei-lms-course-outline .rspl-lesson-thumbnail {
+  width: auto;
+  max-width: 64px;
+  height: auto;
+  max-height: 64px;
+  margin: 0px 0px 4px 0px;
+}
+
+.wp-block-sensei-lms-course-outline-lesson__status {
+  -webkit-box-ordinal-group: 10;
+      -ms-flex-order: 9;
+          order: 9;
+}
+
+.wp-block-sensei-lms-course-outline-lesson__chevron {
+  -webkit-box-ordinal-group: 11;
+      -ms-flex-order: 10;
+          order: 10;
 }
 
 /* WooCommerce */
@@ -2677,6 +2712,16 @@ body.primary-navigation-open .primary-navigation {
 .woocommerce button.button.alt:hover,
 .woocommerce input.button.alt:hover {
   background-color: #4264fb;
+}
+
+.woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text a {
+  color: var(--accent-color, #3556e7);
+}
+
+.course:not(body),
+.course-container,
+.course-container .course {
+  border-bottom: none;
 }
 
 /*--------------------------------------------------------------
