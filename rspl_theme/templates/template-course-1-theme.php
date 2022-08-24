@@ -9,9 +9,10 @@
  */
 
 // ссылка на логотип
-$custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' ); 
-$product_id = 900;
-$button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity=1";
+$custom_logo_url  = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+$product_price    = get_post_meta($post-> ID, 'rspl_theme_coursepromo_metabox_product_price', true );
+$product_id       = get_post_meta($post-> ID, 'rspl_theme_coursepromo_metabox_product_id', true );
+$button_url       = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity=1";
 ?>
 
 <!DOCTYPE html>
@@ -22,17 +23,8 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
   <meta content="ie=edge" http-equiv="X-UA-Compatible" />
 
   
-  <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/course-promo.js?31"></script>
-  
-  <link href="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/front.css?33" rel="stylesheet" />
-  
-
-  <!-- шрифты тест --> 
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-  <!-- <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet"> -->
+  <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/course-promo.js?41"></script>
+  <link href="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/front.css?41" rel="stylesheet" />
 
   <title><?php bloginfo('name'); ?></title>
   <meta name="description" content="<?php bloginfo('description'); ?>" />
@@ -52,7 +44,7 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
 
     <div id="hire-us" class="display-none">
       <a href="#contact">O нас</a>
-    </div>
+    </div><!-- hire-us Убрать -->
 
     <a href="#" id="menu-button">
       <div></div>
@@ -60,44 +52,43 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
       <div></div>
     </a>
 
-    <!-- меню -->
-  <div id="menu">    
-    <?php
-    wp_nav_menu(
-      array(
-        'theme_location'  => 'primary',
-				'menu_class'      => 'menu-wrapper',
-				'container_id' => 'menu-wrapper',
-				'items_wrap'      => '<ul id="menu-items" class="%2$s">%3$s</ul>',
-				'fallback_cb'     => false,
-        'depth'           => 1,
-			)
-		);
-    ?>
-
-    <div id="follow-bar">
-      <div id="follow">
-        <p><?php echo __( 'Подписывайтесь', 'rspl_theme' ); ?></p>
-        <span></span>
-      </div>
-
+    <div id="menu">    
       <?php
-        if ( has_nav_menu( 'social' ) ) :
-        
-          wp_nav_menu(
-            array(
-              'theme_location'  => 'social',
-              'items_wrap'      => '<ul id="primary-menu-follow-list" class="%2$s">%3$s</ul>',
-              'link_before'     => '<span class="screen-reader-text">',
-              'link_after'      => '</span>' . rspl_theme_get_icon_svg( 'link' ),
-              'depth'           => 1,
-              'container'       => '',
-              )
-          );
-         endif; ?> 
+      wp_nav_menu(
+        array(
+          'theme_location'  => 'primary',
+          'menu_class'      => 'menu-wrapper',
+          'container_id' => 'menu-wrapper',
+          'items_wrap'      => '<ul id="menu-items" class="%2$s">%3$s</ul>',
+          'fallback_cb'     => false,
+          'depth'           => 1,
+        )
+      );
+      ?>
+
+      <div id="follow-bar">
+        <div id="follow">
+          <p><?php echo __( 'Подписывайтесь', 'rspl_theme' ); ?></p>
+          <span></span>
+        </div>
+
+        <?php
+          if ( has_nav_menu( 'social' ) ) :
+          
+            wp_nav_menu(
+              array(
+                'theme_location'  => 'social',
+                'items_wrap'      => '<ul id="primary-menu-follow-list" class="%2$s">%3$s</ul>',
+                'link_before'     => '<span class="screen-reader-text">',
+                'link_after'      => '</span>' . rspl_theme_get_icon_svg( 'link' ),
+                'depth'           => 1,
+                'container'       => '',
+                )
+            );
+          endif; ?> 
+      </div>
     </div>
-  </div>
-  <!-- меню -->
+    <!-- меню -->
 
     <script>
       Ribbon.init(document.getElementById("ribbon"));
@@ -156,7 +147,7 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
             </div>
 
             <div class="case-tagline">
-              <p>Подзаголовок (для компьютера).</p>
+              <p><?php echo get_post_meta($post-> ID, 'rspl_theme_coursepromo_metabox_subtitle', true ); ?></p>
             </div>
           </div>
 
@@ -168,7 +159,7 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
                     <img
                       class="lazy"
                       src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                      data-src="https://client.raspel.ru/wp-content/uploads/2022/06/canyon-background-large-scaled.jpg"
+                      data-src="<?php the_post_thumbnail_url(); ?>"
                       alt=" "
                       width="1280"
                       height="720"
@@ -194,26 +185,17 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
           </div>
 
           <div class="case-tagline-mobile">
-            <p>Подзаголовок (для мобильных)</p>
+            <p>
+              <?php echo get_post_meta($post-> ID, 'rspl_theme_coursepromo_metabox_subtitle', true ); ?>
+            </p>
           </div>
 
           <div id="case-intro" class="intro-paragraphs">
             <p>
-              Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру
-              сгенерировать несколько абзацев более менее осмысленного текста
-              рыбы на русском языке, а начинающему оратору отточить навык
-              публичных выступлений в домашних условиях. При создании генератора
-              мы использовали небезизвестный универсальный код речей. Текст
-              генерируется абзацами случайным образом от двух до десяти
-              предложений в абзаце, что позволяет сделать текст более
-              привлекательным и живым для визуально-слухового восприятия.
+              <?php echo get_post_meta($post-> ID, 'rspl_theme_coursepromo_metabox_p_1', true ); ?>
             </p>
             <p>
-              По своей сути рыбатекст является альтернативой традиционному lorem
-              ipsum, который вызывает у некторых людей недоумение при попытках
-              прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на
-              русском языке наполнит любой макет непонятным смыслом и придаст
-              неповторимый колорит советских времен.
+              <?php echo get_post_meta($post-> ID, 'rspl_theme_coursepromo_metabox_p_2', true ); ?>
             </p>
           </div>
 
@@ -238,15 +220,18 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
               <a
                 class="add-to-cart"
                 id='add_to_cart'
-              
+                onclick="preloader(this)"
                 href="<?php echo $button_url ?>"
                 style="--accent-color: #f5865e; --accent-hover-color: #e37a52"
               >
                 <p>
                   Распаковать тему <br />
-                  <span class="woocommerce-Price-amount amount"><bdi>3200&nbsp;<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+                  <span class="woocommerce-Price-amount amount"><bdi><?php echo $product_price?>&nbsp;<span class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
                   <!-- <span class="price">3200</span> -->
                 </p>
+                <div class="preloader">
+                  <div class="preloader circle"></div>
+                </div>
               </a>
             </div>
 
@@ -271,108 +256,16 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
 
           <div id="case-styles">
             <div id="style-header"></div>
-            <div id="style-description">
+            <div id="style-description" style="padding-bottom: 100px;">
               <p>
-                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру
-                сгенерировать несколько абзацев более менее осмысленного текста
-                рыбы на русском языке, а начинающему оратору отточить навык
-                публичных выступлений в домашних условиях. При создании
-                генератора мы использовали небезизвестный универсальный код
-                речей. Текст генерируется абзацами случайным образом от двух до
-                десяти предложений в абзаце, что позволяет сделать текст более
-                привлекательным и живым для визуально-слухового восприятия.
+                <?php echo get_post_meta($post-> ID, 'rspl_theme_coursepromo_metabox_p_3', true ); ?>
               </p>
             </div>
           </div>
-
-          <!-- <div id="style-cards ">
-            <div class="color-card" style="background: #171721">
-              <span>
-                <h3>#171721</h3>
-              </span>
-            </div>
-
-            <div class="color-card" style="background: #32323e">
-              <span>
-                <h3>#32323E</h3>
-              </span>
-            </div>
-
-            <div class="color-card" style="background: #4a4a53">
-              <span>
-                <h3>#4A4A53</h3>
-              </span>
-            </div>
-
-            <div class="color-card" style="background: #d0d0d9">
-              <span>
-                <h3>#D0D0D9</h3>
-              </span>
-            </div>
-
-            <div class="color-card" style="background: #41c3f3">
-              <span>
-                <h3>#41C3F3</h3>
-              </span>
-            </div>
-
-            <div class="color-card" style="background: #f5865e">
-              <span>
-                <h3>#f5865e</h3>
-              </span>
-            </div>
-          </div> -->
-          <!-- style-cards -->
-
-          <!-- <div id="small-slider-container">
-            <div id="small-slider-wrapper">
-              <div class="colorswatch-slider">
-                <div class="colorcard-cell" style="background: #171721">
-                  <span>
-                    <h3>#171721</h3>
-                  </span>
-                </div>
-
-                <div class="colorcard-cell" style="background: #32323e">
-                  <span>
-                    <h3>#32323E</h3>
-                  </span>
-                </div>
-
-                <div class="colorcard-cell" style="background: #4a4a53">
-                  <span>
-                    <h3>#4A4A53</h3>
-                  </span>
-                </div>
-
-                <div class="colorcard-cell" style="background: #d0d0d9">
-                  <span>
-                    <h3>#D0D0D9</h3>
-                  </span>
-                </div>
-
-                <div class="colorcard-cell" style="background: #41c3f3">
-                  <span>
-                    <h3>#41C3F3</h3>
-                  </span>
-                </div>
-
-                <div class="colorcard-cell" style="background: #f5865e">
-                  <span>
-                    <h3>#f5865e</h3>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- small-slider-container -->
           
         </div>
 
-        <div
-          id="screenshot-container-desktop"
-          class="screenshot-container-desktop"
-        >
+        <!-- <div id="screenshot-container-desktop" class="screenshot-container-desktop">
           <div id="screenshot-wrapper-desktop">
             <div id="screenshot-slider-wrapper-desktop">
               <div class="screenshot-slider-desktop">
@@ -384,7 +277,7 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
                     <img
                       class="lazy"
                       src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                      data-src="https://client.raspel.ru/wp-content/uploads/2019/05/1_0002_18-1-1.jpg"
+                      data-src="https://client.raspel.ru/wp-content/uploads/2022/08/c77708d0f1f80ef99f3c547481ab5f7f.jpg"
                       alt=" "
                     />
                     <div class="spinner"></div>
@@ -399,7 +292,7 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
                     <img
                       class="lazy"
                       src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                      data-src="https://client.raspel.ru/wp-content/uploads/2019/05/1_0009_11-1.jpg"
+                      data-src="https://client.raspel.ru/wp-content/uploads/2022/08/gallery1-1.jpg"
                       alt=" "
                     />
                     <div class="spinner"></div>
@@ -414,7 +307,7 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
                     <img
                       class="lazy"
                       src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                      data-src="https://client.raspel.ru/wp-content/uploads/2022/06/canyon-background-large-scaled.jpg"
+                      data-src="https://client.raspel.ru/wp-content/uploads/2022/08/math-1-1.jpg"
                       alt=" "
                     />
                     <div class="spinner"></div>
@@ -429,7 +322,7 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
                     <img
                       class="lazy"
                       src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                      data-src="https://client.raspel.ru/wp-content/uploads/2022/06/river-surrounded-by-forests-under-a-cloudy-sky-in-thuringia-in-germany.jpg"
+                      data-src="https://client.raspel.ru/wp-content/uploads/2022/08/c77708d0f1f80ef99f3c547481ab5f7f.jpg"
                       alt=" "
                     />
                     <div class="spinner"></div>
@@ -438,9 +331,9 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div id="screenshot-container" class="screenshot-container">
+        <!-- <div id="screenshot-container" class="screenshot-container">
           <div id="screenshot-wrapper">
             <div id="screenshot-slider-wrapper">
               <div class="screenshot-slider">
@@ -506,7 +399,7 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div
           class="footer"
@@ -628,6 +521,9 @@ $button_url = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&quantity
           }, 25);
         }
       );
+      function preloader(button) {
+        button.classList.toggle("active");
+      };
     </script>
   </body>
 </html>

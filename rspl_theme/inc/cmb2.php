@@ -170,3 +170,58 @@ function rspl_theme_register_frontpage_metabox() {
 	// ) );
 
 }
+
+
+
+add_action( 'cmb2_admin_init', 'rspl_theme_register_coursepromo_metabox' );
+function rspl_theme_register_coursepromo_metabox() {
+	/**
+	 * Metabox to Course Promo page
+	 */
+	$cmb_demo = new_cmb2_box( array(
+		'id'            => 'rspl_theme_coursepromo_metabox',
+		'title'         => esc_html__( 'Метабокс для course promo', 'cmb2' ),
+		'object_types'  => array( 'page' ), // Post type
+		'show_on'      => array( 'key' => 'page-template', 'value' => [ 'templates/template-course-1-theme.php', 'templates/template-course-2-theme.php', 'templates/template-course-3-theme.php' ] ),
+	) );
+
+	$cmb_demo->add_field( array(
+		'name' => esc_html__( 'ID товара для добавления в корзину', 'cmb2' ),
+		'id'   => 'rspl_theme_coursepromo_metabox_product_id',
+		'type' => 'text_small',
+	) );
+
+	$cmb_demo->add_field( array(
+		'name' => esc_html__( 'Стоимость', 'cmb2' ),
+		'desc' => esc_html__( 'Должна совпадать с ценой в товаре', 'cmb2' ),
+		'id'   => 'rspl_theme_coursepromo_metabox_product_price',
+		'type' => 'text_small',
+	) );
+
+	$cmb_demo->add_field( array(
+		'name' => esc_html__( 'Подзаголовок', 'cmb2' ),
+		'id'   => 'rspl_theme_coursepromo_metabox_subtitle',
+		'type' => 'text_medium',
+	) );
+
+	$cmb_demo->add_field( array(
+		'name' => esc_html__( 'Первый параграф', 'cmb2' ),
+		// 'desc' => esc_html__( 'field description (optional)', 'cmb2' ),
+		'id'   => 'rspl_theme_coursepromo_metabox_p_1',
+		'type' => 'textarea',
+	) );
+
+	$cmb_demo->add_field( array(
+		'name' => esc_html__( 'Второй параграф', 'cmb2' ),
+		// 'desc' => esc_html__( 'field description (optional)', 'cmb2' ),
+		'id'   => 'rspl_theme_coursepromo_metabox_p_2',
+		'type' => 'textarea',
+	) );
+
+	$cmb_demo->add_field( array(
+		'name' => esc_html__( 'Третий параграф', 'cmb2' ),
+		// 'desc' => esc_html__( 'field description (optional)', 'cmb2' ),
+		'id'   => 'rspl_theme_coursepromo_metabox_p_3',
+		'type' => 'textarea',
+	) );
+}

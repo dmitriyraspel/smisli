@@ -24,8 +24,8 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
     />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
 
-    <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/course-promo.js?40"></script>
-    <link href="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/front.css?40" rel="stylesheet" />
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/course-promo.js?41"></script>
+    <link href="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/front.css?41" rel="stylesheet" />
 
     <title><?php bloginfo('name'); ?></title>
     <meta name="description" content="<?php bloginfo('description'); ?>" />
