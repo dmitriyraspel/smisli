@@ -794,6 +794,7 @@ input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+input[type="name"],
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -830,6 +831,7 @@ textarea {
   transition: all 0.7s;
 }
 
+input[type="name"]:focus,
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -2974,3 +2976,52 @@ circle:nth-of-type(4) {
 .dark a {
   color: #fff;
 }
+/* 
+Front Page Form 
+*/
+.front-page-form {
+  margin: 1.5em 0 1.5em;
+}
+.front-page-form._sending {
+	opacity: 0.5;
+}
+
+
+.front-page-form input,
+.front-page-form textarea {
+  width: 350px;
+  max-width: 100%;
+  font-weight: 700;
+}
+
+
+.front-page-form-button {
+  position: relative;
+  background: transparent;
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  overflow: hidden;
+}
+
+.front-page-form-button.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: #1b1b1b42;
+}
+.button-line {
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: -5%;
+  width: 110%;
+  height: 2px;
+  background: #1b1b1b;
+  transition: all 1s;
+  z-index: 3;
+  transform: translateX(-100%);
+}
+.disabled .button-line {
+  transform: translateX(0%);
+}
+
