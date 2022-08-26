@@ -7644,6 +7644,10 @@ Front Page Form
   margin: 1.5em 0 1.5em;
 }
 
+.front-page-form._sending {
+	opacity: 0.4;
+}
+
 
 .front-page-form input,
 .front-page-form textarea {

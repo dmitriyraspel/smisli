@@ -24,8 +24,8 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
     />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
 
-    <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/course-promo.js?41"></script>
-    <link href="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/front.css?41" rel="stylesheet" />
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/course-promo.js?42"></script>
+    <link href="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/front.css?42" rel="stylesheet" />
 
     <title><?php bloginfo('name'); ?></title>
     <meta name="description" content="<?php bloginfo('description'); ?>" />
@@ -430,37 +430,44 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
             <p><?php echo get_post_meta($post-> ID, 'rspl_theme_frontpage_screen_7_description', true ); ?></p>
 
             <form 
-            action=""
+            method="post"
+            action="<?php echo esc_url( admin_url('admin-ajax.php') ); ?>"
             id="front-page-feedback-form" 
             class="front-page-form"
-            >
+            >            
               <div class="input-block">
                 <span class="border">
-                  <input 
-                  id="front-page-form-email-input"
-                  class="border-input" 
-                  type="email" 
-                  placeholder="Ваш email">
-                </span>
-              </div>
-              <div class="input-block">
-                <span class="border">
-                  <input 
+                  <input
+				  name="name"				  
                   id="front-page-form-name-input" 
                   class="border-input"
                   type="name" 
-                  placeholder="Ваше имя">
+                  placeholder="Ваше имя"
+				  required>
                 </span>
               </div>
+			  
+			  <div class="input-block">
+                <span class="border">
+                  <input 
+				  name="email"
+                  id="front-page-form-email-input"
+                  class="border-input" 
+                  type="email" 
+                  placeholder="Ваш email"
+				  required>
+                </span>
+              </div>
+
               <div class="input-block">
                 <div class="border">
-                  <textarea 
-                  id="front-page-form-textarea"
-                  class="border-input" placeholder="Введите ваше предложение"></textarea>
+                  <textarea name="message" required="true" id="front-page-form-textarea" class="border-input" placeholder="Введите ваше предложение *"></textarea>
                 </div>
               </div>
+
+
               <div class="input-button">
-                <button type="submit" class="front-page-form-button disabled " >Отправить
+                <button type="submit" id="front-page-form-button" class="front-page-form-button " >Отправить
                   <span class="button-line"></span>
                 </button>
               </div>
@@ -611,6 +618,91 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
     
 
     <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/simple-adaptive-slider/simple-adaptive-slider.js?40"></script>
+    
+    <script src='<?php echo home_url(); ?>/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+    
 
+    <script type="text/javascript">
+
+      var form 				= document.getElementById('front-page-feedback-form');
+      var formAction 	= form.getAttribute('action');
+      let formButton	= document.getElementById('front-page-form-button');
+      let formName		= document.getElementById('front-page-form-name-input');
+      let formEmail 	= document.getElementById('front-page-form-email-input');
+      let formMessage = document.getElementById('front-page-form-textarea');
+      var formCheckbox = document.getElementById('front-page-form-agreement'); 
+
+
+      jQuery( function( $ ){
+      $( '#front-page-form-button' ).click(function(){
+        event.preventDefault();
+
+        
+        var valid = true;
+
+        var nameVal = $( '#front-page-form-name-input' ).val();
+        // проверяем имя
+        if ( nameVal == '' ) {
+          $( '#front-page-form-name-input' ).addClass(" input-error");
+          valid = false;
+        }
+
+        var messageVal = $( '#front-page-form-textarea' ).val();
+        // проверяем сообщение
+        if ( messageVal == '' ) {
+          $( '#front-page-form-textarea' ).addClass(" input-error");
+          valid = false;
+        }
+
+        var emailVal = $( '#front-page-form-email-input' ).val();
+        // проверяем Email
+        if ( emailVal == '' ) {
+          $( '#front-page-form-email-input' ).addClass(" input-error");
+          valid = false;
+        } else {
+          const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+          if( ! re.test( emailVal ) ) {
+            jQuery( 'label[for="email"]' ).append( ' <span class="validation-error">Некорректный email</span>' );
+            $( '#front-page-form-email-input' ).addClass(" input-error");
+            valid = false;
+          }
+        }
+
+        if( false == valid ) {
+          console.log('valid == false');
+        } else {
+          var formData = {
+            action: 'hello',
+            name: nameVal,
+            email: emailVal,
+            message: messageVal
+          };
+          console.log(formCheckbox, 'valid == true', formData);
+          $.ajax({
+            url: 'http://localhost/smisli/wp-admin/admin-ajax.php',
+            type: 'POST',
+            data: formData, 
+            beforeSend: function( xhr ) {
+              $( '#front-page-feedback-form' ).addClass(" _sending");
+            },
+            //
+            // complete: function( data ) {
+            // 	console.log(data);
+            // 	$( '#front-page-feedback-form' ).removeClass(" _sending");
+            // },
+            //
+            success: function( data ) {
+              console.log(data);
+              $( '#front-page-feedback-form' ).removeClass(" _sending");
+            }
+          });
+
+        }
+
+      });
+    });
+
+    </script>
+	
   </body>
 </html>
