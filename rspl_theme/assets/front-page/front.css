@@ -7687,6 +7687,18 @@ Front Page Form
   transform: translateX(0%);
 }
 
+input[type="name"]._error,
+input[type="text"]._error,
+input[type="email"]._error,
+input[type="url"]._error,
+input[type="password"]._error,
+input[type="search"]._error,
+input[type="number"]._error,
+input[type="tel"]._error,
+textarea._error {
+  background-color:rgba(240, 13, 13, 0.253);
+}
+
 
 /* .ani-border {
   padding: 1em;

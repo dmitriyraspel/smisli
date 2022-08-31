@@ -855,6 +855,28 @@ textarea:focus {
   color: #1b1b1b;
 }
 
+input[type="name"]._error,
+input[type="text"]._error,
+input[type="email"]._error,
+input[type="url"]._error,
+input[type="password"]._error,
+input[type="search"]._error,
+input[type="number"]._error,
+input[type="tel"]._error,
+input[type="range"]._error,
+input[type="date"]._error,
+input[type="month"]._error,
+input[type="week"]._error,
+input[type="time"]._error,
+input[type="datetime"]._error,
+input[type="datetime-local"]._error,
+input[type="color"]._error,
+textarea._error {
+  border-radius: 1px;
+  border: 1px solid red;
+  border-bottom: 2px solid red;
+}
+
 textarea {
   width: 1480px;
   resize: none;

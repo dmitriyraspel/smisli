@@ -24,8 +24,8 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
     />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
 
-    <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/course-promo.js?42"></script>
-    <link href="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/front.css?42" rel="stylesheet" />
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/course-promo.js?43"></script>
+    <link href="<?php echo get_stylesheet_directory_uri() ?>/assets/front-page/front.css?43" rel="stylesheet" />
 
     <title><?php bloginfo('name'); ?></title>
     <meta name="description" content="<?php bloginfo('description'); ?>" />
@@ -430,6 +430,7 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
             <p><?php echo get_post_meta($post-> ID, 'rspl_theme_frontpage_screen_7_description', true ); ?></p>
 
             <form 
+            name="feedback"
             method="post"
             action="<?php echo esc_url( admin_url('admin-ajax.php') ); ?>"
             id="front-page-feedback-form" 
@@ -443,7 +444,7 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
                   class="border-input"
                   type="name" 
                   placeholder="Ваше имя"
-				  required>
+				  data-validate="require" >
                 </span>
               </div>
 			  
@@ -455,19 +456,25 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
                   class="border-input" 
                   type="email" 
                   placeholder="Ваш email"
-				  required>
+				  data-validate="require">
                 </span>
               </div>
 
               <div class="input-block">
                 <div class="border">
-                  <textarea name="message" required="true" id="front-page-form-textarea" class="border-input" placeholder="Введите ваше предложение *"></textarea>
+                  <textarea 
+				  name="message" 
+				  id="front-page-form-textarea" 
+				  class="border-input" 
+				  placeholder="Введите ваше предложение"
+				  data-validate="require"
+				  ></textarea>
                 </div>
               </div>
 
 
               <div class="input-button">
-                <button type="submit" id="front-page-form-button" class="front-page-form-button " >Отправить
+                <button type="submit" id="front-page-form-button" class="front-page-form-button disabled" >Отправить
                   <span class="button-line"></span>
                 </button>
               </div>
@@ -621,88 +628,141 @@ $custom_logo_url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 
     
     <script src='<?php echo home_url(); ?>/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
     
+	<script type="text/javascript">
 
-    <script type="text/javascript">
+	///// переменные:
+	var feedbackForm = document.forms.feedback;
+	// var formAction 	= feedbackForm.getAttribute("action");
+  var formAction = '<?php echo esc_url( admin_url('admin-ajax.php') ); ?>';
 
-      var form 				= document.getElementById('front-page-feedback-form');
-      var formAction 	= form.getAttribute('action');
-      let formButton	= document.getElementById('front-page-form-button');
-      let formName		= document.getElementById('front-page-form-name-input');
-      let formEmail 	= document.getElementById('front-page-form-email-input');
-      let formMessage = document.getElementById('front-page-form-textarea');
-      var formCheckbox = document.getElementById('front-page-form-agreement'); 
+	var formButton	= document.getElementById('front-page-form-button');
+	var formName = feedbackForm.name;
+	var formEmail = feedbackForm.email;
+	var formMessage = feedbackForm.message;
 
 
-      jQuery( function( $ ){
-      $( '#front-page-form-button' ).click(function(){
-        event.preventDefault();
+	// Имя
+	formName.addEventListener('focusout', (event) => {
+		validateName();
+	});
+	formName.addEventListener('focus', (event) => {
+		formName.classList.remove("_error");
+		formName.setAttribute( 'data-validate', 'require' );
+	});
+	// Email
+	formEmail.addEventListener('focusout', (event) => {
+		validateEmail();
+	});
+	formEmail.addEventListener('focus', (event) => {
+		formEmail.classList.remove("_error");
+		formEmail.setAttribute( 'data-validate', 'require' );
+	});
+	// Сообщение
+	formMessage.addEventListener('focusout', (event) => {
+		validateMessage();
+	});
+	formMessage.addEventListener('focus', (event) => {
+		formMessage.classList.remove("_error");
+		formMessage.setAttribute( 'data-validate', 'require' );
+	});
 
-        
-        var valid = true;
+	// Проверка имени
+	function validateName() {
+		var val = formName.value;
+		
+		if (val === "") {
+			formName.setAttribute( 'data-validate', 'require' );
+			formName.classList.add("_error");
+		} else {
+			formName.classList.remove("_error");
+			formName.setAttribute( 'data-validate', 'success' );
+		}
+		removeDisabled();
+	} 
 
-        var nameVal = $( '#front-page-form-name-input' ).val();
-        // проверяем имя
-        if ( nameVal == '' ) {
-          $( '#front-page-form-name-input' ).addClass(" input-error");
-          valid = false;
-        }
+	// проверка Email
+	function validateEmail() {
+		if (emailTest(formEmail)) {
+			formEmail.classList.add("_error");
+			formEmail.setAttribute( 'data-validate', 'require' );
+			return false;
+		} else {
+			formEmail.classList.remove("_error");
+			formEmail.setAttribute( 'data-validate', 'success' );
+		return true;
+		}
+		removeDisabled();
+	}
+	//Функция тест email
+	function emailTest(input) {
+	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+	}
 
-        var messageVal = $( '#front-page-form-textarea' ).val();
-        // проверяем сообщение
-        if ( messageVal == '' ) {
-          $( '#front-page-form-textarea' ).addClass(" input-error");
-          valid = false;
-        }
+	// Проверка Сообщения
+	function validateMessage() {
+		var val = formMessage.value;
+		if (val === "") {
+			formMessage.classList.add("_error");
+			formMessage.setAttribute( 'data-validate', 'require' );
+		} else {
+			formMessage.classList.remove("_error");
+			formMessage.setAttribute( 'data-validate', 'success' );
+		}
+		removeDisabled();
+	}
 
-        var emailVal = $( '#front-page-form-email-input' ).val();
-        // проверяем Email
-        if ( emailVal == '' ) {
-          $( '#front-page-form-email-input' ).addClass(" input-error");
-          valid = false;
-        } else {
-          const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-          if( ! re.test( emailVal ) ) {
-            jQuery( 'label[for="email"]' ).append( ' <span class="validation-error">Некорректный email</span>' );
-            $( '#front-page-form-email-input' ).addClass(" input-error");
-            valid = false;
-          }
-        }
+	// Убираем Disabled класс с кнопки
+	function removeDisabled() {
+		if ( formName.getAttribute( 'data-validate' ) === 'success' && formMessage.getAttribute( 'data-validate' ) === 'success' && formEmail.getAttribute( 'data-validate' ) === 'success' ) {
+			formButton.classList.remove("disabled");
+		} else {
+			formButton.classList.add("disabled");
+		}
+	}
 
-        if( false == valid ) {
-          console.log('valid == false');
-        } else {
-          var formData = {
-            action: 'hello',
-            name: nameVal,
-            email: emailVal,
-            message: messageVal
-          };
-          console.log(formCheckbox, 'valid == true', formData);
-          $.ajax({
-            url: 'http://localhost/smisli/wp-admin/admin-ajax.php',
-            type: 'POST',
-            data: formData, 
-            beforeSend: function( xhr ) {
-              $( '#front-page-feedback-form' ).addClass(" _sending");
-            },
-            //
-            // complete: function( data ) {
-            // 	console.log(data);
-            // 	$( '#front-page-feedback-form' ).removeClass(" _sending");
-            // },
-            //
-            success: function( data ) {
-              console.log(data);
-              $( '#front-page-feedback-form' ).removeClass(" _sending");
-            }
-          });
 
-        }
 
-      });
-    });
 
-    </script>
+
+	// только отправка
+	jQuery( function( $ ){
+	$( '#front-page-form-button' ).click(function(){
+		event.preventDefault();
+
+		var nameVal = $( '#front-page-form-name-input' ).val();
+		var messageVal = $( '#front-page-form-textarea' ).val();
+		var emailVal = $( '#front-page-form-email-input' ).val();
+
+			if ( $( '#front-page-form-button' ).hasClass("disabled") ) {
+			// console.log('button disabled');
+		} else {
+			var formData = {
+				action: 'hello',
+				name: nameVal,
+				email: emailVal,
+				message: messageVal
+			};
+			
+			$.ajax({
+				url: formAction, // 
+				type: 'POST',
+				data: formData, 
+				beforeSend: function( xhr ) {
+					$( '#front-page-feedback-form' ).addClass(" _sending");
+					$( '#front-page-form-button' ).addClass("disabled");
+					$( '#front-page-form-button' ).text( 'Отправка...' );
+				},
+				success: function( data ) {
+					$( '#front-page-feedback-form' ).removeClass(" _sending");
+					$( '#front-page-form-button' ).text( 'Отправлено' );
+				}
+			});
+		}
+	});
+});
+// отправлено
+
+</script>
 	
   </body>
 </html>
