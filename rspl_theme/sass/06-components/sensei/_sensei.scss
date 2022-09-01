@@ -116,12 +116,87 @@
   flex: 0 0 20px;
 }
 .wp-block-sensei-lms-course-outline-lesson__chevron {
-order: 10;
+  order: 10;
+  display: none;
+}
+
+// страница все курсы
+.rspl-archive-course-container {}
+
+.rspl-archive-course-container li.course {
+  float: none;
+  padding: 0;
+  position: relative;
+  display: flex;
+}
+
+.rspl-archive-course-link {
+  display: block;
+  text-decoration: none;
+}
+
+.rspl-archive-course-img-wrap {
+  max-width: 220px;
+}
+
+.rspl-archive-course-thumbnail {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.rspl-archive-course-title {
+  margin-top: 0px;
+  font-weight: 700;
+}
+
+.rspl-archive-course-lesson-count {
+  display: block;
+  margin-left: 1em;
+}
+
+@media only screen and (max-width: $mobile-width) {
+  .rspl-archive-course-container li.course {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: $spacing-vertical * 2;
+  }
+  .rspl-archive-course-content {
+    max-width: 220px;
+  }
+  .rspl-archive-course-title {
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+  .rspl-archive-course-lesson-count {
+    font-size: 14px;
+    text-align: right;
+  }
 }
 
 
+@media only screen and (min-width: $mobile-width) {
+  .rspl-archive-course-container li.course {
+    margin-bottom: $spacing-vertical * 1.5;
+  }
+  .rspl-archive-course-img-wrap {
+    width: 40%;
+    max-width: 40%;
+  }
+  .rspl-archive-course-content {
+    padding-left: var(--heading--font-size-h3);
+    max-width: 60%;
+  }
+}
 
-
-
-
-
+@media only screen and (min-width: 1024px) {
+  .rspl-archive-course-container li.course {
+    margin-bottom: $spacing-vertical * 2;
+  }
+  .rspl-archive-course-title {
+    font-size: var(--heading--font-size-h2);
+  }
+}
