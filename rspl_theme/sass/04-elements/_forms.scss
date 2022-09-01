@@ -20,7 +20,7 @@ input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-
+input[type="name"],
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -67,6 +67,11 @@ textarea {
 		// background-color: $input-background-hover;
 		color: $input-color-focus;
 		// background: red;
+	}
+	&._error {
+		border-radius: $input-border-radius-hover;
+		border: 1px solid $error;
+		border-bottom: 2px solid $error;
 	}
 }
 

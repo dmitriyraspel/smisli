@@ -873,8 +873,8 @@ input[type="datetime-local"]._error,
 input[type="color"]._error,
 textarea._error {
   border-radius: 1px;
-  border: 1px solid red;
-  border-bottom: 2px solid red;
+  border: 1px solid tomato;
+  border-bottom: 2px solid tomato;
 }
 
 textarea {
@@ -2671,16 +2671,49 @@ body.primary-navigation-open .primary-navigation {
 
 .wp-block-sensei-lms-course-outline .rspl-lesson-thumbnail {
   width: auto;
-  max-width: 64px;
+  max-width: 100px;
   height: auto;
-  max-height: 64px;
-  margin: 0px 0px 4px 0px;
+  max-height: 100px;
+  margin: 0px 0px 16px 0px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.wp-block-sensei-lms-course-outline-lesson {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 0 16px 0;
+  position: relative;
+}
+
+.wp-block-sensei-lms-course-outline-lesson,
+.entry-content .wp-block-sensei-lms-course-outline-lesson,
+.sensei .entry-content .wp-block-sensei-lms-course-outline-lesson:not(.button) {
+  margin: 0 0 16px 0;
+}
+
+.wp-block-sensei-lms-course-outline-lesson > span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0px 16px;
+  font-weight: 700;
 }
 
 .wp-block-sensei-lms-course-outline-lesson__status {
   -webkit-box-ordinal-group: 10;
       -ms-flex-order: 9;
           order: 9;
+  margin-left: 0px;
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
 }
 
 .wp-block-sensei-lms-course-outline-lesson__chevron {
@@ -2746,6 +2779,60 @@ body.primary-navigation-open .primary-navigation {
 .course-container,
 .course-container .course {
   border-bottom: none;
+}
+
+/* Front-page Form */
+/* 
+Front Page Form 
+*/
+.front-page-form {
+  margin: 1.5em 0 1.5em;
+}
+
+.front-page-form._sending {
+  opacity: 0.5;
+}
+
+.front-page-form input,
+.front-page-form textarea {
+  width: 350px;
+  max-width: 100%;
+  font-weight: 700;
+}
+
+.front-page-form-button {
+  position: relative;
+  background: transparent;
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  overflow: hidden;
+}
+
+.front-page-form-button.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: #1b1b1b42;
+}
+
+.button-line {
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: -5%;
+  width: 110%;
+  height: 2px;
+  background: #1b1b1b;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  z-index: 3;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.disabled .button-line {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 /*--------------------------------------------------------------
@@ -2998,52 +3085,3 @@ circle:nth-of-type(4) {
 .dark a {
   color: #fff;
 }
-/* 
-Front Page Form 
-*/
-.front-page-form {
-  margin: 1.5em 0 1.5em;
-}
-.front-page-form._sending {
-	opacity: 0.5;
-}
-
-
-.front-page-form input,
-.front-page-form textarea {
-  width: 350px;
-  max-width: 100%;
-  font-weight: 700;
-}
-
-
-.front-page-form-button {
-  position: relative;
-  background: transparent;
-  font-weight: 700;
-  font-size: 20px;
-  border: none;
-  overflow: hidden;
-}
-
-.front-page-form-button.disabled {
-  pointer-events: none;
-  cursor: default;
-  color: #1b1b1b42;
-}
-.button-line {
-  display: block;
-  position: absolute;
-  top: 60%;
-  left: -5%;
-  width: 110%;
-  height: 2px;
-  background: #1b1b1b;
-  transition: all 1s;
-  z-index: 3;
-  transform: translateX(-100%);
-}
-.disabled .button-line {
-  transform: translateX(0%);
-}
-

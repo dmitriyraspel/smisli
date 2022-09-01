@@ -75,33 +75,53 @@
   margin-top: $spacing-vertical * 2;
 }
 
-.wp-block-sensei-lms-course-outline .rspl-lesson-thumbnail {
-  width: auto;
-  max-width: 64px;
-  height: auto;
-  max-height: 64px;
-  margin: 0px 0px 4px 0px;
+.wp-block-sensei-lms-course-outline {
+  
+  .rspl-lesson-thumbnail {
+    width: auto;
+    max-width: 100px;
+    height: auto;
+    max-height: 100px;
+    margin: 0px 0px 16px 0px;
+    border-radius: 4px;
+    overflow: hidden;
+  } 
+}
+
+.wp-block-sensei-lms-course-outline-lesson {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 16px 0 ;
+  position: relative;
+}
+
+.wp-block-sensei-lms-course-outline-lesson, 
+.entry-content .wp-block-sensei-lms-course-outline-lesson, 
+.sensei .entry-content .wp-block-sensei-lms-course-outline-lesson:not(.button) {
+  margin: 0 0 16px 0 ;
+}
+
+
+.wp-block-sensei-lms-course-outline-lesson>span {
+  flex: 1;
+  padding: 0px 16px;
+  font-weight: $bold;
 }
  
 .wp-block-sensei-lms-course-outline-lesson__status {
   order: 9;
+  margin-left: 0px;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
 }
 .wp-block-sensei-lms-course-outline-lesson__chevron {
 order: 10;
 }
-// .editor-styles-wrapper .wp-block-sensei-lms-learner-courses__courses-list--is-list-view .course .entry, 
-// .wp-block-sensei-lms-learner-courses--is-list-view #sensei-user-courses .course .entry {
-//   flex-wrap: wrap;
-// }
-// .editor-styles-wrapper .wp-block-sensei-lms-learner-courses__courses-list--is-list-view .course img, 
-// .wp-block-sensei-lms-learner-courses--is-list-view #sensei-user-courses .course img {
-//   width: auto;
-//   height: auto;
-//   max-width: 150px;
-//   max-height: 150px;
-// }
 
-// .editor-styles-wrapper .wp-block-sensei-lms-learner-courses__courses-list--is-list-view .course .wp-block-sensei-lms-learner-courses__courses-list__details:not(:only-child), 
-// .wp-block-sensei-lms-learner-courses--is-list-view #sensei-user-courses .course .wp-block-sensei-lms-learner-courses__courses-list__details:not(:only-child) {
-//   flex-basis: 100%;
-// }
+
+
+
+
+
+
