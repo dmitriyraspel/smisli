@@ -670,7 +670,8 @@ button,
 .button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+a.wp-block-button__link {
   cursor: pointer;
   display: inline-block;
   font-family: "Lora", serif;
@@ -693,7 +694,8 @@ button:hover,
 .button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+a.wp-block-button__link:hover {
   border-color: #3556e7;
 }
 
@@ -1411,17 +1413,29 @@ form .double .half {
   height: 2px;
   background-color: #1b1b1b;
   background: var(--button-color, #1b1b1b);
-  -webkit-transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, opacity 0.001s linear 0.5s, background-color 0.25s linear, -webkit-transform 0.25s ease-out 0.25s;
-  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, opacity 0.001s linear 0.5s, background-color 0.25s linear, -webkit-transform 0.25s ease-out 0.25s;
-  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s, background-color 0.25s linear;
-  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s, background-color 0.25s linear, -webkit-transform 0.25s ease-out 0.25s;
+  -webkit-transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
+ opacity 0.001s linear 0.5s,
+ background-color 0.25s linear, -webkit-transform 0.25s ease-out 0.25s;
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
+ opacity 0.001s linear 0.5s,
+ background-color 0.25s linear, -webkit-transform 0.25s ease-out 0.25s;
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
+ transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s,
+ background-color 0.25s linear;
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
+ transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s,
+ background-color 0.25s linear, -webkit-transform 0.25s ease-out 0.25s;
 }
 
 #menu-toggle.animating div {
-  -webkit-transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, opacity 0.001s linear 0.5s, -webkit-transform 0.25s ease-out 0.25s;
-  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, opacity 0.001s linear 0.5s, -webkit-transform 0.25s ease-out 0.25s;
-  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s;
-  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s, -webkit-transform 0.25s ease-out 0.25s;
+  -webkit-transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
+ opacity 0.001s linear 0.5s, -webkit-transform 0.25s ease-out 0.25s;
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
+ opacity 0.001s linear 0.5s, -webkit-transform 0.25s ease-out 0.25s;
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
+ transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s;
+  transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s,
+ transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s, -webkit-transform 0.25s ease-out 0.25s;
 }
 
 #menu-toggle.light div {
@@ -1460,10 +1474,27 @@ form .double .half {
 .primary-navigation-open #menu-toggle div {
   width: 24px;
   background-color: white;
-  -webkit-transition: width 0.125s ease-in-out 0.875s,  top 0.25s ease-in-out 0.25s, opacity 0.001s linear 0.5s,  background-color 0.25s linear,  -webkit-transform 0.25s ease-out 0.5s;
-  transition: width 0.125s ease-in-out 0.875s,  top 0.25s ease-in-out 0.25s, opacity 0.001s linear 0.5s,  background-color 0.25s linear,  -webkit-transform 0.25s ease-out 0.5s;
-  transition: width 0.125s ease-in-out 0.875s,  top 0.25s ease-in-out 0.25s, transform 0.25s ease-out 0.5s,  opacity 0.001s linear 0.5s,  background-color 0.25s linear;
-  transition: width 0.125s ease-in-out 0.875s,  top 0.25s ease-in-out 0.25s, transform 0.25s ease-out 0.5s,  opacity 0.001s linear 0.5s,  background-color 0.25s linear,  -webkit-transform 0.25s ease-out 0.5s;
+  -webkit-transition: width 0.125s ease-in-out 0.875s, 
+ top 0.25s ease-in-out 0.25s,
+ opacity 0.001s linear 0.5s, 
+ background-color 0.25s linear, 
+ -webkit-transform 0.25s ease-out 0.5s;
+  transition: width 0.125s ease-in-out 0.875s, 
+ top 0.25s ease-in-out 0.25s,
+ opacity 0.001s linear 0.5s, 
+ background-color 0.25s linear, 
+ -webkit-transform 0.25s ease-out 0.5s;
+  transition: width 0.125s ease-in-out 0.875s, 
+ top 0.25s ease-in-out 0.25s,
+ transform 0.25s ease-out 0.5s, 
+ opacity 0.001s linear 0.5s, 
+ background-color 0.25s linear;
+  transition: width 0.125s ease-in-out 0.875s, 
+ top 0.25s ease-in-out 0.25s,
+ transform 0.25s ease-out 0.5s, 
+ opacity 0.001s linear 0.5s, 
+ background-color 0.25s linear, 
+ -webkit-transform 0.25s ease-out 0.5s;
 }
 
 .primary-navigation-open #menu-toggle div:nth-child(1) {
@@ -3170,3 +3201,10 @@ circle:nth-of-type(4) {
 .dark a {
   color: #fff;
 }
+
+
+/* a.wp-block-button__link {
+  font-family: "Lora", serif;
+  line-height: 1.5;
+  font-weight: 700;
+} */
