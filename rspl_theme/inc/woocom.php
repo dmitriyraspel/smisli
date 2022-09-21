@@ -64,3 +64,21 @@ function rspl_theme_redirect_after_order_received_page() {
 	exit;
  
 }
+
+// Замена текста "Вернуться в магазин"
+add_filter( 'woocommerce_return_to_shop_text', 'rspl_theme_woocommerce_return_to_shop_text_filter' );
+function rspl_theme_woocommerce_return_to_shop_text_filter( $default_text ){
+
+    $default_text = 'Вернуться к выбору';
+	return $default_text;
+}
+
+
+
+// Замены ссылки кнопки "Вернуться в магазин"
+add_filter( 'woocommerce_return_to_shop_redirect', 'rspl_theme_woocommerce_return_to_shop_redirect_filter' );
+function rspl_theme_woocommerce_return_to_shop_redirect_filter( $wc_get_page_permalink ){
+
+    $wc_get_page_permalink = site_url( 'courses-overview' );
+	return $wc_get_page_permalink;
+}
