@@ -327,8 +327,3 @@ require get_template_directory() . '/inc/cmb2.php';
  * Form to Telegram
  */
 require get_template_directory() . '/inc/form-to-telegram.php';
-
-/**
- * Sensei Woocom integration.
- */
-require get_template_directory() . '/inc/woocom-sensei.php';

@@ -1,8 +1,13 @@
 <?php
 
+
+ if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
+
 // Добавляем метабокс курса для товара
 add_action( 'add_meta_boxes', 'rspl_add_course_metabox' ); 
- 
 function rspl_add_course_metabox() {
  
 	add_meta_box(
@@ -48,6 +53,7 @@ function rspl_course_metabox_callback( $post ) {
                 echo '<option value="'.get_the_ID().'">'.get_the_title().'</option>';
               }
             endwhile;
+						// reset !!!
           echo '</select> 
         </td>
       </tr>
@@ -101,44 +107,7 @@ function rspl_remove_meta_box_content_drip_promo(){
 }
 
 
-// Замена текста уведомлений:
-
-// Для Лекций
-// add_filter('sensei_lesson_course_signup_notice_message', 'rspl_course_signup_notice_message_filter', 10, 3 );
-
-// для Модулей
-// add_filter('sensei_module_course_signup_notice_message', 'rspl_course_signup_notice_message_filter', 10, 3 ); 
-
-// для Вопросов/Заданий
-// add_filter('sensei_quiz_course_signup_notice_message', 'rspl_course_signup_notice_message_filter', 10, 3 ); 
-function rspl_course_signup_notice_message_filter( $message_default, $course_id, $course_link ) {
-	
-	$course_name 		= get_the_title( $course_id );
-	$wc_post_id 		= get_post_meta( $course_id, 'rspl_course_woocommerce_product', true );
-	$checkout_url 	= wc_get_checkout_url() . "?add-to-cart=" . $wc_post_id . "&quantity=1";
-	
-	$checkout_link  = '<a href="' . $checkout_url . '" title="' . esc_attr__( 'Купить курс', 'rspl_theme' ) . '">';
-	$checkout_link .= $course_name;
-	$checkout_link .= '</a>';
-	
-	$lesson_get_take_course_url =  esc_url( Sensei()->lesson->get_take_course_url( $course_id ) ); // Проверить quiz и module
-  // "http://localhost/smisli/course/testovyj-kurs/"
-  // "http://localhost/smisli/course/nachalo-raboty-s-sensei-lms/"
-
-	$course_link  = '<a href="' . $lesson_get_take_course_url . '" title="' . esc_attr__( 'Зарегистрироваться', 'rspl_theme' ) . '">';
-	$course_link .= esc_html__( $course_name );
-	$course_link .= '</a>';
-	//
-	if( 0 < $wc_post_id) { // если есть id товара = курс платный
-		$message_default = sprintf( esc_html__( 'Пожалуйста, оплатите %1$s, чтобы получить доступ.', 'rspl_theme' ), $checkout_link );
-	} else {
-		$message_default = sprintf( esc_html__( 'Пожалуйста, запишитесь на %1$s, чтобы получить доступ.', 'rspl_theme' ), $course_link );
-	}
-
-	return $message_default;
-}
-
-// выводит цену товара/курса. передаем id товара woocommerce, добавить проверку на пустую $wc_post_id 
+// выводит цену товара/курса. передаем id товара woocommerce, добавить проверку на пустую $wc_post_id Надо ли?
 function rspl_get_price_course($wc_post_id) {
 	
 	$regular_price = get_post_meta( $wc_post_id, '_regular_price', true);
@@ -299,6 +268,139 @@ function rspl_lesson_content_has_access($content) {
 	return $content;
 
 }
+
+
+// Регистрация пользователя при покупке, чекбокс отмечен V
+add_filter( 'woocommerce_create_account_default_checked', 'rspl_create_account_default_checked_filter' );
+function rspl_create_account_default_checked_filter( $checked ){
+	$checked = true;
+	return $checked;
+}
+
+
+// При покупке Заказ на проверку
+add_action( 'woocommerce_order_status_changed', 'rspl_checkout_get_order_for_check', 10, 4 );
+function rspl_checkout_get_order_for_check( $order_id, $status_transition_from, $status_transition_to, $that ){
+
+	$order = wc_get_order( $order_id );
+
+	if( $order->has_status( ['completed', 'processing'] ) ) {
+		rspl_check_order_has_course($order);
+	}
+}
+
+
+// Проверка ордера. Если пользователь купил курс, записываем на этот курс  
+function rspl_check_order_has_course($order) {
+
+	// массив товаров-курсов ключ=id товара, значение= id курса
+	$wc_post_ids = array(
+		"wc_post_id" => 'course_id'
+	);
+
+	// задаем нужные критерии выборки курсов из БД
+	$args = array(
+		'post_status' => 'publish',
+		'posts_per_page' => 100,
+		'post_type' => 'course'
+	);
+
+	$query = new WP_Query( $args );
+
+	// Цикл
+	if ( $query->have_posts() ) {
+		while ( $query->have_posts() ) {
+				
+				$query->the_post();
+				$course_id = get_the_ID();
+				$wc_post_id = get_post_meta( $course_id, 'rspl_course_woocommerce_product', true );
+				
+				if( 0 < $wc_post_id) { // условие чтобы не попадали бесплатные курсы
+					$wc_post_ids[$wc_post_id] = $course_id;
+				}
+				
+		}
+	}
+
+	// Сбрасываем данные запроса, чтобы вернуть стандартный запрос $post.
+	wp_reset_postdata();
+
+	// здесь мы имеем массив товар-курс, по которому будем проверять order
+
+	// получаем экземпляр объекта WC_Order
+	// $order = wc_get_order( $order_id );
+
+	// получим ID покупателя. По-хорошему, надо в начале функции проверять есть ли user, если нет ничего не делать.
+	// Но, если его нет, надо искать более подходящий Хук
+	$user_id = $order->get_user_id();
+
+	$order_items = $order->get_items();
+
+	foreach( $order_items as $item_id => $item ){
+		$product_id = $item->get_product_id(); // id товара
+		// если продавать не только курсы, надо бы добавить проверку
+		$course_id = $wc_post_ids[$product_id];
+		
+		rspl_enrol_courseid_userid ($course_id, $user_id);
+	}
+
+}
+
+
+// Запись юзера на курс
+function rspl_enrol_courseid_userid ($course_id, $user_id) {
+	$course_enrolment = Sensei_Course_Enrolment::get_course_instance( $course_id );
+	$course_enrolment->enrol( $user_id );
+}
+
+
+/*
+*     Отключены
+*/
+
+// На странице my-account/orders/ сделать проверку. 
+// Получить все ордера юзера и отправить в rspl_check_order_has_course($order_id)
+// require_once plugin_dir_url( __FILE__ ) . metaboxes.php;
+// Замена текста уведомлений:
+
+
+
+// Для Лекций
+// add_filter('sensei_lesson_course_signup_notice_message', 'rspl_course_signup_notice_message_filter', 10, 3 );
+
+// для Модулей
+// add_filter('sensei_module_course_signup_notice_message', 'rspl_course_signup_notice_message_filter', 10, 3 ); 
+
+// для Вопросов/Заданий
+// add_filter('sensei_quiz_course_signup_notice_message', 'rspl_course_signup_notice_message_filter', 10, 3 ); 
+function rspl_course_signup_notice_message_filter( $message_default, $course_id, $course_link ) {
+	
+	$course_name 		= get_the_title( $course_id );
+	$wc_post_id 		= get_post_meta( $course_id, 'rspl_course_woocommerce_product', true );
+	$checkout_url 	= wc_get_checkout_url() . "?add-to-cart=" . $wc_post_id . "&quantity=1";
+	
+	$checkout_link  = '<a href="' . $checkout_url . '" title="' . esc_attr__( 'Купить курс', 'rspl_theme' ) . '">';
+	$checkout_link .= $course_name;
+	$checkout_link .= '</a>';
+	
+	$lesson_get_take_course_url =  esc_url( Sensei()->lesson->get_take_course_url( $course_id ) ); // Проверить quiz и module
+  // "http://localhost/smisli/course/testovyj-kurs/"
+  // "http://localhost/smisli/course/nachalo-raboty-s-sensei-lms/"
+
+	$course_link  = '<a href="' . $lesson_get_take_course_url . '" title="' . esc_attr__( 'Зарегистрироваться', 'rspl_theme' ) . '">';
+	$course_link .= esc_html__( $course_name );
+	$course_link .= '</a>';
+	//
+	if( 0 < $wc_post_id) { // если есть id товара = курс платный
+		$message_default = sprintf( esc_html__( 'Пожалуйста, оплатите %1$s, чтобы получить доступ.', 'rspl_theme' ), $checkout_link );
+	} else {
+		$message_default = sprintf( esc_html__( 'Пожалуйста, запишитесь на %1$s, чтобы получить доступ.', 'rspl_theme' ), $course_link );
+	}
+
+	return $message_default;
+}
+
+
 
 
 //Автоматическое присвоение заказам статуса «Выполнен» // работает. Проверить после подключения платежного шлюза
