@@ -4,13 +4,21 @@
 // .woocommerce-billing-fields__field-wrapper .form-row span.optional {
 //   display: none;
 // }
-.woocommerce-error, 
+.woocommerce-error {
+  border-top: 2px solid $error; // --accent-color
+}
 .woocommerce-info, 
 .woocommerce-message {
-  border-top: 2px solid rgb(66, 100, 251); // --accent-color
+  border-top: none; // --accent-hover-color
 }
-.woocommerce-message {
-  border-top-color: #06d19c; // --accent-hover-color
+
+.woocommerce-form-coupon-toggle .woocommerce-info {
+  border-top: none;
+  background-color: transparent;
+}
+
+.woocommerce form.checkout_coupon {
+  border: none;
 }
 
 .woocommerce #respond input#submit,
@@ -39,14 +47,17 @@
   // background-color: #a46497;
   // color: $button-color;
   font-weight: $bold;
-  background-color: $primary;
+  background-color: $background; 
+  color: $text;
 }
 .woocommerce #respond input#submit.alt:hover, 
 .woocommerce a.button.alt:hover, 
 .woocommerce button.button.alt:hover, 
 .woocommerce input.button.alt:hover {
-  background-color: $secondary;
-  // color: #fff;
+  // background-color: $secondary;
+  border-color: $button-color-hover;
+  background-color: $background-alt;
+  color: $text;
 }
 
 .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text a {
@@ -57,4 +68,10 @@
 .course-container, 
 .course-container .course {
   border-bottom: none;
+}
+
+.woocommerce form .form-row .input-checkbox {
+  position: relative;
+  left: unset;
+  visibility: visible;
 }
