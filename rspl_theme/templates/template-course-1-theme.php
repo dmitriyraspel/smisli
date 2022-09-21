@@ -216,7 +216,7 @@ $button_url       = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&qu
               </svg>
             </div>
 
-            <div class="launch-square">
+            <div class="launch-square no-barba">
               <a
                 class="add-to-cart"
                 id='add_to_cart'
@@ -522,7 +522,10 @@ $button_url       = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&qu
         }
       );
       function preloader(button) {
-        button.classList.toggle("active");
+        button.classList.add("active");
+        setTimeout(() => {
+          button.classList.remove("active");
+        }, 4000);
       };
     </script>
   </body>

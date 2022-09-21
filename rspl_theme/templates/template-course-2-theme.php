@@ -220,7 +220,7 @@ $button_url       = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&qu
 
                 <div class="launch-square">
                   <a
-                    class="add-to-cart"
+                    class="add-to-cart no-barba"
                     id='add_to_cart'
                     onclick="preloader(this)"
                     href="<?php echo $button_url ?>"
@@ -484,7 +484,10 @@ $button_url       = wc_get_checkout_url() . "?add-to-cart=" . $product_id . "&qu
         }
       );
       function preloader(button) {
-        button.classList.toggle("active");
+        button.classList.add("active");
+        setTimeout(() => {
+          button.classList.remove("active");
+        }, 4000);
       };
     </script>
   </body>
