@@ -1,8 +1,11 @@
 
 function pspl_share_button() {
-
   
   var buttonShare = document.querySelector(".button-share");
+
+  if (!buttonShare) {
+		return;
+	}
   
   buttonShare.onclick = function(){
     buttonShare.classList.toggle("button-share__active");
