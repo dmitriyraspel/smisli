@@ -259,8 +259,9 @@ function rspl_theme_scripts() {
 	// Main script temp
 	wp_enqueue_script( 'rspl_theme-script-bodyclass-temp', get_template_directory_uri() . '/assets/filemtime_files/bodyclass.js', array(), filemtime(get_template_directory() . '/assets/filemtime_files/bodyclass.js') , true );
 	wp_enqueue_script( 'rspl_theme-script-navigation-temp', get_template_directory_uri() . '/assets/filemtime_files/navigation.js', array(), filemtime(get_template_directory() . '/assets/filemtime_files/navigation.js') , true );
-    wp_enqueue_script( 'rspl_theme-script-canvas-temp', get_template_directory_uri() . '/assets/filemtime_files/canvas.js', array(), filemtime(get_template_directory() . '/assets/filemtime_files/canvas.js') , true );
+	wp_enqueue_script( 'rspl_theme-script-canvas-temp', get_template_directory_uri() . '/assets/filemtime_files/canvas.js', array(), filemtime(get_template_directory() . '/assets/filemtime_files/canvas.js') , true );
 	wp_enqueue_script( 'rspl_theme-script-audio-temp', get_template_directory_uri() . '/assets/filemtime_files/audio.js', array(), filemtime(get_template_directory() . '/assets/filemtime_files/audio.js') , true );
+	wp_enqueue_script( 'rspl_theme-script-share-temp', get_template_directory_uri() . '/assets/filemtime_files/share.js', array(), filemtime(get_template_directory() . '/assets/filemtime_files/share.js') , true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -327,3 +328,8 @@ require get_template_directory() . '/inc/cmb2.php';
  * Form to Telegram
  */
 require get_template_directory() . '/inc/form-to-telegram.php';
+
+/**
+ * Share button
+ */
+require get_template_directory() . '/inc/share-button.php';
