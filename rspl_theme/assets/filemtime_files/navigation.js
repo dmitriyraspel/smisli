@@ -120,3 +120,25 @@ function rsplthemeToggleAriaExpanded( el, withListeners ) {
 }
 
 primary_nav();
+
+function rspl_user_menu() {
+  
+  var userMenu = document.querySelector(".user-menu__wrap");
+
+  if (!userMenu) {
+		return;
+	}
+  
+  userMenu.onclick = function(){
+    userMenu.classList.toggle("user-menu__wrap__active");
+    document.addEventListener( 'click', userMenuOnClickOutside );
+  }
+  
+  function userMenuOnClickOutside( event ) {
+    if ( ! userMenu.contains( event.target ) ) {
+      userMenu.classList.remove("user-menu__wrap__active");
+    }
+  }
+}
+
+rspl_user_menu();

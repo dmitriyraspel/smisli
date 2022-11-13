@@ -30,6 +30,8 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-primary-menu' : '';
 
     <?php get_template_part( 'template-parts/header/site-branding' ); ?>
 
+    <?php get_template_part( 'template-parts/header/user-menu' ); ?>
+
     <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
       <div></div>
       <div></div>
