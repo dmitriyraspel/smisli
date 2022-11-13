@@ -1,5 +1,5 @@
 
-function pspl_share_button() {
+function rspl_share_button() {
   
   var buttonShare = document.querySelector(".button-share");
 
@@ -19,4 +19,4 @@ function pspl_share_button() {
   }
 }
 
-pspl_share_button();
+rspl_share_button();
