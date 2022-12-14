@@ -206,7 +206,49 @@
     color: $error;
   }
 }
+
+
+.cart_totals h2 {
+  font-size: 22px;
+}
+.woocommerce .cart-collaterals .cart_totals, 
+.woocommerce-page .cart-collaterals .cart_totals {
+  float: none;
+  width: 100%;
+  max-width: 435px;
+}
+
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button
+#add_payment_method .wc-proceed-to-checkout a.checkout-button, 
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+  padding: 0.5em 1em;
+}
+
+.cart-coupon {
+  // max-width: 435px;
+  label {
+    opacity: 0;
+  }
+  input[type="text"] {
+    width: 150px;
+  }
+  button.button {
+    width: 266px;
+    padding: 0.5em 1em;
+  }
+}
+
+.woocommerce table.shop_table.no-border {
+  border: none;
+}
+
+
 @media (max-width: $mobile-width) {
+
   .woocommerce-cart-form__cart-items {
     max-width: 300px;
 
@@ -226,6 +268,8 @@
         text-align: center;
         img {
           max-width: 150px;
+          margin-left: auto;
+          margin-right: auto;
         }
       }
       .product-name {
@@ -236,26 +280,63 @@
         text-align: center;
       }
       .woocommerce-cart-form_to-checkout-button {
-        width: 100%;
-        max-width: 300px;
+        max-width: 100%;
       }
+    }
+
+    .cart-coupon {
+      width: 300px;
+      text-align: center;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+
+      input[type="text"] {
+        width: 266px;
+      }
+      button.button {
+        width: 266px;
+        // text-align: center;
+      }
+    }
+
+    .woocommerce .cart-collaterals .cart_totals, 
+    .woocommerce-page .cart-collaterals .cart_totals {
+      width: 100%;
+      max-width: 300px;
     }
 
 }
 
 @media (min-width: $mobile-width) {
-  .product-remove {
-    order: 4;
-    width: 20px;
-    height: 24px;
-    text-align: center;
-  } 
-  .woocommerce_cart_item_description {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .woocommerce-cart-form__cart-items {
+    .woocommerce-cart-form__cart-item {
+      .product-remove {
+        order: 4;
+        width: 20px;
+        height: 24px;
+        text-align: center;
+      } 
+      .woocommerce_cart_item_description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .product-name a {
+        font-size: 22px;
+      }
+    }
   }
-  .product-name a {
-    font-size: 22px;
+
+  .cart-coupon {
+    input[type="text"] {
+      margin-right: 20px;
+    }
+    button.button {
+      // width: 266px;
+    }
   }
+  
 }
+

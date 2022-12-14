@@ -3054,6 +3054,44 @@ body.primary-navigation-open .primary-navigation {
   color: tomato;
 }
 
+.cart_totals h2 {
+  font-size: 22px;
+}
+
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals {
+  float: none;
+  width: 100%;
+  max-width: 435px;
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button
+#add_payment_method .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+  padding: 0.5em 1em;
+}
+
+.cart-coupon label {
+  opacity: 0;
+}
+
+.cart-coupon input[type="text"] {
+  width: 150px;
+}
+
+.cart-coupon button.button {
+  width: 266px;
+  padding: 0.5em 1em;
+}
+
+.woocommerce table.shop_table.no-border {
+  border: none;
+}
+
 @media (max-width: 581px) {
   .woocommerce-cart-form__cart-items {
     max-width: 300px;
@@ -3078,6 +3116,8 @@ body.primary-navigation-open .primary-navigation {
   }
   .woocommerce-cart-form__cart-items .product-thumbnail img {
     max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .woocommerce-cart-form__cart-items .product-name {
     margin-top: 15px;
@@ -3086,13 +3126,27 @@ body.primary-navigation-open .primary-navigation {
     text-align: center;
   }
   .woocommerce-cart-form__cart-items .woocommerce-cart-form_to-checkout-button {
+    max-width: 100%;
+  }
+  .cart-coupon {
+    width: 300px;
+    text-align: center;
+  }
+  .cart-coupon input[type="text"] {
+    width: 266px;
+  }
+  .cart-coupon button.button {
+    width: 266px;
+  }
+  .woocommerce .cart-collaterals .cart_totals,
+  .woocommerce-page .cart-collaterals .cart_totals {
     width: 100%;
     max-width: 300px;
   }
 }
 
 @media (min-width: 581px) {
-  .product-remove {
+  .woocommerce-cart-form__cart-items .woocommerce-cart-form__cart-item .product-remove {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
@@ -3100,7 +3154,7 @@ body.primary-navigation-open .primary-navigation {
     height: 24px;
     text-align: center;
   }
-  .woocommerce_cart_item_description {
+  .woocommerce-cart-form__cart-items .woocommerce-cart-form__cart-item .woocommerce_cart_item_description {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3112,8 +3166,11 @@ body.primary-navigation-open .primary-navigation {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .product-name a {
+  .woocommerce-cart-form__cart-items .woocommerce-cart-form__cart-item .product-name a {
     font-size: 22px;
+  }
+  .cart-coupon input[type="text"] {
+    margin-right: 20px;
   }
 }
 
