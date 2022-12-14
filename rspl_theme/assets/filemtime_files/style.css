@@ -663,7 +663,7 @@ a:hover, a:active {
 }
 
 a.button:hover, a.button:focus, a.button:active, a.button:visited {
-  color: #1b1b1b;
+  color: #fff;
 }
 
 button,
@@ -677,9 +677,9 @@ input[type="submit"] {
   font-size: 20px;
   line-height: 1.5;
   font-weight: 700;
-  color: #1b1b1b;
-  background-color: transparent;
-  border: 1px solid #1b1b1b42;
+  color: #fff;
+  background-color: #BFBFBF;
+  border: 1px solid #bfbfbf;
   padding: 8px 16px;
   margin-bottom: 1.5em;
   border-radius: 0px;
@@ -694,7 +694,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #3556e7;
+  border-color: #949494;
 }
 
 .button__accent {
@@ -1160,8 +1160,8 @@ form .double .half {
 }
 
 .wp-block-button__link {
-  color: #1b1b1b;
-  background-color: transparent;
+  color: #fff;
+  background-color: #BFBFBF;
   border-radius: 0px;
   font-size: 20px;
   padding: 8px 16px;
@@ -1172,7 +1172,7 @@ form .double .half {
 }
 
 .is-style-outline > .wp-block-button__link:not(.has-text-color) {
-  color: #1b1b1b;
+  color: #fff;
 }
 
 .entry-content .wp-block-button__link {
@@ -2679,9 +2679,9 @@ body.primary-navigation-open .primary-navigation {
   padding: 8px 16px;
   text-transform: unset;
   font-size: unset;
-  color: #1b1b1b;
-  background-color: transparent;
-  border: 1px solid #1b1b1b42;
+  color: #fff;
+  background-color: #BFBFBF;
+  border: 1px solid #bfbfbf;
 }
 
 .course-container a.button:hover,
@@ -2716,8 +2716,8 @@ body.primary-navigation-open .primary-navigation {
 .quiz:not(.quiz-blocks):not(.sensei-course-theme) input[type=submit]:hover,
 .quiz:not(.quiz-blocks):not(.sensei-course-theme) input.button:hover,
 .quiz:not(.quiz-blocks):not(.sensei-course-theme) button.button:hover {
-  color: #1b1b1b;
-  border-color: #3556e7;
+  color: #fff;
+  border-color: #949494;
   background: transparent;
 }
 
@@ -2907,37 +2907,38 @@ body.primary-navigation-open .primary-navigation {
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button {
-  border: solid 1px #1b1b1b42;
-  background-color: transparent;
+  border: 1px solid #bfbfbf;
+  background-color: #BFBFBF;
   border-radius: 0px;
-  color: #1b1b1b;
+  color: #fff;
 }
 
 .woocommerce #respond input#submit:hover,
 .woocommerce a.button:hover,
 .woocommerce button.button:hover,
 .woocommerce input.button:hover {
-  background-color: transparent;
-  color: #1b1b1b;
-  border-color: #3556e7;
+  border: 1px solid #949494;
+  background-color: #949494;
+  color: #fff;
 }
 
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-  font-weight: 700;
-  background-color: #ffffff;
-  color: #1b1b1b;
+  border: 1px solid #bfbfbf;
+  background-color: #BFBFBF;
+  border-radius: 0px;
+  color: #fff;
 }
 
 .woocommerce #respond input#submit.alt:hover,
 .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
 .woocommerce input.button.alt:hover {
-  border-color: #3556e7;
-  background-color: #f7f7f7;
-  color: #1b1b1b;
+  border: 1px solid #949494;
+  background-color: #949494;
+  color: #fff;
 }
 
 .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text a {

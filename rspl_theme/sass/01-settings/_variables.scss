@@ -77,15 +77,16 @@ $block-spacing-vertical: 1.5em;
 // Buttons
 $button-font-size: 20px;
 $button-line-height: 1.5;
-$button-color: $text;
-$button-color-hover: $primary;
-$button-border-color: #1b1b1b42;
-$button-border-color-hover: $primary;
-$button-background-color: transparent;
-$button-background-color-hover: transparent;
+$button-color: #fff;
+$button-color-hover: #fff;
+$button-border-color: #bfbfbf;
+$button-border-color-hover: #949494;
+$button-background-color: #BFBFBF;
+$button-background-color-hover: #949494;
 $button-border-radius: 0px;
 $button-padding: 8px 16px;
 $button-padding-is-style-outline: 6px 14px;
+$button-font-weight: $bold;
 
 $button-padding-vertical: 8px;
 $button-padding-horizontal: 16px;
