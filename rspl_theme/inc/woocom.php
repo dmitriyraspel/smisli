@@ -69,7 +69,7 @@ function rspl_theme_redirect_after_order_received_page() {
 add_filter( 'woocommerce_return_to_shop_text', 'rspl_theme_woocommerce_return_to_shop_text_filter' );
 function rspl_theme_woocommerce_return_to_shop_text_filter( $default_text ){
 
-    $default_text = 'Вернуться к выбору';
+    $default_text = 'ПЕРЕЙТИ В КАТАЛОГ ПРОДУКТОВ';
 	return $default_text;
 }
 
@@ -81,4 +81,15 @@ function rspl_theme_woocommerce_return_to_shop_redirect_filter( $wc_get_page_per
 
     $wc_get_page_permalink = site_url( 'courses-overview' );
 	return $wc_get_page_permalink;
+}
+
+// Замены текста "Ваша корзина пока пуста."
+remove_action( 'woocommerce_cart_is_empty', 'wc_empty_cart_message', 10 );
+add_action( 'woocommerce_cart_is_empty', 'rspl_theme_wc_empty_cart_message', 10 );
+
+function rspl_theme_wc_empty_cart_message() {
+    $html  = '<p class="cart-empty theme-cart-empty">';
+    $html .= wp_kses_post( apply_filters( 'wc_empty_cart_message', __( 'ВАША КОРЗИНА ПОКА ПУСТА. ВЫБЕРИТЕ, ПОЖАЛУЙСТА,
+    ПРОЕКТ ПО ДУШЕ В КАТАЛОГЕ ПРОДУКТОВ.', 'rspl_theme' ) ) );
+    echo $html . '</p>';
 }
