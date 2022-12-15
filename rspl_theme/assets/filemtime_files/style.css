@@ -1152,11 +1152,9 @@ form .double .half {
 /**
  * wp-block-button
  */
-.wp-block-button__link:active,
-.wp-block-button__link:focus,
-.wp-block-button__link:hover,
 .wp-block-button__link:visited {
-  color: #1b1b1b;
+  color: #fff;
+  background-color: #BFBFBF;
 }
 
 .wp-block-button__link {
@@ -1165,6 +1163,12 @@ form .double .half {
   border-radius: 0px;
   font-size: 20px;
   padding: 8px 16px;
+}
+
+.wp-block-button__link:focus,
+.wp-block-button__link:hover {
+  color: #fff;
+  background-color: #949494;
 }
 
 .is-style-outline > .wp-block-button__link {
