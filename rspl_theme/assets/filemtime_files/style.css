@@ -3367,6 +3367,122 @@ Front Page Form
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACn0lEQVRIidWVy08TURSHvztDDQO0osirlBDwVSRuhJC4dSX4oEggMf4ZEjGsXJgYwI1/gyvxVUxA3egC44KAcWNLDGJCECTl1dqXfcx10de0HSyw47e6c+7J7zvn3Jm5cNQl/rfZMSmP6VWRfiR9CC4BjvTWKpIvAtwipLm/DYnYgQHO6fCAIhiX0FaiyB9ScG+xp+LV/gCTUr1QFRmTcLeEcZ4kPF6c00Z4IHRjXClMPIx5utLh9u7II5N4Ts7p8IAQvDioeb5kv7e30l0ESB+oBzi9H5vOEwqDzWV01yhc+Rg1+PNTCWnOzMGXZeJ6VaS/lLnVIuhpULndonLempru1109P0nQKq2RPuB5HgBw7WXccVxhsFnlpr2MchUCoTCrGyEc9bV4/HpRvi4xBXQak2wWwdUGlTstKmfT1cYTCVbWt4klErQ1NQDgCRQDBHRl1kZAY2bx8OIxbthVLOl3TErJ5m6A9c1trBUabY5GFJE6Pm9AmjXdZAbI6v3vJAkpuVyjUk2UXxs+orE4p6ptOOprs3kxHZaCxR2AzAaNgDXgHMCsL8msLwnEedLio1aNU3eyGnttTZ7N9z86cRN/IcVaZp370CQLZt188JfjTyq8W9ompuePw2z+KSvmiwAC3GbJn4IVbMYEtugWo3M7BOI5iMdvOn8UwVQRQKvXXgNLhclbCRVPUPA01srMjsbQ578sB+WeHQhYJqi9MTzn5HwbviUkL03LMshmEVy3qzxbSZAsaEJI6fJcq8x2UPQ3dc6EJwQMl4LsoTFvb8V9Y6Dob7o4p40gmTiE+bh3ThstDO554bTPhFwgJoAzJYyXhJTDxrHsCwDQOS8tEV/EpUv6FEmnFKkrU0hWdcGCCu7yOm1qoUvESxRxhPUPbsPwfbpVsdcAAAAASUVORK5CYII=") center no-repeat;
 }
 
+/* Profile Page */
+.profile-step-1,
+.profile-step-2 {
+  width: 280px;
+}
+
+.profile-avatar-wrap {
+  width: 280px;
+}
+
+.profile-avatar-img {
+  width: 100px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-avatar-img img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.profile-avatar-name {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+.profile-avatar-button {
+  display: block;
+  font-size: 16px;
+  width: 280px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-buttons-link {
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 769px) {
+  .profile-avatar-wrap {
+    width: 100%;
+  }
+  .profile-step-1,
+  .profile-step-2 {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .profile-logout-wrap {
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .profile-step-1,
+  .profile-logout-wrap {
+    margin-bottom: 30px;
+  }
+  .profile-step-1,
+  .profile-step-2 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .profile-step-1 > *:first-child,
+  .profile-step-2 > *:first-child {
+    margin-right: 20px;
+    width: 180px;
+  }
+  .profile-step-1 > *:last-child,
+  .profile-step-2 > *:last-child {
+    margin-left: 20px;
+    width: 200px;
+  }
+  .profile-avatar-wrap {
+    width: 180px;
+  }
+  .profile-avatar-button {
+    width: 180px;
+  }
+  .profile-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .profile-buttons-link {
+    width: 200px;
+    padding: 10px 16px;
+  }
+  .profile-logout-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
