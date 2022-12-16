@@ -3487,6 +3487,36 @@ Front Page Form
   }
 }
 
+/* Login */
+#my-courses #customer_login h2 {
+  text-align: center;
+}
+
+#my-courses #customer_login form.login,
+#my-courses #customer_login form.register {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 300px;
+}
+
+#my-courses #customer_login form.login .button,
+#my-courses #customer_login form.register .button {
+  font-size: 16px;
+}
+
+#my-courses #customer_login form.login .sensei-login-submit,
+#my-courses #customer_login form.register .sensei-login-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#my-courses #customer_login form.login .sensei-login-submit .button,
+#my-courses #customer_login form.register .sensei-login-submit .button {
+  margin-right: 20px;
+}
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
