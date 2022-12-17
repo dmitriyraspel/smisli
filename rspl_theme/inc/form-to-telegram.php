@@ -1,9 +1,9 @@
 <?php
 
-add_action( 'wp_ajax_hello', 'say_hello' );
-add_action( 'wp_ajax_nopriv_hello', 'say_hello' );
+add_action( 'wp_ajax_tgform', 'send_to_tgform' );
+add_action( 'wp_ajax_nopriv_tgform', 'send_to_tgform' );
 
-function say_hello() {
+function send_to_tgform() {
 
 	$name = empty( $_POST['name']) ? 'пользователь не указан' : esc_attr($_POST['name'] );
 	$email = empty( $_POST['email']) ? 'Почта не узазана' : esc_attr($_POST['email'] );

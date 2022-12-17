@@ -7659,19 +7659,27 @@ Front Page Form
 
 .front-page-form-button {
   position: relative;
-  background: transparent;
+  font-family: "Lora", serif;
+  font-size: 16px;
   font-weight: 700;
-  font-size: 20px;
-  border: none;
+  color: #1b1b1b;
+  background-color: transparent;
+  border: 1px solid #1b1b1b;
+  padding: 8px 16px;
+  border-radius: 0px;
+  text-decoration: none;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
   overflow: hidden;
 }
 
 .front-page-form-button.disabled {
   pointer-events: none;
   cursor: default;
-  color: #1b1b1b42;
+  opacity: 0.8;
 }
-.button-line {
+
+/* .button-line {
   display: block;
   position: absolute;
   top: 60%;
@@ -7679,13 +7687,17 @@ Front Page Form
   width: 110%;
   height: 2px;
   background: #1b1b1b;
+  -webkit-transition: all 1s;
   transition: all 1s;
   z-index: 3;
-  transform: translateX(-100%);
-}
-.disabled .button-line {
-  transform: translateX(0%);
-}
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+} */
+
+/* .disabled .button-line {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+} */
 
 input[type="name"]._error,
 input[type="text"]._error,

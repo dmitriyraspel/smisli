@@ -19,30 +19,39 @@ Front Page Form
 
 .front-page-form-button {
   position: relative;
-  background: transparent;
-  font-weight: 700;
-  font-size: 20px;
-  border: none;
-  overflow: hidden;
+  font-family: $font;
+	font-size: 16px;
+	font-weight: $button-font-weight;
+	color: $text;
+	background-color: transparent;
+	border: 1px solid $text;
+	padding: $button-padding;
+	// margin-bottom: $block-spacing-vertical;
+	border-radius: $button-border-radius;
+	// white-space: nowrap;
+	text-decoration: none;
+	transition: $base-transition;
+	overflow: hidden;
 }
 
 .front-page-form-button.disabled {
   pointer-events: none;
   cursor: default;
-  color: #1b1b1b42;
+  // color: $text;
+  opacity: 0.8;
 }
-.button-line {
-  display: block;
-  position: absolute;
-  top: 60%;
-  left: -5%;
-  width: 110%;
-  height: 2px;
-  background: #1b1b1b;
-  transition: all 1s;
-  z-index: 3;
-  transform: translateX(-100%);
-}
-.disabled .button-line {
-  transform: translateX(0%);
-}
+// .button-line {
+//   display: block;
+//   position: absolute;
+//   top: 60%;
+//   left: -5%;
+//   width: 110%;
+//   height: 2px;
+//   background: #1b1b1b;
+//   transition: all 1s;
+//   z-index: 3;
+//   transform: translateX(-100%);
+// }
+// .disabled .button-line {
+//   transform: translateX(0%);
+// }
