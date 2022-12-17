@@ -2354,29 +2354,9 @@ body.primary-navigation-open .primary-navigation {
 .entry-title,
 .entry-title a {
   text-decoration: none;
-  font-size: 54px;
+  text-align: center;
+  font-size: var(--heading--font-size-h2);
   font-weight: 700;
-}
-
-@media (min-width: 581px) {
-  .entry-title,
-  .entry-title a {
-    font-size: 54px;
-  }
-}
-
-@media (min-width: 581px) {
-  .entry-title,
-  .entry-title a {
-    font-size: 72px;
-  }
-}
-
-@media (min-width: 768px) {
-  .entry-title,
-  .entry-title a {
-    font-size: 100px;
-  }
 }
 
 .post-thumbnail {
