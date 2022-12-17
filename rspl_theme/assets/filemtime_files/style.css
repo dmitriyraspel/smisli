@@ -1936,8 +1936,8 @@ body.primary-navigation-open .primary-navigation {
 
 .user-menu__list {
   position: absolute;
-  top: 28px;
-  right: 12px;
+  top: 40px;
+  right: -30px;
   background: rgba(255, 255, 255, 0.8);
   list-style: none;
   margin: 0;
@@ -1946,6 +1946,9 @@ body.primary-navigation-open .primary-navigation {
   transition: 0.2s;
   visibility: hidden;
   opacity: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .user-menu__item {
