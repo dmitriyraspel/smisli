@@ -84,7 +84,8 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-primary-menu' : '';
 
 
 	</div><!-- /.header-inner -->
-	
-	
+		
+  <?php get_template_part( 'template-parts/header/after-header-menu' ); ?>
 
 </header><!-- #masthead -->
+
