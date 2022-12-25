@@ -24,7 +24,7 @@ do_action( 'sensei_login_form_before' );
 
 <h2><?php esc_html_e( 'Login', 'sensei-lms' ); ?></h2>
 
-<form method="post" name="sensi-login-form 2131" id="loginform" class="login sensei">
+<form method="post" name="sensi-login-form" id="loginform" class="login sensei">
 
 	<?php
 	/**
@@ -67,14 +67,14 @@ do_action( 'sensei_login_form_before' );
 		<label for="rememberme" class="inline"><?php esc_html_e( 'Remember me', 'sensei-lms' ); ?></label>
 	</p>
 
-	<p class='sensei-login-submit'>
-
-		<input type="submit" class="button" name="login" value="<?php esc_attr_e( 'Login', 'sensei-lms' ); ?>" />
-
-		<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" class="button"><?php esc_html_e( 'Lost your password?', 'sensei-lms' ); ?></a>
-
-	</p>
-
+	<div class="sensei-login-submit">
+		<div class="sensei-login-submit-button sensei-login-submit-login">
+			<input type="submit" class="button" name="login" value="<?php esc_attr_e( 'Login', 'sensei-lms' ); ?>" />
+		</div>
+		<div class="sensei-login-submit-button sensei-login-submit-lostpassword">
+			<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" class="button"><?php esc_html_e( 'Lost your password?', 'sensei-lms' ); ?></a>
+		</div>
+	</div>
 
 	<?php
 	/**
