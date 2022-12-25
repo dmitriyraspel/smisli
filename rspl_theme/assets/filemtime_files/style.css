@@ -3559,6 +3559,105 @@ Front Page Form
   }
 }
 
+/* katalog-productov */
+.katalog-productov-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+  /* justify-content: center; */
+}
+
+.katalog-productov-cart-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.katalog-productov-cart-subtitle {
+  margin-top: 0;
+  font-weight: 700;
+  color: #1b1b1b98;
+}
+
+.katalog-productov-cart-img {
+  width: 240px;
+  height: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.katalog-productov-cart-img img {
+  width: auto;
+  max-height: 100%;
+}
+
+.katalog-productov-cart-buttons {
+  width: 280px;
+  max-width: 100%;
+}
+
+.katalog-productov-cart-buttons > .katalog-productov-cart-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.katalog-productov-cart-buttons a,
+.katalog-productov-cart-buttons .wp-block-button__link {
+  width: 280px;
+}
+
+.katalog-productov-cart-button-line a,
+.katalog-productov-cart-button-line .wp-block-button__link {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  border-top: 3px solid #C00000;
+  border-top: 3px solid #BFBFBF;
+}
+
+.katalog-productov-cart-button-line a::after,
+.katalog-productov-cart-button-line .wp-block-button__link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 44%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #C00000;
+  background: #BFBFBF;
+}
+
+@media (min-width: 999px) {
+  .katalog-productov-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .katalog-productov-cart {
+    min-width: 320px;
+  }
+}
+
 /* Login */
 /*--------------------------------------------------------------
 # Utilities
