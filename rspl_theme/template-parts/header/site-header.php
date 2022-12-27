@@ -51,31 +51,8 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-primary-menu' : '';
           'depth'           => 2,
         )
       );
-      endif; 
-    
-      if ( has_nav_menu( 'social' ) ) :
-        ?>
-        <div class="follow-bar">
-          <p class="follow-bar-text">
-          <?php echo __( 'Подписывайтесь', 'rspl_theme' ); ?>
-          </p>
-        
-
-          <?php
-          wp_nav_menu(
-            array(
-              'theme_location'  => 'social',
-              'items_wrap'      => '<ul id="primary-menu-follow-list" class="%2$s">%3$s</ul>',
-              'link_before'     => '<span class="screen-reader-text">',
-              'link_after'      => '</span>' . rspl_theme_get_icon_svg( 'link' ),
-              'depth'           => 1,
-              'container'       => '',
-              )
-          );
-        ?>
-        </div>
-      <?php endif; ?>
-      
+      endif; ?>
+          
     </nav><!-- #site-navigation -->
 
 		 

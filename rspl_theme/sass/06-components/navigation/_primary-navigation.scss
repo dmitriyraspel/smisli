@@ -28,15 +28,16 @@
     /* align-items: center; */
     justify-content: center;
     min-height: 100%;
-    padding-left: 12%;
-    max-width: 83%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 90%;
   }
 
   .menu-wrapper {
     // width: 80%;
 
     li {
-      font-size: 64px;
+      font-size: 32px;
       font-family: $font-heading;
       font-weight: $bold;
       -webkit-font-smoothing: antialiased;
@@ -48,27 +49,32 @@
       text-decoration: none;
       color: white;
 
-      &:after {
-        content: '';
-        display: block;
-        background: rgb(255, 255, 255);
-        height: 0;
-        position: absolute;
-        left: -8px;
-        right: -12px;
-        bottom: -1px;
-        opacity: 0.1;
-        transition: height 0.25s ease, opacity 0.25s ease;
-      }
+      // &:after {
+      //   content: '';
+      //   display: block;
+      //   background: rgb(255, 255, 255);
+      //   height: 0;
+      //   position: absolute;
+      //   left: -8px;
+      //   right: -12px;
+      //   bottom: -1px;
+      //   opacity: 0.1;
+      //   transition: height 0.25s ease, opacity 0.25s ease;
+      // }
 
-      &:hover::after {
-        height: 27px;
-        opacity: 0.15;
-      }
+      // &:hover::after {
+      //   height: 27px;
+      //   opacity: 0.15;
+      // }
     }
-    li.current-menu-item a::after {
-      height: 27px;
-      opacity: 0.15;
+    // li.current-menu-item a::after {
+    //   height: 27px;
+    //   opacity: 0.15;
+    // }
+    li a:hover,
+    li.current-menu-item a {
+      // color: $text;
+      color: rgba(27, 27, 27, 0.8);
     }
   }
 }
@@ -132,7 +138,7 @@ body.primary-navigation-open {
 		width: 54%;
     .menu-wrapper {
       li {
-        font-size: 60px;
+        // font-size: 60px;
         a {}
       }
     }
@@ -149,7 +155,7 @@ body.primary-navigation-open {
 		width: 64%;
     .menu-wrapper {
       li {
-        font-size: 52px;
+        // font-size: 52px;
         
         a {}
       }
@@ -170,7 +176,7 @@ body.primary-navigation-open {
     }
     .menu-wrapper {
       li {
-        font-size: 42px;
+        font-size: 30px;
         a {}
       }
     }
